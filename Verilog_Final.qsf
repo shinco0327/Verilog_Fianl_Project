@@ -1,0 +1,109 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2009 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II
+# Version 9.0 Build 132 02/25/2009 SJ Web Edition
+# Date created = 15:33:35  November 23, 2020
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		Verilog_Final_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY Cyclone
+set_global_assignment -name DEVICE EP1C6Q240C8
+set_global_assignment -name TOP_LEVEL_ENTITY Verilog_Final
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 9.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:33:35  NOVEMBER 23, 2020"
+set_global_assignment -name LAST_QUARTUS_VERSION 9.0
+set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
+set_global_assignment -name VERILOG_FILE Verilog_Final.v
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name GENERATE_RBF_FILE ON
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVCMOS"
+set_global_assignment -name RESERVE_ASDO_AFTER_CONFIGURATION "AS INPUT TRI-STATED"
+set_location_assignment PIN_28 -to clk
+set_location_assignment PIN_226 -to function_btn
+set_location_assignment PIN_225 -to left_btn
+set_location_assignment PIN_224 -to right_btn
+set_location_assignment PIN_74 -to screen_col[0]
+set_location_assignment PIN_59 -to screen_col[1]
+set_location_assignment PIN_58 -to screen_col[2]
+set_location_assignment PIN_57 -to screen_col[3]
+set_location_assignment PIN_56 -to screen_col[4]
+set_location_assignment PIN_55 -to screen_col[5]
+set_location_assignment PIN_54 -to screen_col[6]
+set_location_assignment PIN_53 -to screen_col[7]
+set_location_assignment PIN_50 -to screen_col[8]
+set_location_assignment PIN_49 -to screen_col[9]
+set_location_assignment PIN_48 -to screen_col[10]
+set_location_assignment PIN_47 -to screen_col[11]
+set_location_assignment PIN_46 -to screen_col[12]
+set_location_assignment PIN_45 -to screen_col[13]
+set_location_assignment PIN_44 -to screen_col[14]
+set_location_assignment PIN_43 -to screen_col[15]
+set_location_assignment PIN_42 -to screen_col[16]
+set_location_assignment PIN_41 -to screen_col[17]
+set_location_assignment PIN_23 -to screen_col[18]
+set_location_assignment PIN_21 -to screen_col[19]
+set_location_assignment PIN_20 -to screen_col[20]
+set_location_assignment PIN_19 -to screen_col[21]
+set_location_assignment PIN_18 -to screen_col[22]
+set_location_assignment PIN_17 -to screen_col[23]
+set_location_assignment PIN_16 -to screen_col[24]
+set_location_assignment PIN_15 -to screen_col[25]
+set_location_assignment PIN_14 -to screen_col[26]
+set_location_assignment PIN_13 -to screen_col[27]
+set_location_assignment PIN_12 -to screen_col[28]
+set_location_assignment PIN_11 -to screen_col[29]
+set_location_assignment PIN_8 -to screen_col[30]
+set_location_assignment PIN_7 -to screen_col[31]
+set_location_assignment PIN_61 -to screen_row[0]
+set_location_assignment PIN_62 -to screen_row[1]
+set_location_assignment PIN_63 -to screen_row[2]
+set_location_assignment PIN_64 -to screen_row[3]
+set_location_assignment PIN_65 -to screen_row[4]
+set_location_assignment PIN_66 -to screen_row[5]
+set_location_assignment PIN_67 -to screen_row[6]
+set_location_assignment PIN_68 -to screen_row[7]
+set_location_assignment PIN_73 -to screen_row[8]
+set_location_assignment PIN_2 -to screen_row[9]
+set_location_assignment PIN_238 -to screen_row[10]
+set_location_assignment PIN_237 -to screen_row[11]
+set_location_assignment PIN_236 -to screen_row[12]
+set_location_assignment PIN_235 -to screen_row[13]
+set_location_assignment PIN_234 -to screen_row[14]
+set_location_assignment PIN_233 -to screen_row[15]
+set_global_assignment -name MISC_FILE "C:/Users/User/Desktop/Verilog_Final/Verilog_Final.dpf"

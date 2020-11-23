@@ -1,0 +1,459 @@
+Analysis & Synthesis report for Verilog_Final
+Mon Nov 23 17:31:29 2020
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. User-Specified and Inferred Latches
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Port Connectivity Checks: "screen_map:M0"
+ 13. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                          ;
++-----------------------------+-----------------------------------------+
+; Analysis & Synthesis Status ; Successful - Mon Nov 23 17:31:29 2020   ;
+; Quartus II Version          ; 9.0 Build 132 02/25/2009 SJ Web Edition ;
+; Revision Name               ; Verilog_Final                           ;
+; Top-level Entity Name       ; Verilog_Final                           ;
+; Family                      ; Cyclone                                 ;
+; Total logic elements        ; 351                                     ;
+; Total pins                  ; 52                                      ;
+; Total virtual pins          ; 0                                       ;
+; Total memory bits           ; 0                                       ;
+; Total PLLs                  ; 0                                       ;
++-----------------------------+-----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                            ;
++----------------------------------------------------------------+--------------------+--------------------+
+; Option                                                         ; Setting            ; Default Value      ;
++----------------------------------------------------------------+--------------------+--------------------+
+; Device                                                         ; EP1C6Q240C8        ;                    ;
+; Top-level entity name                                          ; Verilog_Final      ; Verilog_Final      ;
+; Family name                                                    ; Cyclone            ; Stratix II         ;
+; Use Generated Physical Constraints File                        ; Off                ;                    ;
+; Use smart compilation                                          ; Off                ; Off                ;
+; Restructure Multiplexers                                       ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                            ; Off                ; Off                ;
+; Preserve fewer node names                                      ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                      ; Off                ; Off                ;
+; Verilog Version                                                ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                   ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                       ; Auto               ; Auto               ;
+; Safe State Machine                                             ; Off                ; Off                ;
+; Extract Verilog State Machines                                 ; On                 ; On                 ;
+; Extract VHDL State Machines                                    ; On                 ; On                 ;
+; Ignore Verilog initial constructs                              ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                     ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                 ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                        ; On                 ; On                 ;
+; Parallel Synthesis                                             ; Off                ; Off                ;
+; NOT Gate Push-Back                                             ; On                 ; On                 ;
+; Power-Up Don't Care                                            ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                   ; Off                ; Off                ;
+; Remove Duplicate Registers                                     ; On                 ; On                 ;
+; Ignore CARRY Buffers                                           ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                         ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                          ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                      ; Off                ; Off                ;
+; Ignore LCELL Buffers                                           ; Off                ; Off                ;
+; Ignore SOFT Buffers                                            ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                 ; Off                ; Off                ;
+; Optimization Technique                                         ; Balanced           ; Balanced           ;
+; Carry Chain Length                                             ; 70                 ; 70                 ;
+; Auto Carry Chains                                              ; On                 ; On                 ;
+; Auto Open-Drain Pins                                           ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                          ; Off                ; Off                ;
+; Auto ROM Replacement                                           ; On                 ; On                 ;
+; Auto RAM Replacement                                           ; On                 ; On                 ;
+; Auto Shift Register Replacement                                ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                  ; On                 ; On                 ;
+; Strict RAM Replacement                                         ; Off                ; Off                ;
+; Allow Synchronous Control Signals                              ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                         ; Off                ; Off                ;
+; Auto RAM Block Balancing                                       ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                              ; Off                ; Off                ;
+; Auto Resource Sharing                                          ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                             ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                             ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                  ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing            ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives              ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report             ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                             ; Off                ; Off                ;
+; Synchronization Register Chain Length                          ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                              ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report       ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report      ; 100                ; 100                ;
+; Clock MUX Protection                                           ; On                 ; On                 ;
+; Block Design Naming                                            ; Auto               ; Auto               ;
+; Synthesis Effort                                               ; Auto               ; Auto               ;
+; Allows Asynchronous Clear Usage For Shift Register Replacement ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                             ; Medium             ; Medium             ;
++----------------------------------------------------------------+--------------------+--------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                            ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                        ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------+
+; Verilog_Final.v                  ; yes             ; User Verilog HDL File  ; C:/Users/User/Desktop/Verilog_Final/Verilog_Final.v ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------+
+
+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Total logic elements                        ; 351          ;
+;     -- Combinational with no register       ; 320          ;
+;     -- Register only                        ; 14           ;
+;     -- Combinational with a register        ; 17           ;
+;                                             ;              ;
+; Logic element usage by number of LUT inputs ;              ;
+;     -- 4 input functions                    ; 212          ;
+;     -- 3 input functions                    ; 95           ;
+;     -- 2 input functions                    ; 27           ;
+;     -- 1 input functions                    ; 3            ;
+;     -- 0 input functions                    ; 0            ;
+;                                             ;              ;
+; Logic elements by mode                      ;              ;
+;     -- normal mode                          ; 335          ;
+;     -- arithmetic mode                      ; 16           ;
+;     -- qfbk mode                            ; 0            ;
+;     -- register cascade mode                ; 0            ;
+;     -- synchronous clear/load mode          ; 0            ;
+;     -- asynchronous clear/load mode         ; 0            ;
+;                                             ;              ;
+; Total registers                             ; 31           ;
+; Total logic cells in carry chains           ; 19           ;
+; I/O pins                                    ; 52           ;
+; Maximum fan-out node                        ; human_col[4] ;
+; Maximum fan-out                             ; 92           ;
+; Total fan-out                               ; 1288         ;
+; Average fan-out                             ; 3.20         ;
++---------------------------------------------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                            ;
++----------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name          ; Library Name ;
++----------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------+--------------+
+; |Verilog_Final             ; 351 (49)    ; 31           ; 0           ; 52   ; 0            ; 320 (18)     ; 14 (14)           ; 17 (17)          ; 19 (19)         ; 0 (0)      ; |Verilog_Final               ; work         ;
+;    |screen_map:M0|         ; 302 (302)   ; 0            ; 0           ; 0    ; 0            ; 302 (302)    ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Verilog_Final|screen_map:M0 ; work         ;
++----------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                   ;
++-----------------------------------------------------+------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal    ; Free of Timing Hazards ;
++-----------------------------------------------------+------------------------+------------------------+
+; screen_map:M0|screen_col[0]                         ; screen_map:M0|WideNor0 ; yes                    ;
+; screen_map:M0|screen_col[1]                         ; screen_map:M0|WideNor0 ; yes                    ;
+; screen_map:M0|screen_col[2]                         ; screen_map:M0|WideNor0 ; yes                    ;
+; screen_map:M0|screen_col[3]                         ; screen_map:M0|WideNor0 ; yes                    ;
+; screen_map:M0|screen_col[4]                         ; screen_map:M0|WideNor0 ; yes                    ;
+; screen_map:M0|screen_col[5]                         ; screen_map:M0|WideNor0 ; yes                    ;
+; screen_map:M0|screen_col[6]                         ; screen_map:M0|WideNor0 ; yes                    ;
+; screen_map:M0|screen_col[7]                         ; screen_map:M0|WideNor0 ; yes                    ;
+; screen_map:M0|screen_col[8]                         ; screen_map:M0|WideNor0 ; yes                    ;
+; screen_map:M0|screen_col[9]                         ; screen_map:M0|WideNor0 ; yes                    ;
+; screen_map:M0|screen_col[10]                        ; screen_map:M0|WideNor0 ; yes                    ;
+; screen_map:M0|screen_col[11]                        ; screen_map:M0|WideNor0 ; yes                    ;
+; screen_map:M0|screen_col[12]                        ; screen_map:M0|WideNor0 ; yes                    ;
+; screen_map:M0|screen_col[13]                        ; screen_map:M0|WideNor0 ; yes                    ;
+; screen_map:M0|screen_col[14]                        ; screen_map:M0|WideNor0 ; yes                    ;
+; screen_map:M0|screen_col[15]                        ; screen_map:M0|WideNor0 ; yes                    ;
+; screen_map:M0|screen_col[16]                        ; screen_map:M0|WideNor0 ; yes                    ;
+; screen_map:M0|screen_col[17]                        ; screen_map:M0|WideNor0 ; yes                    ;
+; screen_map:M0|screen_col[18]                        ; screen_map:M0|WideNor0 ; yes                    ;
+; screen_map:M0|screen_col[19]                        ; screen_map:M0|WideNor0 ; yes                    ;
+; screen_map:M0|screen_col[20]                        ; screen_map:M0|WideNor0 ; yes                    ;
+; screen_map:M0|screen_col[21]                        ; screen_map:M0|WideNor0 ; yes                    ;
+; screen_map:M0|screen_col[22]                        ; screen_map:M0|WideNor0 ; yes                    ;
+; screen_map:M0|screen_col[23]                        ; screen_map:M0|WideNor0 ; yes                    ;
+; screen_map:M0|screen_col[24]                        ; screen_map:M0|WideNor0 ; yes                    ;
+; screen_map:M0|screen_col[25]                        ; screen_map:M0|WideNor0 ; yes                    ;
+; screen_map:M0|screen_col[26]                        ; screen_map:M0|WideNor0 ; yes                    ;
+; screen_map:M0|screen_col[27]                        ; screen_map:M0|WideNor0 ; yes                    ;
+; screen_map:M0|screen_col[28]                        ; screen_map:M0|WideNor0 ; yes                    ;
+; screen_map:M0|screen_col[29]                        ; screen_map:M0|WideNor0 ; yes                    ;
+; screen_map:M0|screen_col[30]                        ; screen_map:M0|WideNor0 ; yes                    ;
+; screen_map:M0|screen_col[31]                        ; screen_map:M0|WideNor0 ; yes                    ;
+; Number of user-specified and inferred latches = 32  ;                        ;                        ;
++-----------------------------------------------------+------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; screen_state[0]                        ; Stuck at VCC due to stuck port data_in ;
+; screen_row[0]~reg0                     ; Merged with reg_screen_row[0]          ;
+; screen_row[1]~reg0                     ; Merged with reg_screen_row[1]          ;
+; screen_row[2]~reg0                     ; Merged with reg_screen_row[2]          ;
+; screen_row[3]~reg0                     ; Merged with reg_screen_row[3]          ;
+; screen_row[4]~reg0                     ; Merged with reg_screen_row[4]          ;
+; screen_row[5]~reg0                     ; Merged with reg_screen_row[5]          ;
+; screen_row[6]~reg0                     ; Merged with reg_screen_row[6]          ;
+; screen_row[7]~reg0                     ; Merged with reg_screen_row[7]          ;
+; screen_row[8]~reg0                     ; Merged with reg_screen_row[8]          ;
+; screen_row[9]~reg0                     ; Merged with reg_screen_row[9]          ;
+; screen_row[10]~reg0                    ; Merged with reg_screen_row[10]         ;
+; screen_row[11]~reg0                    ; Merged with reg_screen_row[11]         ;
+; screen_row[12]~reg0                    ; Merged with reg_screen_row[12]         ;
+; screen_row[13]~reg0                    ; Merged with reg_screen_row[13]         ;
+; screen_row[14]~reg0                    ; Merged with reg_screen_row[14]         ;
+; screen_row[15]~reg0                    ; Merged with reg_screen_row[15]         ;
+; Total Number of Removed Registers = 17 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 31    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 5     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; reg_screen_row[0]                      ; 4       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |Verilog_Final|human_col[2] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "screen_map:M0"                                                                                                                                                                          ;
++--------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port         ; Type  ; Severity ; Details                                                                                                                                                                          ;
++--------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; screen_state ; Input ; Warning  ; Input port expression (4 bits) is wider than the input port (1 bits) it drives.  The 3 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++--------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.0 Build 132 02/25/2009 SJ Web Edition
+    Info: Processing started: Mon Nov 23 17:31:27 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Verilog_Final -c Verilog_Final
+Info: Found 2 design units, including 2 entities, in source file Verilog_Final.v
+    Info: Found entity 1: Verilog_Final
+    Info: Found entity 2: screen_map
+Info: Elaborating entity "Verilog_Final" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at Verilog_Final.v(25): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at Verilog_Final.v(28): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at Verilog_Final.v(32): truncated value with size 32 to match size of target (10)
+Info: Elaborating entity "screen_map" for hierarchy "screen_map:M0"
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(51): variable "screen_state" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10270): Verilog HDL Case Statement warning at Verilog_Final.v(53): incomplete case statement has no default case item
+Info (10264): Verilog HDL Case Statement information at Verilog_Final.v(53): all case item expressions in this case statement are onehot
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(104): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(105): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(106): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(107): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(108): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(114): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(115): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(116): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(117): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(118): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(124): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(125): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(126): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(127): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(128): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(134): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(135): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(136): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(137): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(138): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(144): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(145): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(146): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(147): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(148): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(154): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(155): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(156): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(157): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(158): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10270): Verilog HDL Case Statement warning at Verilog_Final.v(73): incomplete case statement has no default case item
+Info (10264): Verilog HDL Case Statement information at Verilog_Final.v(73): all case item expressions in this case statement are onehot
+Warning (10240): Verilog HDL Always Construct warning at Verilog_Final.v(48): inferring latch(es) for variable "screen_col", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "screen_col[0]" at Verilog_Final.v(48)
+Info (10041): Inferred latch for "screen_col[1]" at Verilog_Final.v(48)
+Info (10041): Inferred latch for "screen_col[2]" at Verilog_Final.v(48)
+Info (10041): Inferred latch for "screen_col[3]" at Verilog_Final.v(48)
+Info (10041): Inferred latch for "screen_col[4]" at Verilog_Final.v(48)
+Info (10041): Inferred latch for "screen_col[5]" at Verilog_Final.v(48)
+Info (10041): Inferred latch for "screen_col[6]" at Verilog_Final.v(48)
+Info (10041): Inferred latch for "screen_col[7]" at Verilog_Final.v(48)
+Info (10041): Inferred latch for "screen_col[8]" at Verilog_Final.v(48)
+Info (10041): Inferred latch for "screen_col[9]" at Verilog_Final.v(48)
+Info (10041): Inferred latch for "screen_col[10]" at Verilog_Final.v(48)
+Info (10041): Inferred latch for "screen_col[11]" at Verilog_Final.v(48)
+Info (10041): Inferred latch for "screen_col[12]" at Verilog_Final.v(48)
+Info (10041): Inferred latch for "screen_col[13]" at Verilog_Final.v(48)
+Info (10041): Inferred latch for "screen_col[14]" at Verilog_Final.v(48)
+Info (10041): Inferred latch for "screen_col[15]" at Verilog_Final.v(48)
+Info (10041): Inferred latch for "screen_col[16]" at Verilog_Final.v(48)
+Info (10041): Inferred latch for "screen_col[17]" at Verilog_Final.v(48)
+Info (10041): Inferred latch for "screen_col[18]" at Verilog_Final.v(48)
+Info (10041): Inferred latch for "screen_col[19]" at Verilog_Final.v(48)
+Info (10041): Inferred latch for "screen_col[20]" at Verilog_Final.v(48)
+Info (10041): Inferred latch for "screen_col[21]" at Verilog_Final.v(48)
+Info (10041): Inferred latch for "screen_col[22]" at Verilog_Final.v(48)
+Info (10041): Inferred latch for "screen_col[23]" at Verilog_Final.v(48)
+Info (10041): Inferred latch for "screen_col[24]" at Verilog_Final.v(48)
+Info (10041): Inferred latch for "screen_col[25]" at Verilog_Final.v(48)
+Info (10041): Inferred latch for "screen_col[26]" at Verilog_Final.v(48)
+Info (10041): Inferred latch for "screen_col[27]" at Verilog_Final.v(48)
+Info (10041): Inferred latch for "screen_col[28]" at Verilog_Final.v(48)
+Info (10041): Inferred latch for "screen_col[29]" at Verilog_Final.v(48)
+Info (10041): Inferred latch for "screen_col[30]" at Verilog_Final.v(48)
+Info (10041): Inferred latch for "screen_col[31]" at Verilog_Final.v(48)
+Warning: 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning: Latch screen_map:M0|screen_col[0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal reg_screen_row[0]
+Warning: Latch screen_map:M0|screen_col[1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal reg_screen_row[0]
+Warning: Latch screen_map:M0|screen_col[2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal reg_screen_row[0]
+Warning: Latch screen_map:M0|screen_col[3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal reg_screen_row[0]
+Warning: Latch screen_map:M0|screen_col[4] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal reg_screen_row[0]
+Warning: Latch screen_map:M0|screen_col[5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal reg_screen_row[0]
+Warning: Latch screen_map:M0|screen_col[6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal reg_screen_row[0]
+Warning: Latch screen_map:M0|screen_col[7] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal reg_screen_row[0]
+Warning: Latch screen_map:M0|screen_col[8] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal reg_screen_row[0]
+Warning: Latch screen_map:M0|screen_col[9] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal reg_screen_row[0]
+Warning: Latch screen_map:M0|screen_col[10] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal reg_screen_row[0]
+Warning: Latch screen_map:M0|screen_col[11] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal reg_screen_row[0]
+Warning: Latch screen_map:M0|screen_col[12] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal reg_screen_row[0]
+Warning: Latch screen_map:M0|screen_col[13] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal reg_screen_row[0]
+Warning: Latch screen_map:M0|screen_col[14] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal reg_screen_row[0]
+Warning: Latch screen_map:M0|screen_col[15] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal reg_screen_row[0]
+Warning: Latch screen_map:M0|screen_col[16] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal reg_screen_row[0]
+Warning: Latch screen_map:M0|screen_col[17] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal reg_screen_row[0]
+Warning: Latch screen_map:M0|screen_col[18] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal reg_screen_row[0]
+Warning: Latch screen_map:M0|screen_col[19] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal reg_screen_row[0]
+Warning: Latch screen_map:M0|screen_col[20] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal reg_screen_row[0]
+Warning: Latch screen_map:M0|screen_col[21] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal reg_screen_row[0]
+Warning: Latch screen_map:M0|screen_col[22] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal reg_screen_row[0]
+Warning: Latch screen_map:M0|screen_col[23] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal reg_screen_row[0]
+Warning: Latch screen_map:M0|screen_col[24] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal reg_screen_row[0]
+Warning: Latch screen_map:M0|screen_col[25] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal reg_screen_row[0]
+Warning: Latch screen_map:M0|screen_col[26] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal reg_screen_row[0]
+Warning: Latch screen_map:M0|screen_col[27] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal reg_screen_row[0]
+Warning: Latch screen_map:M0|screen_col[28] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal reg_screen_row[0]
+Warning: Latch screen_map:M0|screen_col[29] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal reg_screen_row[0]
+Warning: Latch screen_map:M0|screen_col[30] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal reg_screen_row[0]
+Warning: Latch screen_map:M0|screen_col[31] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal reg_screen_row[0]
+Warning: Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "function_btn"
+Info: Implemented 403 device resources after synthesis - the final resource count might be different
+    Info: Implemented 4 input pins
+    Info: Implemented 48 output pins
+    Info: Implemented 351 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 104 warnings
+    Info: Peak virtual memory: 238 megabytes
+    Info: Processing ended: Mon Nov 23 17:31:29 2020
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+
