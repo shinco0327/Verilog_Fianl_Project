@@ -107,3 +107,6 @@ set_location_assignment PIN_235 -to screen_row[13]
 set_location_assignment PIN_234 -to screen_row[14]
 set_location_assignment PIN_233 -to screen_row[15]
 set_global_assignment -name MISC_FILE "C:/Users/User/Desktop/Verilog_Final/Verilog_Final.dpf"
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
+set_global_assignment -name VECTOR_WAVEFORM_FILE Verilog_Final.vwf
+set_global_assignment -name SIMULATION_MODE FUNCTIONAL

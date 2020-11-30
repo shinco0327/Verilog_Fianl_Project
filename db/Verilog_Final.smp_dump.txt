@@ -1,0 +1,5 @@
+
+State Machine - |Verilog_Final|screen_state
+Name screen_state.0001 
+screen_state.0000 0 
+screen_state.0001 1 

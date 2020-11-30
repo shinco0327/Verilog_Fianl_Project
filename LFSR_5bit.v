@@ -1,8 +1,7 @@
-module Random_test(clk, rst, prn, ys);
+module LFSR_5bit(clk, prn);
     input clk;
-    input rst;
+    reg rst;
     output [4:0] prn;
-    output ys;
 
     reg [9:0] D123456789 = 6'd1; //NEVER 000000
 
@@ -11,7 +10,7 @@ module Random_test(clk, rst, prn, ys);
     assign prn[2] = D123456789[5];
     assign prn[3] = D123456789[3];
     assign prn[4] = D123456789[1];
-    assign ys = (D123456789[1] | D123456789[9]);
+    
 
     always @ (posedge rst or posedge clk)
     if (rst)
@@ -31,4 +30,9 @@ module Random_test(clk, rst, prn, ys);
             D123456789[9] <= D123456789[8];
             D123456789[0] <= D123456789[9] ^ D123456789[8];
         end
+
+    initial begin 
+        rst = 1;
+        #5 rst = 0;
+    end    
 endmodule

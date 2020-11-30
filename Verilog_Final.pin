@@ -69,33 +69,33 @@ CHIP  "Verilog_Final"  ASSIGNED TO AN: EP1C6Q240C8
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
 RESERVED_INPUT               : 1         :        :                   :         : 1         :                
-screen_row[9]                : 2         : output : 3.3-V LVCMOS      :         : 1         : Y              
+RESERVED_INPUT               : 2         :        :                   :         : 1         :                
 RESERVED_INPUT               : 3         :        :                   :         : 1         :                
 RESERVED_INPUT               : 4         :        :                   :         : 1         :                
 RESERVED_INPUT               : 5         :        :                   :         : 1         :                
 RESERVED_INPUT               : 6         :        :                   :         : 1         :                
-screen_col[31]               : 7         : output : 3.3-V LVCMOS      :         : 1         : Y              
-screen_col[30]               : 8         : output : 3.3-V LVCMOS      :         : 1         : Y              
+RESERVED_INPUT               : 7         :        :                   :         : 1         :                
+RESERVED_INPUT               : 8         :        :                   :         : 1         :                
 VCCIO1                       : 9         : power  :                   : 3.3V    : 1         :                
 GND                          : 10        : gnd    :                   :         :           :                
-screen_col[29]               : 11        : output : 3.3-V LVCMOS      :         : 1         : Y              
-screen_col[28]               : 12        : output : 3.3-V LVCMOS      :         : 1         : Y              
-screen_col[27]               : 13        : output : 3.3-V LVCMOS      :         : 1         : Y              
-screen_col[26]               : 14        : output : 3.3-V LVCMOS      :         : 1         : Y              
-screen_col[25]               : 15        : output : 3.3-V LVCMOS      :         : 1         : Y              
-screen_col[24]               : 16        : output : 3.3-V LVCMOS      :         : 1         : Y              
-screen_col[23]               : 17        : output : 3.3-V LVCMOS      :         : 1         : Y              
-screen_col[22]               : 18        : output : 3.3-V LVCMOS      :         : 1         : Y              
-screen_col[21]               : 19        : output : 3.3-V LVCMOS      :         : 1         : Y              
-screen_col[20]               : 20        : output : 3.3-V LVCMOS      :         : 1         : Y              
-screen_col[19]               : 21        : output : 3.3-V LVCMOS      :         : 1         : Y              
+RESERVED_INPUT               : 11        :        :                   :         : 1         :                
+RESERVED_INPUT               : 12        :        :                   :         : 1         :                
+RESERVED_INPUT               : 13        :        :                   :         : 1         :                
+RESERVED_INPUT               : 14        :        :                   :         : 1         :                
+RESERVED_INPUT               : 15        :        :                   :         : 1         :                
+RESERVED_INPUT               : 16        :        :                   :         : 1         :                
+RESERVED_INPUT               : 17        :        :                   :         : 1         :                
+RESERVED_INPUT               : 18        :        :                   :         : 1         :                
+RESERVED_INPUT               : 19        :        :                   :         : 1         :                
+RESERVED_INPUT               : 20        :        :                   :         : 1         :                
+RESERVED_INPUT               : 21        :        :                   :         : 1         :                
 VCCIO1                       : 22        : power  :                   : 3.3V    : 1         :                
-screen_col[18]               : 23        : output : 3.3-V LVCMOS      :         : 1         : Y              
-~nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 24        : input  : 3.3-V LVCMOS      :         : 1         : N              
+RESERVED_INPUT               : 23        :        :                   :         : 1         :                
+RESERVED_INPUT               : 24        :        :                   :         : 1         :                
 DATA0                        : 25        : input  :                   :         : 1         :                
 nCONFIG                      : 26        :        :                   :         : 1         :                
 VCCA_PLL1                    : 27        : power  :                   : 1.5V    :           :                
-clk                          : 28        : input  : 3.3-V LVCMOS      :         : 1         : Y              
+GND+                         : 28        :        :                   :         : 1         :                
 GND+                         : 29        :        :                   :         : 1         :                
 GNDA_PLL1                    : 30        : gnd    :                   :         :           :                
 GNDG_PLL1                    : 31        : gnd    :                   :         :           :                
@@ -104,44 +104,44 @@ nCE                          : 33        :        :                   :         
 MSEL0                        : 34        :        :                   :         : 1         :                
 MSEL1                        : 35        :        :                   :         : 1         :                
 DCLK                         : 36        : bidir  :                   :         : 1         :                
-~ASDO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 37        : input  : 3.3-V LVCMOS      :         : 1         : N              
+RESERVED_INPUT               : 37        :        :                   :         : 1         :                
 RESERVED_INPUT               : 38        :        :                   :         : 1         :                
 RESERVED_INPUT               : 39        :        :                   :         : 1         :                
 GND                          : 40        : gnd    :                   :         :           :                
-screen_col[17]               : 41        : output : 3.3-V LVCMOS      :         : 1         : Y              
-screen_col[16]               : 42        : output : 3.3-V LVCMOS      :         : 1         : Y              
-screen_col[15]               : 43        : output : 3.3-V LVCMOS      :         : 1         : Y              
-screen_col[14]               : 44        : output : 3.3-V LVCMOS      :         : 1         : Y              
-screen_col[13]               : 45        : output : 3.3-V LVCMOS      :         : 1         : Y              
-screen_col[12]               : 46        : output : 3.3-V LVCMOS      :         : 1         : Y              
-screen_col[11]               : 47        : output : 3.3-V LVCMOS      :         : 1         : Y              
-screen_col[10]               : 48        : output : 3.3-V LVCMOS      :         : 1         : Y              
-screen_col[9]                : 49        : output : 3.3-V LVCMOS      :         : 1         : Y              
-screen_col[8]                : 50        : output : 3.3-V LVCMOS      :         : 1         : Y              
+RESERVED_INPUT               : 41        :        :                   :         : 1         :                
+RESERVED_INPUT               : 42        :        :                   :         : 1         :                
+RESERVED_INPUT               : 43        :        :                   :         : 1         :                
+RESERVED_INPUT               : 44        :        :                   :         : 1         :                
+RESERVED_INPUT               : 45        :        :                   :         : 1         :                
+RESERVED_INPUT               : 46        :        :                   :         : 1         :                
+RESERVED_INPUT               : 47        :        :                   :         : 1         :                
+RESERVED_INPUT               : 48        :        :                   :         : 1         :                
+RESERVED_INPUT               : 49        :        :                   :         : 1         :                
+RESERVED_INPUT               : 50        :        :                   :         : 1         :                
 VCCIO1                       : 51        : power  :                   : 3.3V    : 1         :                
 GND                          : 52        : gnd    :                   :         :           :                
-screen_col[7]                : 53        : output : 3.3-V LVCMOS      :         : 1         : Y              
-screen_col[6]                : 54        : output : 3.3-V LVCMOS      :         : 1         : Y              
-screen_col[5]                : 55        : output : 3.3-V LVCMOS      :         : 1         : Y              
-screen_col[4]                : 56        : output : 3.3-V LVCMOS      :         : 1         : Y              
-screen_col[3]                : 57        : output : 3.3-V LVCMOS      :         : 1         : Y              
-screen_col[2]                : 58        : output : 3.3-V LVCMOS      :         : 1         : Y              
-screen_col[1]                : 59        : output : 3.3-V LVCMOS      :         : 1         : Y              
+RESERVED_INPUT               : 53        :        :                   :         : 1         :                
+RESERVED_INPUT               : 54        :        :                   :         : 1         :                
+RESERVED_INPUT               : 55        :        :                   :         : 1         :                
+RESERVED_INPUT               : 56        :        :                   :         : 1         :                
+RESERVED_INPUT               : 57        :        :                   :         : 1         :                
+RESERVED_INPUT               : 58        :        :                   :         : 1         :                
+RESERVED_INPUT               : 59        :        :                   :         : 1         :                
 RESERVED_INPUT               : 60        :        :                   :         : 1         :                
-screen_row[0]                : 61        : output : 3.3-V LVCMOS      :         : 4         : Y              
-screen_row[1]                : 62        : output : 3.3-V LVCMOS      :         : 4         : Y              
-screen_row[2]                : 63        : output : 3.3-V LVCMOS      :         : 4         : Y              
-screen_row[3]                : 64        : output : 3.3-V LVCMOS      :         : 4         : Y              
-screen_row[4]                : 65        : output : 3.3-V LVCMOS      :         : 4         : Y              
-screen_row[5]                : 66        : output : 3.3-V LVCMOS      :         : 4         : Y              
-screen_row[6]                : 67        : output : 3.3-V LVCMOS      :         : 4         : Y              
-screen_row[7]                : 68        : output : 3.3-V LVCMOS      :         : 4         : Y              
+RESERVED_INPUT               : 61        :        :                   :         : 4         :                
+RESERVED_INPUT               : 62        :        :                   :         : 4         :                
+RESERVED_INPUT               : 63        :        :                   :         : 4         :                
+RESERVED_INPUT               : 64        :        :                   :         : 4         :                
+RESERVED_INPUT               : 65        :        :                   :         : 4         :                
+RESERVED_INPUT               : 66        :        :                   :         : 4         :                
+RESERVED_INPUT               : 67        :        :                   :         : 4         :                
+RESERVED_INPUT               : 68        :        :                   :         : 4         :                
 GND                          : 69        : gnd    :                   :         :           :                
 VCCIO4                       : 70        : power  :                   : 3.3V    : 4         :                
 GND                          : 71        : gnd    :                   :         :           :                
 VCCINT                       : 72        : power  :                   : 1.5V    :           :                
-screen_row[8]                : 73        : output : 3.3-V LVCMOS      :         : 4         : Y              
-screen_col[0]                : 74        : output : 3.3-V LVCMOS      :         : 4         : Y              
+RESERVED_INPUT               : 73        :        :                   :         : 4         :                
+RESERVED_INPUT               : 74        :        :                   :         : 4         :                
 RESERVED_INPUT               : 75        :        :                   :         : 4         :                
 RESERVED_INPUT               : 76        :        :                   :         : 4         :                
 RESERVED_INPUT               : 77        :        :                   :         : 4         :                
@@ -291,20 +291,20 @@ RESERVED_INPUT               : 220       :        :                   :         
 RESERVED_INPUT               : 221       :        :                   :         : 2         :                
 RESERVED_INPUT               : 222       :        :                   :         : 2         :                
 RESERVED_INPUT               : 223       :        :                   :         : 2         :                
-right_btn                    : 224       : input  : 3.3-V LVCMOS      :         : 2         : Y              
-left_btn                     : 225       : input  : 3.3-V LVCMOS      :         : 2         : Y              
-function_btn                 : 226       : input  : 3.3-V LVCMOS      :         : 2         : Y              
+RESERVED_INPUT               : 224       :        :                   :         : 2         :                
+RESERVED_INPUT               : 225       :        :                   :         : 2         :                
+RESERVED_INPUT               : 226       :        :                   :         : 2         :                
 RESERVED_INPUT               : 227       :        :                   :         : 2         :                
 RESERVED_INPUT               : 228       :        :                   :         : 2         :                
 VCCINT                       : 229       : power  :                   : 1.5V    :           :                
 GND                          : 230       : gnd    :                   :         :           :                
 VCCIO2                       : 231       : power  :                   : 3.3V    : 2         :                
 GND                          : 232       : gnd    :                   :         :           :                
-screen_row[15]               : 233       : output : 3.3-V LVCMOS      :         : 2         : Y              
-screen_row[14]               : 234       : output : 3.3-V LVCMOS      :         : 2         : Y              
-screen_row[13]               : 235       : output : 3.3-V LVCMOS      :         : 2         : Y              
-screen_row[12]               : 236       : output : 3.3-V LVCMOS      :         : 2         : Y              
-screen_row[11]               : 237       : output : 3.3-V LVCMOS      :         : 2         : Y              
-screen_row[10]               : 238       : output : 3.3-V LVCMOS      :         : 2         : Y              
+RESERVED_INPUT               : 233       :        :                   :         : 2         :                
+RESERVED_INPUT               : 234       :        :                   :         : 2         :                
+RESERVED_INPUT               : 235       :        :                   :         : 2         :                
+RESERVED_INPUT               : 236       :        :                   :         : 2         :                
+RESERVED_INPUT               : 237       :        :                   :         : 2         :                
+RESERVED_INPUT               : 238       :        :                   :         : 2         :                
 RESERVED_INPUT               : 239       :        :                   :         : 2         :                
 RESERVED_INPUT               : 240       :        :                   :         : 2         :                
