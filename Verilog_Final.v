@@ -1,23 +1,20 @@
-module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, clk, out, state);
+module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, clk);
 	input left_btn, right_btn, function_btn, clk;
 	output reg[15:0]screen_row;
 	output reg[31:0]screen_col;
-	reg [15:0]reg_screen_row;
+	//reg [15:0]reg_screen_row;
 	reg [3:0]screen_state;
 	reg [9:0] timer;
 	reg [4:0] human_col;
 	wire [4:0]prn;
 	wire easy_t, normal_t, extreme_t;
-	reg [10:0] knife[19:0]; //[row_x, row_4, row_3, row_2, row_1, row_0, col_4, col_3, col_2, col_1, col_0]
-	output [10:0]out;
-	output [3:0] state;
-	parameter knife_size = 20;
+	reg [10:0] knife[9:0]; //[row_x, row_4, row_3, row_2, row_1, row_0, col_4, col_3, col_2, col_1, col_0]
+	parameter knife_size = 8;
 	
-	assign out = knife[2];
-	assign state = screen_state;
+
 	//screen_map M0(screen_state, screen_col, reg_screen_row,  human_col);
 	LFSR_5bit M1(clk, prn);
-	drop_random M2(clk, easy_t, normal_t, extreme_t);
+	//drop_random M2(clk, easy_t, normal_t, extreme_t);
 
 
 	always@(posedge clk) begin
@@ -25,7 +22,7 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
 		//##################################################################################
 			if(screen_row == 16'b1000_0000_0000_0000) screen_row = 16'b0000_0000_0000_0001;
 			else screen_row = {screen_row[14:0], 1'b0};
-			reg_screen_row = screen_row;
+			//reg_screen_row = screen_row;
 		//##################################################################################
 
 		case(screen_state)
@@ -95,6 +92,7 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
 				endcase
 			end
 			default: begin
+				screen_col = 0;
 				case(screen_row)
 					/*
 					16'b0000_0000_0000_0001: screen_col = 32'b0000_0000_0000_0000_0000_0000_0000_0000;
@@ -115,153 +113,93 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
 					16'b1000_0000_0000_0000: screen_col = 32'hFFFF_FFFF;
 					*/
 					16'b0000_0000_0000_0001: begin
-						for(i=0; i<32; i=i+1) screen_col[i] = 0;
-						for(i=0; i< knife_size; i=i+1)begin
-							if(knife[i] != 11'b111_1111_1111)
-								if(knife[i][4:0] == 4'hf) screen_col[knife[i][9:5]] = 1;
-								if(knife[i][4:0] == 4'b1110) screen_col[knife[i][9:5]] = 1;
-								if(knife[i][4:0] == 4'b1101) screen_col[knife[i][9:5]] = 1;
-						end
+						knife_movement(4'b1111);
 					end	
 					16'b0000_0000_0000_0010: begin
-						for(i=0; i<32; i=i+1) screen_col[i] = 0;
-						for(i=0; i< knife_size; i=i+1)begin
-							if(knife[i] != 11'b111_1111_1111)
-								if(knife[i][4:0] == 4'b1110) screen_col[knife[i][9:5]] = 1;
-								if(knife[i][4:0] == 4'b1101) screen_col[knife[i][9:5]] = 1;
-								if(knife[i][4:0] == 4'b1100) screen_col[knife[i][9:5]] = 1;
-						end
+						knife_movement(4'b1110);
 					end	
 					16'b0000_0000_0000_0100: begin
-						for(i=0; i<32; i=i+1) screen_col[i] = 0;
-						for(i=0; i< knife_size; i=i+1)begin
-							if(knife[i] != 11'b111_1111_1111)
-								if(knife[i][4:0] == 4'b1101) screen_col[knife[i][9:5]] = 1;
-								if(knife[i][4:0] == 4'b1100) screen_col[knife[i][9:5]] = 1;
-								if(knife[i][4:0] == 4'b1011) screen_col[knife[i][9:5]] = 1;
-						end
+						knife_movement(4'b1101);
 					end	
 					16'b0000_0000_0000_1000: begin
-						for(i=0; i<32; i=i+1) screen_col[i] = 0;
-						for(i=0; i< knife_size; i=i+1)begin
-							if(knife[i] != 11'b111_1111_1111)
-								if(knife[i][4:0] == 4'b1100) screen_col[knife[i][9:5]] = 1;
-								if(knife[i][4:0] == 4'b1011) screen_col[knife[i][9:5]] = 1;
-								if(knife[i][4:0] == 4'b1010) screen_col[knife[i][9:5]] = 1;
-						end
+						knife_movement(4'b1100);
 					end	
 					16'b0000_0000_0001_0000: begin
-						for(i=0; i<32; i=i+1) screen_col[i] = 0;
-						for(i=0; i< knife_size; i=i+1)begin
-							if(knife[i] != 11'b111_1111_1111)
-								if(knife[i][4:0] == 4'b1011) screen_col[knife[i][9:5]] = 1;
-								if(knife[i][4:0] == 4'b1010) screen_col[knife[i][9:5]] = 1;
-								if(knife[i][4:0] == 4'b1001) screen_col[knife[i][9:5]] = 1;
-						end
+						knife_movement(4'b1011);
 					end
 					16'b0000_0000_0010_0000: begin
-						for(i=0; i<32; i=i+1) screen_col[i] = 0;
-						for(i=0; i< knife_size; i=i+1)begin
-							if(knife[i] != 11'b111_1111_1111)
-								if(knife[i][4:0] == 4'b1010) screen_col[knife[i][9:5]] = 1;
-								if(knife[i][4:0] == 4'b1001) screen_col[knife[i][9:5]] = 1;
-								if(knife[i][4:0] == 4'b1000) screen_col[knife[i][9:5]] = 1;
-						end
+						knife_movement(4'b1010);
 					end
 					16'b0000_0000_0100_0000: begin
-						for(i=0; i<32; i=i+1) screen_col[i] = 0;
-						for(i=0; i< knife_size; i=i+1)begin
-							if(knife[i] != 11'b111_1111_1111)
-								if(knife[i][4:0] == 4'b1001) screen_col[knife[i][9:5]] = 1;
-								if(knife[i][4:0] == 4'b1000) screen_col[knife[i][9:5]] = 1;
-								if(knife[i][4:0] == 4'b0111) screen_col[knife[i][9:5]] = 1;
-						end
+						knife_movement(4'b1001);
 					end
 					16'b0000_0000_1000_0000: begin
-						for(i=0; i<32; i=i+1) screen_col[i] = 0;
-						for(i=0; i< knife_size; i=i+1)begin
-							if(knife[i] != 11'b111_1111_1111)
-								if(knife[i][4:0] == 4'b1000) screen_col[knife[i][9:5]] = 1;
-								if(knife[i][4:0] == 4'b0111) screen_col[knife[i][9:5]] = 1;
-								if(knife[i][4:0] == 4'b0110) screen_col[knife[i][9:5]] = 1;
-						end
+						knife_movement(4'b1000);
 					end
 					16'b0000_0001_0000_0000: begin
-						for(i=0; i<32; i=i+1) screen_col[i] = 0;
-						for(i=0; i< knife_size; i=i+1)begin
-							if(knife[i] != 11'b111_1111_1111)
-								if(knife[i][4:0] == 4'b0111) screen_col[knife[i][9:5]] = 1;
-								if(knife[i][4:0] == 4'b0110) screen_col[knife[i][9:5]] = 1;
-								if(knife[i][4:0] == 4'b0101) screen_col[knife[i][9:5]] = 1;
-						end
+						knife_movement(4'b0111);
 					end
 					16'b0000_0010_0000_0000: begin
-						for(i=0; i<32; i=i+1) screen_col[i] = 0;
-						for(i=0; i< knife_size; i=i+1)begin
-							if(knife[i] != 11'b111_1111_1111)
-								if(knife[i][4:0] == 4'b0110) screen_col[knife[i][9:5]] = 1;
-								if(knife[i][4:0] == 4'b0101) screen_col[knife[i][9:5]] = 1;
-								if(knife[i][4:0] == 4'b0100) screen_col[knife[i][9:5]] = 1;
-						end
+						knife_movement(4'b0110);
 					end
 					16'b0000_0100_0000_0000: begin
+						knife_movement(4'b0101);
 						for(i=0; i<32; i=i+1) begin
 							if(human_col == i) screen_col[i] = 0;
 							else if(human_col+1 == i) screen_col[i] = 1;
 							else if(human_col+2 == i) screen_col[i] = 1;
 							else if(human_col+3 == i) screen_col[i] = 1;
 							else if(human_col+4 == i) screen_col[i] = 0;
-							else screen_col[i] = 0;
 						end	
 					end
 					16'b0000_1000_0000_0000: begin
+						knife_movement(4'b0100);
 						for(i=0; i<32; i=i+1) begin
 							if(human_col == i) screen_col[i] = 0;
 							else if(human_col+1 == i) screen_col[i] = 1;
 							else if(human_col+2 == i) screen_col[i] = 1;
 							else if(human_col+3 == i) screen_col[i] = 1;
 							else if(human_col+4 == i) screen_col[i] = 0;
-							else screen_col[i] = 0;
 						end	
 					end
 					16'b0001_0000_0000_0000: begin
+						knife_movement(4'b0011);
 						for(i=0; i<32; i=i+1) begin
 							if(human_col == i) screen_col[i] = 0;
 							else if(human_col+1 == i) screen_col[i] = 1;
 							else if(human_col+2 == i) screen_col[i] = 1;
 							else if(human_col+3 == i) screen_col[i] = 1;
 							else if(human_col+4 == i) screen_col[i] = 0;
-							else screen_col[i] = 0;
 						end	
 					end
 					16'b0010_0000_0000_0000: begin
+						knife_movement(4'b0010);
 						for(i=0; i<32; i=i+1) begin
 							if(human_col == i) screen_col[i] = 1;
 							else if(human_col+1 == i) screen_col[i] = 0;
 							else if(human_col+2 == i) screen_col[i] = 1;
 							else if(human_col+3 == i) screen_col[i] = 0;
 							else if(human_col+4 == i) screen_col[i] = 1;
-							else screen_col[i] = 0;
 						end	
 					end
 					16'b0100_0000_0000_0000: begin
+						knife_movement(4'b0001);
 						for(i=0; i<32; i=i+1) begin
 							if(human_col == i) screen_col[i] = 0;
 							else if(human_col+1 == i) screen_col[i] = 1;
 							else if(human_col+2 == i) screen_col[i] = 1;
 							else if(human_col+3 == i) screen_col[i] = 1;
 							else if(human_col+4 == i) screen_col[i] = 0;
-							else screen_col[i] = 0;
 						end	
 					end
 					16'b1000_0000_0000_0000: begin
+						knife_movement(4'b0000);
 						for(i=0; i<32; i=i+1) begin
 							if(human_col == i) screen_col[i] = 1;
 							else if(human_col+1 == i) screen_col[i] = 0;
 							else if(human_col+2 == i) screen_col[i] = 0;
 							else if(human_col+3 == i) screen_col[i] = 0;
 							else if(human_col+4 == i) screen_col[i] = 1;
-							else screen_col[i] = 0;
 						end	
 					end
 				endcase
@@ -278,6 +216,20 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
 	end
 	//##################################################################################
 	//##################################################################################
+	task knife_movement;
+		input [3:0]position;
+		integer i;
+		for(i=0; i< knife_size; i=i+1)begin
+			if(knife[i] != 11'b111_1111_1111)begin
+				if((position + 2) < 4'hf) if(knife[i][4:0] == position+2) screen_col[knife[i][9:5]] = 1;
+				if((position + 1) < 4'hf) if(knife[i][4:0] == position+1) screen_col[knife[i][9:5]] = 1;
+				if(knife[i][4:0] == position) screen_col[knife[i][9:5]] = 1;
+			end
+		end
+	endtask
+	//##################################################################################
+	//##################################################################################
+
 	task create_knife;
 		if(knife[0] == 11'b111_1111_1111) begin
 			knife[0][10:5] = {1'b0, prn[4:0]};
@@ -310,7 +262,7 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
 		else if(knife[7] == 11'b111_1111_1111) begin
 			knife[7][10:5] = {1'b0, prn[4:0]};
 			knife[7][4:0] = {4'hf};
-		end	
+		end	/*
 		else if(knife[8] == 11'b111_1111_1111) begin
 			knife[8][10:5] = {1'b0, prn[4:0]};
 			knife[8][4:0] = {4'hf};
@@ -358,16 +310,7 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
 		else if(knife[19] == 11'b111_1111_1111) begin
 			knife[19][10:5] = {1'b0, prn[4:0]};
 			knife[19][4:0] = {4'hf};
-		end	
+		end	*/
 	endtask
 endmodule
 
-module screen_map(screen_state, screen_col, screen_row, human_col);
-	input screen_state;
-	input [15:0]screen_row;
-	output reg[31:0]screen_col;
-	input [4:0] human_col;
-
-	 
-
-endmodule

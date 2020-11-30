@@ -21,8 +21,8 @@ VHSM_ON
 # entity
 drop_random
 # storage
-db|Verilog_Final.(3).cnf
-db|Verilog_Final.(3).cnf
+db|Verilog_Final.(2).cnf
+db|Verilog_Final.(2).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -48,9 +48,6 @@ VERILOG_CONSTANT_LOOP_LIMIT
 VERILOG_NON_CONSTANT_LOOP_LIMIT
 250
 }
-# hierarchies {
-drop_random:M2
-}
 # macro_sequence
 
 # end
@@ -66,7 +63,7 @@ ON
 # case_sensitive
 # source_file
 LFSR_5bit.v
-b9770f315f64586881ca5c8974685
+9f862ed9cf8ad372ba5bcf961e18d0e1
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -102,7 +99,7 @@ ON
 # case_sensitive
 # source_file
 Verilog_Final.v
-dbcb6d4bde93f13342ff6472bd056
+65acdf5679b6656735c61a8337789b9
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -122,7 +119,7 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 }
 # user_parameter {
 knife_size
-20
+8
 PARAMETER_SIGNED_DEC
 DEF
 }

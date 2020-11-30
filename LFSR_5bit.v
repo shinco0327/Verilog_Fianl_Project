@@ -1,7 +1,8 @@
-module LFSR_5bit(clk, prn);
+module LFSR_5bit(clk, prn, easy_t, normal_t, extreme_t);
     input clk;
     reg rst;
     output [4:0] prn;
+    output easy_t, normal_t, extreme_t;
 
     reg [9:0] D123456789 = 6'd1; //NEVER 000000
 
@@ -10,6 +11,9 @@ module LFSR_5bit(clk, prn);
     assign prn[2] = D123456789[5];
     assign prn[3] = D123456789[3];
     assign prn[4] = D123456789[1];
+    assign easy_t = prn[2] & prn[0] & prn[1]; 
+    assign normal_t = prn[1] | prn[2];
+    assign extreme_t = prn[1] | prn[2] | prn[4];
     
 
     always @ (posedge rst or posedge clk)

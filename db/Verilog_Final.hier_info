@@ -59,21 +59,7 @@ screen_col[28] <= screen_col[28]$latch.DB_MAX_OUTPUT_PORT_TYPE
 screen_col[29] <= screen_col[29]$latch.DB_MAX_OUTPUT_PORT_TYPE
 screen_col[30] <= screen_col[30]$latch.DB_MAX_OUTPUT_PORT_TYPE
 screen_col[31] <= screen_col[31]$latch.DB_MAX_OUTPUT_PORT_TYPE
-clk => clk~0.IN2
-out[0] <= knife[2][0].DB_MAX_OUTPUT_PORT_TYPE
-out[1] <= knife[2][1].DB_MAX_OUTPUT_PORT_TYPE
-out[2] <= knife[2][2].DB_MAX_OUTPUT_PORT_TYPE
-out[3] <= knife[2][3].DB_MAX_OUTPUT_PORT_TYPE
-out[4] <= knife[2][4].DB_MAX_OUTPUT_PORT_TYPE
-out[5] <= knife[2][5].DB_MAX_OUTPUT_PORT_TYPE
-out[6] <= knife[2][6].DB_MAX_OUTPUT_PORT_TYPE
-out[7] <= knife[2][7].DB_MAX_OUTPUT_PORT_TYPE
-out[8] <= knife[2][8].DB_MAX_OUTPUT_PORT_TYPE
-out[9] <= knife[2][9].DB_MAX_OUTPUT_PORT_TYPE
-out[10] <= knife[2][10].DB_MAX_OUTPUT_PORT_TYPE
-state[1] <= <GND>
-state[2] <= <GND>
-state[3] <= <GND>
+clk => clk~0.IN1
 
 
 |Verilog_Final|LFSR_5bit:M1
@@ -92,19 +78,6 @@ prn[1] <= D123456789[7].DB_MAX_OUTPUT_PORT_TYPE
 prn[2] <= D123456789[5].DB_MAX_OUTPUT_PORT_TYPE
 prn[3] <= D123456789[3].DB_MAX_OUTPUT_PORT_TYPE
 prn[4] <= D123456789[1].DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Verilog_Final|drop_random:M2
-clk => D123456789[9].CLK
-clk => D123456789[8].CLK
-clk => D123456789[7].CLK
-clk => D123456789[6].CLK
-clk => D123456789[5].CLK
-clk => D123456789[4].CLK
-clk => D123456789[3].CLK
-clk => D123456789[2].CLK
-clk => D123456789[1].CLK
-clk => D123456789[0].CLK
 easy_t <= easy_t~1.DB_MAX_OUTPUT_PORT_TYPE
 normal_t <= normal_t~0.DB_MAX_OUTPUT_PORT_TYPE
 extreme_t <= extreme_t~0.DB_MAX_OUTPUT_PORT_TYPE
