@@ -1,16 +1,30 @@
 |Verilog_Final
-left_btn => human_col~19.OUTPUTSELECT
-left_btn => human_col~18.OUTPUTSELECT
-left_btn => human_col~17.OUTPUTSELECT
-left_btn => human_col~16.OUTPUTSELECT
-left_btn => human_col~15.OUTPUTSELECT
-right_btn => human_col~9.OUTPUTSELECT
-right_btn => human_col~8.OUTPUTSELECT
-right_btn => human_col~7.OUTPUTSELECT
-right_btn => human_col~6.OUTPUTSELECT
-right_btn => human_col~5.OUTPUTSELECT
-function_btn => screen_state~1.OUTPUTSELECT
-function_btn => screen_state~0.OUTPUTSELECT
+left_btn => human_col~14.OUTPUTSELECT
+left_btn => human_col~13.OUTPUTSELECT
+left_btn => human_col~12.OUTPUTSELECT
+left_btn => human_col~11.OUTPUTSELECT
+left_btn => human_col~10.OUTPUTSELECT
+right_btn => human_col~19.OUTPUTSELECT
+right_btn => human_col~18.OUTPUTSELECT
+right_btn => human_col~17.OUTPUTSELECT
+right_btn => human_col~16.OUTPUTSELECT
+right_btn => human_col~15.OUTPUTSELECT
+function_btn => Selector225.IN2
+function_btn => screen_state~296.OUTPUTSELECT
+function_btn => screen_state~295.OUTPUTSELECT
+function_btn => screen_state~294.OUTPUTSELECT
+function_btn => za_warudo~0.OUTPUTSELECT
+function_btn => timer~9.OUTPUTSELECT
+function_btn => timer~8.OUTPUTSELECT
+function_btn => timer~7.OUTPUTSELECT
+function_btn => timer~6.OUTPUTSELECT
+function_btn => timer~5.OUTPUTSELECT
+function_btn => timer~4.OUTPUTSELECT
+function_btn => timer~3.OUTPUTSELECT
+function_btn => timer~2.OUTPUTSELECT
+function_btn => timer~1.OUTPUTSELECT
+function_btn => timer~0.OUTPUTSELECT
+function_btn => Selector224.IN0
 screen_row[0] <= screen_row[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 screen_row[1] <= screen_row[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 screen_row[2] <= screen_row[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -59,7 +73,9 @@ screen_col[28] <= screen_col[28]$latch.DB_MAX_OUTPUT_PORT_TYPE
 screen_col[29] <= screen_col[29]$latch.DB_MAX_OUTPUT_PORT_TYPE
 screen_col[30] <= screen_col[30]$latch.DB_MAX_OUTPUT_PORT_TYPE
 screen_col[31] <= screen_col[31]$latch.DB_MAX_OUTPUT_PORT_TYPE
-clk => clk~0.IN1
+clk => clk~0.IN2
+out_state[2] <= <GND>
+out_state[3] <= <GND>
 
 
 |Verilog_Final|LFSR_5bit:M1
@@ -78,6 +94,19 @@ prn[1] <= D123456789[7].DB_MAX_OUTPUT_PORT_TYPE
 prn[2] <= D123456789[5].DB_MAX_OUTPUT_PORT_TYPE
 prn[3] <= D123456789[3].DB_MAX_OUTPUT_PORT_TYPE
 prn[4] <= D123456789[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Verilog_Final|drop_random:M2
+clk => D123456789[9].CLK
+clk => D123456789[8].CLK
+clk => D123456789[7].CLK
+clk => D123456789[6].CLK
+clk => D123456789[5].CLK
+clk => D123456789[4].CLK
+clk => D123456789[3].CLK
+clk => D123456789[2].CLK
+clk => D123456789[1].CLK
+clk => D123456789[0].CLK
 easy_t <= easy_t~1.DB_MAX_OUTPUT_PORT_TYPE
 normal_t <= normal_t~0.DB_MAX_OUTPUT_PORT_TYPE
 extreme_t <= extreme_t~0.DB_MAX_OUTPUT_PORT_TYPE

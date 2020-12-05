@@ -19,6 +19,42 @@ VHSM_ON
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
 # entity
+LFSR_5bit
+# storage
+db|Verilog_Final.(1).cnf
+db|Verilog_Final.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+LFSR_5bit.v
+54aee19cfd1e50e27d26974a2553a1b9
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+LFSR_5bit:M1
+}
+# macro_sequence
+
+# end
+# entity
 drop_random
 # storage
 db|Verilog_Final.(2).cnf
@@ -48,41 +84,8 @@ VERILOG_CONSTANT_LOOP_LIMIT
 VERILOG_NON_CONSTANT_LOOP_LIMIT
 250
 }
-# macro_sequence
-
-# end
-# entity
-LFSR_5bit
-# storage
-db|Verilog_Final.(1).cnf
-db|Verilog_Final.(1).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-LFSR_5bit.v
-9f862ed9cf8ad372ba5bcf961e18d0e1
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
 # hierarchies {
-LFSR_5bit:M1
+drop_random:M2
 }
 # macro_sequence
 
@@ -99,7 +102,7 @@ ON
 # case_sensitive
 # source_file
 Verilog_Final.v
-65acdf5679b6656735c61a8337789b9
+2fa2637495991a92383b0653c535b83
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -119,7 +122,7 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 }
 # user_parameter {
 knife_size
-8
+16
 PARAMETER_SIGNED_DEC
 DEF
 }
