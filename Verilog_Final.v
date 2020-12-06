@@ -10,7 +10,7 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
 	wire easy_t, normal_t, extreme_t;
 	reg [10:0] knife[15:0]; //[row_x, row_4, row_3, row_2, row_1, row_0, col_4, col_3, col_2, col_1, col_0]
 	reg za_warudo;
-	reg [15:0] za_warudo_t;
+	reg [15:0] za_warudo_t, game_t;
 	output [3:0]out_state;
 	parameter knife_size = 16;
 	
@@ -33,7 +33,11 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
 			0: begin
 				integer i;
 				for(i = 0; i < knife_size; i=i+1) knife[i] = 11'b111_1111_1111;
-				if(function_btn) begin screen_state <= 1; timer = 0; end
+				if(function_btn) begin 
+					screen_state <= 1; 
+					timer = 0; 
+					game_t = 16'hffff;
+					end
 				else screen_state <= 0;
 			end
 			//Main Game Mode
@@ -86,8 +90,11 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
 						end
 					end
 					else begin 
-						za_warudo_t = za_warudo_t - 1;
-						if(za_warudo_t == 0) za_warudo = 0; // toki wo ugokidasu
+						if(za_warudo)
+							za_warudo_t = za_warudo_t - 1;
+							if(za_warudo_t == 0) za_warudo = 0; // toki wo ugokidasu
+						game_t = game_t - 1;
+						if(game_t == 0) screen_state <= 3;
 					end
 
 				end
@@ -99,7 +106,7 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
 				end
 
 			end
-			2: begin
+			2, 3: begin
 				if(function_btn) screen_state <= 0;
 			end
 			default: begin
@@ -269,7 +276,29 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
 					16'b0001_0000_0000_0000: screen_col = 32'b0111_1111_1100_0000_0011_1111_1110_0000;
 					16'b0010_0000_0000_0000: screen_col = 32'b0000_0000_0100_0000_0010_0000_0000_0000;
 					16'b0100_0000_0000_0000: screen_col = 32'b0111_1111_1100_0000_0011_1111_1110_0000;
-					16'b1000_0000_0000_0000: screen_col = 32'hFFFF_FFFF;
+					16'b1000_0000_0000_0000: screen_col = 32'b0000_0000_0000_0000_0000_0000_0000_0000;
+				endcase
+			end
+			3: begin
+				screen_col = 0;
+				case(screen_row)
+					16'b0000_0000_0000_0001: screen_col = 32'b0000_0000_0000_0000_0000_0000_0000_0000;
+					16'b0000_0000_0000_0010: screen_col = 32'b0100_0100_0010_0000_0011_1111_1110_0000;
+					16'b0000_0000_0000_0100: screen_col = 32'b0100_0100_0010_0000_0000_0010_0000_0000;
+					16'b0000_0000_0000_1000: screen_col = 32'b0100_0100_0010_0000_0000_0010_0000_0000;
+					16'b0000_0000_0001_0000: screen_col = 32'b0100_0100_0010_0000_0000_0010_0000_0000;
+					16'b0000_0000_0010_0000: screen_col = 32'b0100_0100_0010_0000_0000_0010_0000_0000;
+					16'b0000_0000_0100_0000: screen_col = 32'b0111_1111_1110_0000_0011_1111_1110_0000;
+					16'b0000_0000_1000_0000: screen_col = 32'b0000_0000_0000_0000_0000_0000_0000_0000;
+					
+					16'b0000_0001_0000_0000: screen_col = 32'b0000_0000_0000_0000_0000_0000_0000_0000;
+					16'b0000_0010_0000_0000: screen_col = 32'b0110_0000_1000_0000_0000_0001_1000_0000;
+					16'b0000_0100_0000_0000: screen_col = 32'b0101_0000_1000_0000_0000_0001_1000_0000;
+					16'b0000_1000_0000_0000: screen_col = 32'b0100_1000_1000_0000_0000_0001_1000_0000;
+					16'b0001_0000_0000_0000: screen_col = 32'b0100_0100_1000_0000_0000_0001_1000_0000;
+					16'b0010_0000_0000_0000: screen_col = 32'b0100_0010_1000_0000_0000_0000_0000_0000;
+					16'b0100_0000_0000_0000: screen_col = 32'b0100_0001_1000_0000_0000_0001_1000_0000;
+					16'b1000_0000_0000_0000: screen_col = 32'b0000_0000_0000_0000_0000_0001_1000_0000;
 				endcase
 			end
 			default: begin

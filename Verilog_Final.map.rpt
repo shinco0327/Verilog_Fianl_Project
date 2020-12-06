@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Verilog_Final
-Sun Dec 06 00:02:20 2020
+Sun Dec 06 14:59:10 2020
 Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition
 
 
@@ -15,14 +15,13 @@ Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition
   7. State Machine - |Verilog_Final|screen_state
   8. User-Specified and Inferred Latches
   9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Inverted Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Parameter Settings for User Entity Instance: Top-level Entity: |Verilog_Final
- 15. Port Connectivity Checks: "drop_random:M2"
- 16. Analysis & Synthesis Messages
- 17. Analysis & Synthesis Suppressed Messages
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: Top-level Entity: |Verilog_Final
+ 14. Port Connectivity Checks: "drop_random:M2"
+ 15. Analysis & Synthesis Messages
+ 16. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -48,12 +47,12 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                          ;
 +-----------------------------+-----------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sun Dec 06 00:02:20 2020   ;
+; Analysis & Synthesis Status ; Successful - Sun Dec 06 14:59:10 2020   ;
 ; Quartus II Version          ; 9.0 Build 132 02/25/2009 SJ Web Edition ;
 ; Revision Name               ; Verilog_Final                           ;
 ; Top-level Entity Name       ; Verilog_Final                           ;
 ; Family                      ; Cyclone                                 ;
-; Total logic elements        ; 1,131                                   ;
+; Total logic elements        ; 2,363                                   ;
 ; Total pins                  ; 56                                      ;
 ; Total virtual pins          ; 0                                       ;
 ; Total memory bits           ; 0                                       ;
@@ -149,33 +148,33 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 1131  ;
-;     -- Combinational with no register       ; 992   ;
-;     -- Register only                        ; 38    ;
-;     -- Combinational with a register        ; 101   ;
+; Total logic elements                        ; 2363  ;
+;     -- Combinational with no register       ; 2157  ;
+;     -- Register only                        ; 27    ;
+;     -- Combinational with a register        ; 179   ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 840   ;
-;     -- 3 input functions                    ; 99    ;
-;     -- 2 input functions                    ; 68    ;
-;     -- 1 input functions                    ; 86    ;
+;     -- 4 input functions                    ; 1659  ;
+;     -- 3 input functions                    ; 426   ;
+;     -- 2 input functions                    ; 244   ;
+;     -- 1 input functions                    ; 7     ;
 ;     -- 0 input functions                    ; 0     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 1118  ;
-;     -- arithmetic mode                      ; 13    ;
+;     -- normal mode                          ; 2320  ;
+;     -- arithmetic mode                      ; 43    ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
-;     -- synchronous clear/load mode          ; 15    ;
+;     -- synchronous clear/load mode          ; 10    ;
 ;     -- asynchronous clear/load mode         ; 0     ;
 ;                                             ;       ;
-; Total registers                             ; 139   ;
-; Total logic cells in carry chains           ; 15    ;
+; Total registers                             ; 206   ;
+; Total logic cells in carry chains           ; 47    ;
 ; I/O pins                                    ; 56    ;
 ; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 139   ;
-; Total fan-out                               ; 4236  ;
-; Average fan-out                             ; 3.57  ;
+; Maximum fan-out                             ; 206   ;
+; Total fan-out                               ; 8862  ;
+; Average fan-out                             ; 3.66  ;
 +---------------------------------------------+-------+
 
 
@@ -184,23 +183,24 @@ applicable agreement for further details.
 +----------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name           ; Library Name ;
 +----------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------+--------------+
-; |Verilog_Final             ; 1131 (1121) ; 139          ; 0           ; 56   ; 0            ; 992 (992)    ; 38 (30)           ; 101 (99)         ; 15 (15)         ; 0 (0)      ; |Verilog_Final                ; work         ;
+; |Verilog_Final             ; 2363 (2352) ; 206          ; 0           ; 56   ; 0            ; 2157 (2156)  ; 27 (19)           ; 179 (177)        ; 47 (47)         ; 0 (0)      ; |Verilog_Final                ; work         ;
 ;    |LFSR_5bit:M1|          ; 7 (7)       ; 7            ; 0           ; 0    ; 0            ; 0 (0)        ; 6 (6)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Verilog_Final|LFSR_5bit:M1   ; work         ;
-;    |drop_random:M2|        ; 3 (3)       ; 3            ; 0           ; 0    ; 0            ; 0 (0)        ; 2 (2)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Verilog_Final|drop_random:M2 ; work         ;
+;    |drop_random:M2|        ; 4 (4)       ; 3            ; 0           ; 0    ; 0            ; 1 (1)        ; 2 (2)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Verilog_Final|drop_random:M2 ; work         ;
 +----------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+-------------------------------------------------------------------------------+
-; State Machine - |Verilog_Final|screen_state                                   ;
-+-------------------+-------------------+-------------------+-------------------+
-; Name              ; screen_state.0000 ; screen_state.0010 ; screen_state.0001 ;
-+-------------------+-------------------+-------------------+-------------------+
-; screen_state.0000 ; 0                 ; 0                 ; 0                 ;
-; screen_state.0001 ; 1                 ; 0                 ; 1                 ;
-; screen_state.0010 ; 1                 ; 1                 ; 0                 ;
-+-------------------+-------------------+-------------------+-------------------+
++---------------------------------------------------------------------------------------------------+
+; State Machine - |Verilog_Final|screen_state                                                       ;
++-------------------+-------------------+-------------------+-------------------+-------------------+
+; Name              ; screen_state.0011 ; screen_state.0010 ; screen_state.0001 ; screen_state.0000 ;
++-------------------+-------------------+-------------------+-------------------+-------------------+
+; screen_state.0000 ; 0                 ; 0                 ; 0                 ; 0                 ;
+; screen_state.0001 ; 0                 ; 0                 ; 1                 ; 1                 ;
+; screen_state.0010 ; 0                 ; 1                 ; 0                 ; 1                 ;
+; screen_state.0011 ; 1                 ; 0                 ; 0                 ; 1                 ;
++-------------------+-------------------+-------------------+-------------------+-------------------+
 
 
 +----------------------------------------------------------------------------------------------------+
@@ -208,38 +208,38 @@ Encoding Type:  One-Hot
 +-----------------------------------------------------+---------------------+------------------------+
 ; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
 +-----------------------------------------------------+---------------------+------------------------+
-; screen_col[0]$latch                                 ; Selector237         ; yes                    ;
-; screen_col[1]$latch                                 ; Selector237         ; yes                    ;
-; screen_col[2]$latch                                 ; Selector237         ; yes                    ;
-; screen_col[3]$latch                                 ; Selector237         ; yes                    ;
-; screen_col[4]$latch                                 ; Selector237         ; yes                    ;
-; screen_col[5]$latch                                 ; Selector237         ; yes                    ;
-; screen_col[6]$latch                                 ; Selector237         ; yes                    ;
-; screen_col[7]$latch                                 ; Selector237         ; yes                    ;
-; screen_col[8]$latch                                 ; Selector237         ; yes                    ;
-; screen_col[9]$latch                                 ; Selector237         ; yes                    ;
-; screen_col[10]$latch                                ; Selector237         ; yes                    ;
-; screen_col[11]$latch                                ; Selector237         ; yes                    ;
-; screen_col[12]$latch                                ; Selector237         ; yes                    ;
-; screen_col[13]$latch                                ; Selector237         ; yes                    ;
-; screen_col[14]$latch                                ; Selector237         ; yes                    ;
-; screen_col[15]$latch                                ; Selector237         ; yes                    ;
-; screen_col[16]$latch                                ; Selector237         ; yes                    ;
-; screen_col[17]$latch                                ; Selector237         ; yes                    ;
-; screen_col[18]$latch                                ; Selector237         ; yes                    ;
-; screen_col[19]$latch                                ; Selector237         ; yes                    ;
-; screen_col[20]$latch                                ; Selector237         ; yes                    ;
-; screen_col[21]$latch                                ; Selector237         ; yes                    ;
-; screen_col[22]$latch                                ; Selector237         ; yes                    ;
-; screen_col[23]$latch                                ; Selector237         ; yes                    ;
-; screen_col[24]$latch                                ; Selector237         ; yes                    ;
-; screen_col[25]$latch                                ; Selector237         ; yes                    ;
-; screen_col[26]$latch                                ; Selector237         ; yes                    ;
-; screen_col[27]$latch                                ; Selector237         ; yes                    ;
-; screen_col[28]$latch                                ; Selector237         ; yes                    ;
-; screen_col[29]$latch                                ; Selector237         ; yes                    ;
-; screen_col[30]$latch                                ; Selector237         ; yes                    ;
-; screen_col[31]$latch                                ; Selector237         ; yes                    ;
+; screen_col[0]$latch                                 ; Selector302         ; yes                    ;
+; screen_col[1]$latch                                 ; Selector302         ; yes                    ;
+; screen_col[2]$latch                                 ; Selector302         ; yes                    ;
+; screen_col[3]$latch                                 ; Selector302         ; yes                    ;
+; screen_col[4]$latch                                 ; Selector302         ; yes                    ;
+; screen_col[5]$latch                                 ; Selector302         ; yes                    ;
+; screen_col[6]$latch                                 ; Selector302         ; yes                    ;
+; screen_col[7]$latch                                 ; Selector302         ; yes                    ;
+; screen_col[8]$latch                                 ; Selector302         ; yes                    ;
+; screen_col[9]$latch                                 ; Selector302         ; yes                    ;
+; screen_col[10]$latch                                ; Selector302         ; yes                    ;
+; screen_col[11]$latch                                ; Selector302         ; yes                    ;
+; screen_col[12]$latch                                ; Selector302         ; yes                    ;
+; screen_col[13]$latch                                ; Selector302         ; yes                    ;
+; screen_col[14]$latch                                ; Selector302         ; yes                    ;
+; screen_col[15]$latch                                ; Selector302         ; yes                    ;
+; screen_col[16]$latch                                ; Selector302         ; yes                    ;
+; screen_col[17]$latch                                ; Selector302         ; yes                    ;
+; screen_col[18]$latch                                ; Selector302         ; yes                    ;
+; screen_col[19]$latch                                ; Selector302         ; yes                    ;
+; screen_col[20]$latch                                ; Selector302         ; yes                    ;
+; screen_col[21]$latch                                ; Selector302         ; yes                    ;
+; screen_col[22]$latch                                ; Selector302         ; yes                    ;
+; screen_col[23]$latch                                ; Selector302         ; yes                    ;
+; screen_col[24]$latch                                ; Selector302         ; yes                    ;
+; screen_col[25]$latch                                ; Selector302         ; yes                    ;
+; screen_col[26]$latch                                ; Selector302         ; yes                    ;
+; screen_col[27]$latch                                ; Selector302         ; yes                    ;
+; screen_col[28]$latch                                ; Selector302         ; yes                    ;
+; screen_col[29]$latch                                ; Selector302         ; yes                    ;
+; screen_col[30]$latch                                ; Selector302         ; yes                    ;
+; screen_col[31]$latch                                ; Selector302         ; yes                    ;
 ; Number of user-specified and inferred latches = 32  ;                     ;                        ;
 +-----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
@@ -250,107 +250,64 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------+------------------------------------------+
 ; Register name                          ; Reason for Removal                       ;
 +----------------------------------------+------------------------------------------+
-; za_warudo                              ; Stuck at VCC due to stuck port data_in   ;
 ; drop_random:M2|D123456789[0,2,4..8]    ; Lost fanout                              ;
 ; LFSR_5bit:M1|D123456789[9]             ; Merged with drop_random:M2|D123456789[9] ;
 ; LFSR_5bit:M1|D123456789[3]             ; Merged with drop_random:M2|D123456789[3] ;
 ; LFSR_5bit:M1|D123456789[1]             ; Merged with drop_random:M2|D123456789[1] ;
-; knife[15][4]                           ; Merged with knife[15][10]                ;
-; knife[15][2]                           ; Merged with knife[15][3]                 ;
-; knife[15][0]                           ; Merged with knife[15][3]                 ;
-; knife[15][1]                           ; Merged with knife[15][3]                 ;
-; knife[14][4]                           ; Merged with knife[14][10]                ;
-; knife[14][1]                           ; Merged with knife[14][3]                 ;
-; knife[14][0]                           ; Merged with knife[14][2]                 ;
-; knife[13][4]                           ; Merged with knife[13][10]                ;
-; knife[13][2]                           ; Merged with knife[13][3]                 ;
-; knife[13][0]                           ; Merged with knife[13][3]                 ;
-; knife[12][4]                           ; Merged with knife[12][10]                ;
-; knife[12][1]                           ; Merged with knife[12][3]                 ;
-; knife[12][2]                           ; Merged with knife[12][3]                 ;
-; knife[12][0]                           ; Merged with knife[12][3]                 ;
-; knife[11][4]                           ; Merged with knife[11][10]                ;
-; knife[11][1]                           ; Merged with knife[11][3]                 ;
-; knife[11][0]                           ; Merged with knife[11][2]                 ;
-; knife[10][4]                           ; Merged with knife[10][10]                ;
-; knife[10][1]                           ; Merged with knife[10][3]                 ;
-; knife[10][0]                           ; Merged with knife[10][2]                 ;
-; knife[9][4]                            ; Merged with knife[9][10]                 ;
-; knife[9][1]                            ; Merged with knife[9][3]                  ;
-; knife[9][0]                            ; Merged with knife[9][2]                  ;
-; knife[8][4]                            ; Merged with knife[8][10]                 ;
-; knife[8][2]                            ; Merged with knife[8][3]                  ;
-; knife[8][1]                            ; Merged with knife[8][3]                  ;
-; knife[8][0]                            ; Merged with knife[8][3]                  ;
-; knife[7][4]                            ; Merged with knife[7][10]                 ;
-; knife[7][0]                            ; Merged with knife[7][3]                  ;
-; knife[7][2]                            ; Merged with knife[7][3]                  ;
-; knife[7][1]                            ; Merged with knife[7][3]                  ;
-; knife[6][4]                            ; Merged with knife[6][10]                 ;
-; knife[6][2]                            ; Merged with knife[6][3]                  ;
-; knife[6][1]                            ; Merged with knife[6][3]                  ;
-; knife[6][0]                            ; Merged with knife[6][3]                  ;
-; knife[5][1]                            ; Merged with knife[5][3]                  ;
-; knife[5][0]                            ; Merged with knife[5][2]                  ;
-; knife[4][4]                            ; Merged with knife[4][10]                 ;
-; knife[4][1]                            ; Merged with knife[4][3]                  ;
-; knife[4][0]                            ; Merged with knife[4][2]                  ;
-; knife[3][4]                            ; Merged with knife[3][10]                 ;
-; knife[3][1]                            ; Merged with knife[3][3]                  ;
-; knife[3][0]                            ; Merged with knife[3][2]                  ;
-; knife[2][4]                            ; Merged with knife[2][10]                 ;
-; knife[2][1]                            ; Merged with knife[2][3]                  ;
-; knife[2][0]                            ; Merged with knife[2][2]                  ;
-; knife[1][4]                            ; Merged with knife[1][10]                 ;
-; knife[1][0]                            ; Merged with knife[1][2]                  ;
-; knife[1][1]                            ; Merged with knife[1][2]                  ;
-; knife[0][4]                            ; Merged with knife[0][10]                 ;
-; knife[0][1]                            ; Merged with knife[0][3]                  ;
-; knife[0][2]                            ; Merged with knife[0][3]                  ;
-; knife[14][2]                           ; Merged with knife[14][3]                 ;
-; knife[13][1]                           ; Merged with knife[13][3]                 ;
-; knife[11][2]                           ; Merged with knife[11][3]                 ;
-; knife[10][2]                           ; Merged with knife[10][3]                 ;
-; knife[9][2]                            ; Merged with knife[9][3]                  ;
-; knife[5][4]                            ; Merged with knife[5][10]                 ;
-; knife[5][2]                            ; Merged with knife[5][3]                  ;
-; knife[4][2]                            ; Merged with knife[4][3]                  ;
-; knife[3][2]                            ; Merged with knife[3][3]                  ;
-; knife[2][2]                            ; Merged with knife[2][3]                  ;
-; knife[1][2]                            ; Merged with knife[1][3]                  ;
-; knife[0][0]                            ; Merged with knife[0][3]                  ;
-; knife[0][3]                            ; Stuck at VCC due to stuck port data_in   ;
-; knife[1][3]                            ; Stuck at VCC due to stuck port data_in   ;
-; knife[2][3]                            ; Stuck at VCC due to stuck port data_in   ;
-; knife[3][3]                            ; Stuck at VCC due to stuck port data_in   ;
-; knife[4][3]                            ; Stuck at VCC due to stuck port data_in   ;
-; knife[5][3]                            ; Stuck at VCC due to stuck port data_in   ;
-; knife[6][3]                            ; Stuck at VCC due to stuck port data_in   ;
-; knife[7][3]                            ; Stuck at VCC due to stuck port data_in   ;
-; knife[8][3]                            ; Stuck at VCC due to stuck port data_in   ;
-; knife[9][3]                            ; Stuck at VCC due to stuck port data_in   ;
-; knife[10][3]                           ; Stuck at VCC due to stuck port data_in   ;
-; knife[11][3]                           ; Stuck at VCC due to stuck port data_in   ;
-; knife[12][3]                           ; Stuck at VCC due to stuck port data_in   ;
-; knife[13][3]                           ; Stuck at VCC due to stuck port data_in   ;
-; knife[14][3]                           ; Stuck at VCC due to stuck port data_in   ;
-; knife[15][3]                           ; Stuck at VCC due to stuck port data_in   ;
-; screen_state~304                       ; Lost fanout                              ;
-; screen_state~305                       ; Lost fanout                              ;
-; screen_state.0010                      ; Stuck at GND due to stuck port data_in   ;
-; Total Number of Removed Registers = 94 ;                                          ;
+; knife[0][9]                            ; Stuck at VCC due to stuck port data_in   ;
+; knife[0][8]                            ; Stuck at VCC due to stuck port data_in   ;
+; knife[0][5]                            ; Stuck at VCC due to stuck port data_in   ;
+; knife[1][9]                            ; Stuck at VCC due to stuck port data_in   ;
+; knife[1][8]                            ; Stuck at VCC due to stuck port data_in   ;
+; knife[1][5]                            ; Stuck at VCC due to stuck port data_in   ;
+; knife[2][9]                            ; Stuck at VCC due to stuck port data_in   ;
+; knife[2][8]                            ; Stuck at VCC due to stuck port data_in   ;
+; knife[2][5]                            ; Stuck at VCC due to stuck port data_in   ;
+; knife[3][9]                            ; Stuck at VCC due to stuck port data_in   ;
+; knife[3][8]                            ; Stuck at VCC due to stuck port data_in   ;
+; knife[3][5]                            ; Stuck at VCC due to stuck port data_in   ;
+; knife[4][9]                            ; Stuck at VCC due to stuck port data_in   ;
+; knife[4][8]                            ; Stuck at VCC due to stuck port data_in   ;
+; knife[4][5]                            ; Stuck at VCC due to stuck port data_in   ;
+; knife[5][9]                            ; Stuck at VCC due to stuck port data_in   ;
+; knife[5][8]                            ; Stuck at VCC due to stuck port data_in   ;
+; knife[5][5]                            ; Stuck at VCC due to stuck port data_in   ;
+; knife[6][9]                            ; Stuck at VCC due to stuck port data_in   ;
+; knife[6][8]                            ; Stuck at VCC due to stuck port data_in   ;
+; knife[6][5]                            ; Stuck at VCC due to stuck port data_in   ;
+; knife[7][9]                            ; Stuck at VCC due to stuck port data_in   ;
+; knife[7][8]                            ; Stuck at VCC due to stuck port data_in   ;
+; knife[7][5]                            ; Stuck at VCC due to stuck port data_in   ;
+; knife[8][9]                            ; Stuck at VCC due to stuck port data_in   ;
+; knife[8][8]                            ; Stuck at VCC due to stuck port data_in   ;
+; knife[8][5]                            ; Stuck at VCC due to stuck port data_in   ;
+; knife[9][9]                            ; Stuck at VCC due to stuck port data_in   ;
+; knife[9][8]                            ; Stuck at VCC due to stuck port data_in   ;
+; knife[9][5]                            ; Stuck at VCC due to stuck port data_in   ;
+; knife[10][9]                           ; Stuck at VCC due to stuck port data_in   ;
+; knife[10][8]                           ; Stuck at VCC due to stuck port data_in   ;
+; knife[10][5]                           ; Stuck at VCC due to stuck port data_in   ;
+; knife[11][9]                           ; Stuck at VCC due to stuck port data_in   ;
+; knife[11][8]                           ; Stuck at VCC due to stuck port data_in   ;
+; knife[11][5]                           ; Stuck at VCC due to stuck port data_in   ;
+; knife[12][9]                           ; Stuck at VCC due to stuck port data_in   ;
+; knife[12][8]                           ; Stuck at VCC due to stuck port data_in   ;
+; knife[12][5]                           ; Stuck at VCC due to stuck port data_in   ;
+; knife[13][9]                           ; Stuck at VCC due to stuck port data_in   ;
+; knife[13][8]                           ; Stuck at VCC due to stuck port data_in   ;
+; knife[13][5]                           ; Stuck at VCC due to stuck port data_in   ;
+; knife[14][9]                           ; Stuck at VCC due to stuck port data_in   ;
+; knife[14][8]                           ; Stuck at VCC due to stuck port data_in   ;
+; knife[14][5]                           ; Stuck at VCC due to stuck port data_in   ;
+; knife[15][9]                           ; Stuck at VCC due to stuck port data_in   ;
+; knife[15][8]                           ; Stuck at VCC due to stuck port data_in   ;
+; knife[15][5]                           ; Stuck at VCC due to stuck port data_in   ;
+; screen_state~405                       ; Lost fanout                              ;
+; screen_state~406                       ; Lost fanout                              ;
+; screen_state~407                       ; Lost fanout                              ;
+; screen_state~408                       ; Lost fanout                              ;
+; Total Number of Removed Registers = 62 ;                                          ;
 +----------------------------------------+------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                            ;
-+---------------+---------------------------+--------------------------------------------------------------------------------------------+
-; Register name ; Reason for Removal        ; Registers Removed due to This Register                                                     ;
-+---------------+---------------------------+--------------------------------------------------------------------------------------------+
-; za_warudo     ; Stuck at VCC              ; knife[0][3], knife[1][3], knife[2][3], knife[3][3], knife[4][3], knife[5][3], knife[6][3], ;
-;               ; due to stuck port data_in ; knife[7][3], knife[8][3], knife[9][3], knife[10][3], knife[11][3], knife[12][3],           ;
-;               ;                           ; knife[13][3], knife[14][3], knife[15][3]                                                   ;
-+---------------+---------------------------+--------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -358,164 +315,186 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 139   ;
+; Total registers                              ; 206   ;
 ; Number of registers using Synchronous Clear  ; 10    ;
-; Number of registers using Synchronous Load   ; 5     ;
+; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 111   ;
+; Number of registers using Clock Enable       ; 160   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------+
-; Inverted Register Statistics                      ;
-+-----------------------------------------+---------+
-; Inverted Register                       ; Fan out ;
-+-----------------------------------------+---------+
-; screen_row[0]~reg0                      ; 6       ;
-; knife[11][5]                            ; 17      ;
-; knife[11][6]                            ; 17      ;
-; knife[11][7]                            ; 17      ;
-; knife[11][8]                            ; 17      ;
-; knife[14][5]                            ; 16      ;
-; knife[14][6]                            ; 16      ;
-; knife[14][7]                            ; 16      ;
-; knife[14][8]                            ; 16      ;
-; knife[14][9]                            ; 3       ;
-; knife[14][10]                           ; 3       ;
-; knife[11][9]                            ; 3       ;
-; knife[11][10]                           ; 3       ;
-; knife[6][5]                             ; 17      ;
-; knife[6][6]                             ; 17      ;
-; knife[6][7]                             ; 17      ;
-; knife[6][8]                             ; 17      ;
-; knife[7][5]                             ; 17      ;
-; knife[7][6]                             ; 17      ;
-; knife[7][7]                             ; 17      ;
-; knife[7][8]                             ; 17      ;
-; knife[7][9]                             ; 3       ;
-; knife[7][10]                            ; 3       ;
-; knife[6][9]                             ; 3       ;
-; knife[6][10]                            ; 3       ;
-; knife[13][5]                            ; 17      ;
-; knife[13][6]                            ; 17      ;
-; knife[13][7]                            ; 17      ;
-; knife[13][8]                            ; 17      ;
-; knife[15][5]                            ; 17      ;
-; knife[15][6]                            ; 17      ;
-; knife[15][7]                            ; 17      ;
-; knife[15][8]                            ; 17      ;
-; knife[15][9]                            ; 3       ;
-; knife[15][10]                           ; 3       ;
-; knife[13][9]                            ; 3       ;
-; knife[13][10]                           ; 3       ;
-; knife[4][5]                             ; 17      ;
-; knife[4][6]                             ; 17      ;
-; knife[4][7]                             ; 17      ;
-; knife[4][8]                             ; 17      ;
-; knife[5][5]                             ; 17      ;
-; knife[5][6]                             ; 17      ;
-; knife[5][7]                             ; 17      ;
-; knife[5][8]                             ; 17      ;
-; knife[5][9]                             ; 4       ;
-; knife[5][10]                            ; 4       ;
-; knife[4][9]                             ; 3       ;
-; knife[4][10]                            ; 3       ;
-; knife[3][5]                             ; 17      ;
-; knife[3][6]                             ; 17      ;
-; knife[3][7]                             ; 17      ;
-; knife[3][8]                             ; 17      ;
-; knife[10][5]                            ; 17      ;
-; knife[10][6]                            ; 17      ;
-; knife[10][7]                            ; 17      ;
-; knife[10][8]                            ; 17      ;
-; knife[10][9]                            ; 3       ;
-; knife[10][10]                           ; 3       ;
-; knife[3][9]                             ; 5       ;
-; knife[3][10]                            ; 5       ;
-; knife[12][5]                            ; 17      ;
-; knife[12][6]                            ; 17      ;
-; knife[12][7]                            ; 17      ;
-; knife[12][8]                            ; 17      ;
-; knife[0][5]                             ; 17      ;
-; knife[0][6]                             ; 17      ;
-; knife[0][7]                             ; 17      ;
-; knife[0][8]                             ; 17      ;
-; knife[0][9]                             ; 4       ;
-; knife[0][10]                            ; 4       ;
-; knife[12][9]                            ; 4       ;
-; knife[12][10]                           ; 4       ;
-; knife[2][5]                             ; 17      ;
-; knife[2][6]                             ; 17      ;
-; knife[2][7]                             ; 17      ;
-; knife[2][8]                             ; 17      ;
-; knife[8][5]                             ; 17      ;
-; knife[8][6]                             ; 17      ;
-; knife[8][7]                             ; 17      ;
-; knife[8][8]                             ; 17      ;
-; knife[8][9]                             ; 4       ;
-; knife[8][10]                            ; 4       ;
-; knife[2][9]                             ; 4       ;
-; knife[2][10]                            ; 4       ;
-; knife[1][5]                             ; 17      ;
-; knife[1][6]                             ; 17      ;
-; knife[1][7]                             ; 17      ;
-; knife[1][8]                             ; 17      ;
-; knife[9][5]                             ; 17      ;
-; knife[9][6]                             ; 17      ;
-; knife[9][7]                             ; 17      ;
-; knife[9][8]                             ; 17      ;
-; knife[9][9]                             ; 3       ;
-; knife[9][10]                            ; 3       ;
-; knife[1][9]                             ; 3       ;
-; knife[1][10]                            ; 3       ;
-; LFSR_5bit:M1|D123456789[0]              ; 1       ;
-; Total number of inverted registers = 98 ;         ;
-+-----------------------------------------+---------+
++-----------------------------------------------------+
+; Inverted Register Statistics                        ;
++-------------------------------------------+---------+
+; Inverted Register                         ; Fan out ;
++-------------------------------------------+---------+
+; screen_row[0]~reg0                        ; 5       ;
+; knife[8][6]                               ; 18      ;
+; knife[8][7]                               ; 19      ;
+; knife[8][4]                               ; 9       ;
+; knife[8][3]                               ; 10      ;
+; knife[8][1]                               ; 23      ;
+; knife[8][0]                               ; 23      ;
+; knife[8][2]                               ; 19      ;
+; knife[1][6]                               ; 17      ;
+; knife[1][7]                               ; 17      ;
+; knife[1][4]                               ; 8       ;
+; knife[1][3]                               ; 8       ;
+; knife[1][1]                               ; 28      ;
+; knife[1][0]                               ; 27      ;
+; knife[1][2]                               ; 18      ;
+; knife[11][6]                              ; 12      ;
+; knife[11][7]                              ; 14      ;
+; knife[11][4]                              ; 10      ;
+; knife[11][3]                              ; 9       ;
+; knife[11][1]                              ; 23      ;
+; knife[11][0]                              ; 23      ;
+; knife[11][2]                              ; 18      ;
+; knife[5][6]                               ; 11      ;
+; knife[5][7]                               ; 10      ;
+; knife[5][4]                               ; 11      ;
+; knife[5][3]                               ; 10      ;
+; knife[5][1]                               ; 23      ;
+; knife[5][0]                               ; 23      ;
+; knife[5][2]                               ; 19      ;
+; knife[13][6]                              ; 21      ;
+; knife[13][7]                              ; 23      ;
+; knife[13][4]                              ; 9       ;
+; knife[13][3]                              ; 10      ;
+; knife[13][1]                              ; 24      ;
+; knife[13][0]                              ; 24      ;
+; knife[13][2]                              ; 17      ;
+; knife[15][6]                              ; 16      ;
+; knife[15][7]                              ; 16      ;
+; knife[15][4]                              ; 8       ;
+; knife[15][3]                              ; 8       ;
+; knife[15][1]                              ; 24      ;
+; knife[15][0]                              ; 24      ;
+; knife[15][2]                              ; 18      ;
+; knife[9][6]                               ; 22      ;
+; knife[9][7]                               ; 22      ;
+; knife[9][4]                               ; 9       ;
+; knife[9][3]                               ; 8       ;
+; knife[9][1]                               ; 24      ;
+; knife[9][0]                               ; 24      ;
+; knife[9][2]                               ; 19      ;
+; knife[7][6]                               ; 24      ;
+; knife[7][7]                               ; 25      ;
+; knife[7][4]                               ; 9       ;
+; knife[7][3]                               ; 9       ;
+; knife[7][1]                               ; 23      ;
+; knife[7][0]                               ; 24      ;
+; knife[7][2]                               ; 19      ;
+; knife[2][6]                               ; 25      ;
+; knife[2][7]                               ; 25      ;
+; knife[2][4]                               ; 10      ;
+; knife[2][3]                               ; 9       ;
+; knife[2][1]                               ; 24      ;
+; knife[2][0]                               ; 23      ;
+; knife[2][2]                               ; 19      ;
+; knife[12][6]                              ; 21      ;
+; knife[12][7]                              ; 22      ;
+; knife[12][4]                              ; 10      ;
+; knife[12][3]                              ; 11      ;
+; knife[12][1]                              ; 25      ;
+; knife[12][0]                              ; 25      ;
+; knife[12][2]                              ; 18      ;
+; knife[14][6]                              ; 27      ;
+; knife[14][7]                              ; 27      ;
+; knife[14][4]                              ; 8       ;
+; knife[14][3]                              ; 8       ;
+; knife[14][1]                              ; 24      ;
+; knife[14][0]                              ; 25      ;
+; knife[14][2]                              ; 18      ;
+; knife[3][6]                               ; 28      ;
+; knife[3][7]                               ; 29      ;
+; knife[3][4]                               ; 12      ;
+; knife[3][3]                               ; 11      ;
+; knife[3][1]                               ; 25      ;
+; knife[3][0]                               ; 25      ;
+; knife[3][2]                               ; 17      ;
+; knife[10][6]                              ; 15      ;
+; knife[10][7]                              ; 16      ;
+; knife[10][4]                              ; 10      ;
+; knife[10][3]                              ; 10      ;
+; knife[10][1]                              ; 24      ;
+; knife[10][0]                              ; 24      ;
+; knife[10][2]                              ; 19      ;
+; knife[6][6]                               ; 18      ;
+; knife[6][7]                               ; 18      ;
+; knife[6][4]                               ; 11      ;
+; knife[6][3]                               ; 10      ;
+; knife[6][1]                               ; 24      ;
+; knife[6][0]                               ; 23      ;
+; knife[6][2]                               ; 19      ;
+; knife[0][6]                               ; 20      ;
+; Total number of inverted registers = 130* ;         ;
++-------------------------------------------+---------+
+* Table truncated at 100 items. To change the number of inverted registers reported, set the "Number of Inverted Registers Reported" option under Assignments->Settings->Analysis and Synthesis Settings->More Settings
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |Verilog_Final|human_col[2]  ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|timer[0]      ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |Verilog_Final|knife[0][10]  ;
-; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |Verilog_Final|knife[0][7]   ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |Verilog_Final|knife[1][3]   ;
-; 7:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |Verilog_Final|knife[1][9]   ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 2 LEs                ; 8 LEs                  ; Yes        ; |Verilog_Final|knife[2][3]   ;
-; 8:1                ; 5 bits    ; 25 LEs        ; 5 LEs                ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[2][6]   ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 2 LEs                ; 10 LEs                 ; Yes        ; |Verilog_Final|knife[3][10]  ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 5 LEs                ; 25 LEs                 ; Yes        ; |Verilog_Final|knife[3][6]   ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 2 LEs                ; 10 LEs                 ; Yes        ; |Verilog_Final|knife[4][3]   ;
-; 10:1               ; 5 bits    ; 30 LEs        ; 5 LEs                ; 25 LEs                 ; Yes        ; |Verilog_Final|knife[4][7]   ;
-; 11:1               ; 2 bits    ; 14 LEs        ; 2 LEs                ; 12 LEs                 ; Yes        ; |Verilog_Final|knife[5][10]  ;
-; 11:1               ; 5 bits    ; 35 LEs        ; 5 LEs                ; 30 LEs                 ; Yes        ; |Verilog_Final|knife[5][7]   ;
-; 12:1               ; 2 bits    ; 16 LEs        ; 2 LEs                ; 14 LEs                 ; Yes        ; |Verilog_Final|knife[6][10]  ;
-; 12:1               ; 5 bits    ; 40 LEs        ; 5 LEs                ; 35 LEs                 ; Yes        ; |Verilog_Final|knife[6][8]   ;
-; 13:1               ; 2 bits    ; 16 LEs        ; 2 LEs                ; 14 LEs                 ; Yes        ; |Verilog_Final|knife[7][10]  ;
-; 13:1               ; 5 bits    ; 40 LEs        ; 5 LEs                ; 35 LEs                 ; Yes        ; |Verilog_Final|knife[7][6]   ;
-; 14:1               ; 2 bits    ; 18 LEs        ; 2 LEs                ; 16 LEs                 ; Yes        ; |Verilog_Final|knife[8][3]   ;
-; 14:1               ; 5 bits    ; 45 LEs        ; 5 LEs                ; 40 LEs                 ; Yes        ; |Verilog_Final|knife[8][9]   ;
-; 15:1               ; 2 bits    ; 20 LEs        ; 2 LEs                ; 18 LEs                 ; Yes        ; |Verilog_Final|knife[9][10]  ;
-; 15:1               ; 5 bits    ; 50 LEs        ; 5 LEs                ; 45 LEs                 ; Yes        ; |Verilog_Final|knife[9][6]   ;
-; 16:1               ; 2 bits    ; 20 LEs        ; 2 LEs                ; 18 LEs                 ; Yes        ; |Verilog_Final|knife[10][10] ;
-; 16:1               ; 5 bits    ; 50 LEs        ; 5 LEs                ; 45 LEs                 ; Yes        ; |Verilog_Final|knife[10][9]  ;
-; 17:1               ; 2 bits    ; 22 LEs        ; 2 LEs                ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[11][10] ;
-; 17:1               ; 5 bits    ; 55 LEs        ; 5 LEs                ; 50 LEs                 ; Yes        ; |Verilog_Final|knife[11][9]  ;
-; 18:1               ; 2 bits    ; 24 LEs        ; 2 LEs                ; 22 LEs                 ; Yes        ; |Verilog_Final|knife[12][10] ;
-; 18:1               ; 5 bits    ; 60 LEs        ; 5 LEs                ; 55 LEs                 ; Yes        ; |Verilog_Final|knife[12][8]  ;
-; 19:1               ; 2 bits    ; 24 LEs        ; 2 LEs                ; 22 LEs                 ; Yes        ; |Verilog_Final|knife[13][3]  ;
-; 19:1               ; 5 bits    ; 60 LEs        ; 5 LEs                ; 55 LEs                 ; Yes        ; |Verilog_Final|knife[13][9]  ;
-; 20:1               ; 2 bits    ; 26 LEs        ; 2 LEs                ; 24 LEs                 ; Yes        ; |Verilog_Final|knife[14][3]  ;
-; 20:1               ; 5 bits    ; 65 LEs        ; 5 LEs                ; 60 LEs                 ; Yes        ; |Verilog_Final|knife[14][5]  ;
-; 21:1               ; 2 bits    ; 28 LEs        ; 2 LEs                ; 26 LEs                 ; Yes        ; |Verilog_Final|knife[15][10] ;
-; 21:1               ; 5 bits    ; 70 LEs        ; 5 LEs                ; 65 LEs                 ; Yes        ; |Verilog_Final|knife[15][7]  ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Verilog_Final|Selector224   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |Verilog_Final|za_warudo_t[9]   ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|timer[8]         ;
+; 6:1                ; 16 bits   ; 64 LEs        ; 16 LEs               ; 48 LEs                 ; Yes        ; |Verilog_Final|game_t[10]       ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[0][8]      ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[1][0]      ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[2][9]      ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[3][9]      ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[4][0]      ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[5][7]      ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[6][9]      ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[7][1]      ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[8][0]      ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[9][4]      ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[10][6]     ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[11][6]     ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[12][2]     ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[13][0]     ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[14][0]     ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[15][5]     ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |Verilog_Final|knife~1667       ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; No         ; |Verilog_Final|knife~1664       ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |Verilog_Final|knife~1658       ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; No         ; |Verilog_Final|knife~1654       ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |Verilog_Final|knife~1649       ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; No         ; |Verilog_Final|knife~1644       ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; No         ; |Verilog_Final|human_col~18     ;
+; 6:1                ; 6 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; No         ; |Verilog_Final|knife~1628       ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; No         ; |Verilog_Final|knife~1632       ;
+; 7:1                ; 6 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; No         ; |Verilog_Final|knife~1617       ;
+; 7:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; No         ; |Verilog_Final|knife~1618       ;
+; 8:1                ; 6 bits    ; 30 LEs        ; 6 LEs                ; 24 LEs                 ; No         ; |Verilog_Final|knife~1615       ;
+; 8:1                ; 5 bits    ; 25 LEs        ; 5 LEs                ; 20 LEs                 ; No         ; |Verilog_Final|knife~1611       ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 6 LEs                ; 30 LEs                 ; No         ; |Verilog_Final|knife~1605       ;
+; 9:1                ; 5 bits    ; 30 LEs        ; 5 LEs                ; 25 LEs                 ; No         ; |Verilog_Final|knife~1600       ;
+; 10:1               ; 6 bits    ; 36 LEs        ; 6 LEs                ; 30 LEs                 ; No         ; |Verilog_Final|knife~1592       ;
+; 10:1               ; 5 bits    ; 30 LEs        ; 5 LEs                ; 25 LEs                 ; No         ; |Verilog_Final|knife~1585       ;
+; 11:1               ; 6 bits    ; 42 LEs        ; 6 LEs                ; 36 LEs                 ; No         ; |Verilog_Final|knife~1581       ;
+; 11:1               ; 5 bits    ; 35 LEs        ; 5 LEs                ; 30 LEs                 ; No         ; |Verilog_Final|knife~1578       ;
+; 12:1               ; 6 bits    ; 48 LEs        ; 6 LEs                ; 42 LEs                 ; No         ; |Verilog_Final|knife~1568       ;
+; 12:1               ; 5 bits    ; 40 LEs        ; 5 LEs                ; 35 LEs                 ; No         ; |Verilog_Final|knife~1563       ;
+; 13:1               ; 6 bits    ; 48 LEs        ; 6 LEs                ; 42 LEs                 ; No         ; |Verilog_Final|knife~1561       ;
+; 13:1               ; 5 bits    ; 40 LEs        ; 5 LEs                ; 35 LEs                 ; No         ; |Verilog_Final|knife~1554       ;
+; 14:1               ; 6 bits    ; 54 LEs        ; 6 LEs                ; 48 LEs                 ; No         ; |Verilog_Final|knife~1547       ;
+; 14:1               ; 5 bits    ; 45 LEs        ; 5 LEs                ; 40 LEs                 ; No         ; |Verilog_Final|knife~1545       ;
+; 15:1               ; 6 bits    ; 60 LEs        ; 6 LEs                ; 54 LEs                 ; No         ; |Verilog_Final|knife~1536       ;
+; 15:1               ; 5 bits    ; 50 LEs        ; 5 LEs                ; 45 LEs                 ; No         ; |Verilog_Final|knife~1533       ;
+; 16:1               ; 6 bits    ; 60 LEs        ; 6 LEs                ; 54 LEs                 ; No         ; |Verilog_Final|knife~1527       ;
+; 16:1               ; 5 bits    ; 50 LEs        ; 5 LEs                ; 45 LEs                 ; No         ; |Verilog_Final|knife~1521       ;
+; 17:1               ; 6 bits    ; 66 LEs        ; 6 LEs                ; 60 LEs                 ; No         ; |Verilog_Final|knife~1515       ;
+; 17:1               ; 5 bits    ; 55 LEs        ; 5 LEs                ; 50 LEs                 ; No         ; |Verilog_Final|knife~1512       ;
+; 18:1               ; 6 bits    ; 72 LEs        ; 6 LEs                ; 66 LEs                 ; No         ; |Verilog_Final|knife~1496       ;
+; 18:1               ; 5 bits    ; 60 LEs        ; 5 LEs                ; 55 LEs                 ; No         ; |Verilog_Final|knife~1500       ;
+; 116:1              ; 2 bits    ; 154 LEs       ; 4 LEs                ; 150 LEs                ; No         ; |Verilog_Final|screen_state~394 ;
+; 119:1              ; 2 bits    ; 158 LEs       ; 4 LEs                ; 154 LEs                ; No         ; |Verilog_Final|Selector241      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
 
 
 +-------------------------------------------------------------------------------+
@@ -544,24 +523,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 132 02/25/2009 SJ Web Edition
-    Info: Processing started: Sun Dec 06 00:01:47 2020
+    Info: Processing started: Sun Dec 06 14:57:15 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Verilog_Final -c Verilog_Final
 Info: Found 1 design units, including 1 entities, in source file Verilog_Final.v
     Info: Found entity 1: Verilog_Final
 Info: Elaborating entity "Verilog_Final" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at Verilog_Final.v(46): truncated value with size 32 to match size of target (5)
-Warning (10230): Verilog HDL assignment warning at Verilog_Final.v(49): truncated value with size 32 to match size of target (5)
-Warning (10230): Verilog HDL assignment warning at Verilog_Final.v(61): truncated value with size 32 to match size of target (5)
-Warning (10230): Verilog HDL assignment warning at Verilog_Final.v(88): truncated value with size 32 to match size of target (16)
-Warning (10230): Verilog HDL assignment warning at Verilog_Final.v(91): truncated value with size 32 to match size of target (10)
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(115): variable "screen_state" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10270): Verilog HDL Case Statement warning at Verilog_Final.v(117): incomplete case statement has no default case item
-Info (10264): Verilog HDL Case Statement information at Verilog_Final.v(117): all case item expressions in this case statement are onehot
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(190): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(191): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(192): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(193): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(194): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10230): Verilog HDL assignment warning at Verilog_Final.v(50): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at Verilog_Final.v(53): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at Verilog_Final.v(65): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at Verilog_Final.v(94): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at Verilog_Final.v(96): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at Verilog_Final.v(101): truncated value with size 32 to match size of target (10)
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(125): variable "screen_state" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10270): Verilog HDL Case Statement warning at Verilog_Final.v(127): incomplete case statement has no default case item
+Info (10264): Verilog HDL Case Statement information at Verilog_Final.v(127): all case item expressions in this case statement are onehot
 Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(200): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
 Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(201): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
 Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(202): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
@@ -587,43 +562,51 @@ Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(241): v
 Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(242): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
 Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(243): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
 Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(244): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Info (10264): Verilog HDL Case Statement information at Verilog_Final.v(138): all case item expressions in this case statement are onehot
-Warning (10270): Verilog HDL Case Statement warning at Verilog_Final.v(251): incomplete case statement has no default case item
-Info (10264): Verilog HDL Case Statement information at Verilog_Final.v(251): all case item expressions in this case statement are onehot
-Info (10264): Verilog HDL Case Statement information at Verilog_Final.v(115): all case item expressions in this case statement are onehot
-Warning (10240): Verilog HDL Always Construct warning at Verilog_Final.v(112): inferring latch(es) for variable "screen_col", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "screen_col[0]" at Verilog_Final.v(112)
-Info (10041): Inferred latch for "screen_col[1]" at Verilog_Final.v(112)
-Info (10041): Inferred latch for "screen_col[2]" at Verilog_Final.v(112)
-Info (10041): Inferred latch for "screen_col[3]" at Verilog_Final.v(112)
-Info (10041): Inferred latch for "screen_col[4]" at Verilog_Final.v(112)
-Info (10041): Inferred latch for "screen_col[5]" at Verilog_Final.v(112)
-Info (10041): Inferred latch for "screen_col[6]" at Verilog_Final.v(112)
-Info (10041): Inferred latch for "screen_col[7]" at Verilog_Final.v(112)
-Info (10041): Inferred latch for "screen_col[8]" at Verilog_Final.v(112)
-Info (10041): Inferred latch for "screen_col[9]" at Verilog_Final.v(112)
-Info (10041): Inferred latch for "screen_col[10]" at Verilog_Final.v(112)
-Info (10041): Inferred latch for "screen_col[11]" at Verilog_Final.v(112)
-Info (10041): Inferred latch for "screen_col[12]" at Verilog_Final.v(112)
-Info (10041): Inferred latch for "screen_col[13]" at Verilog_Final.v(112)
-Info (10041): Inferred latch for "screen_col[14]" at Verilog_Final.v(112)
-Info (10041): Inferred latch for "screen_col[15]" at Verilog_Final.v(112)
-Info (10041): Inferred latch for "screen_col[16]" at Verilog_Final.v(112)
-Info (10041): Inferred latch for "screen_col[17]" at Verilog_Final.v(112)
-Info (10041): Inferred latch for "screen_col[18]" at Verilog_Final.v(112)
-Info (10041): Inferred latch for "screen_col[19]" at Verilog_Final.v(112)
-Info (10041): Inferred latch for "screen_col[20]" at Verilog_Final.v(112)
-Info (10041): Inferred latch for "screen_col[21]" at Verilog_Final.v(112)
-Info (10041): Inferred latch for "screen_col[22]" at Verilog_Final.v(112)
-Info (10041): Inferred latch for "screen_col[23]" at Verilog_Final.v(112)
-Info (10041): Inferred latch for "screen_col[24]" at Verilog_Final.v(112)
-Info (10041): Inferred latch for "screen_col[25]" at Verilog_Final.v(112)
-Info (10041): Inferred latch for "screen_col[26]" at Verilog_Final.v(112)
-Info (10041): Inferred latch for "screen_col[27]" at Verilog_Final.v(112)
-Info (10041): Inferred latch for "screen_col[28]" at Verilog_Final.v(112)
-Info (10041): Inferred latch for "screen_col[29]" at Verilog_Final.v(112)
-Info (10041): Inferred latch for "screen_col[30]" at Verilog_Final.v(112)
-Info (10041): Inferred latch for "screen_col[31]" at Verilog_Final.v(112)
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(250): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(251): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(252): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(253): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(254): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Info (10264): Verilog HDL Case Statement information at Verilog_Final.v(148): all case item expressions in this case statement are onehot
+Warning (10270): Verilog HDL Case Statement warning at Verilog_Final.v(262): incomplete case statement has no default case item
+Info (10264): Verilog HDL Case Statement information at Verilog_Final.v(262): all case item expressions in this case statement are onehot
+Warning (10270): Verilog HDL Case Statement warning at Verilog_Final.v(284): incomplete case statement has no default case item
+Info (10264): Verilog HDL Case Statement information at Verilog_Final.v(284): all case item expressions in this case statement are onehot
+Warning (10270): Verilog HDL Case Statement warning at Verilog_Final.v(305): incomplete case statement has no default case item
+Info (10264): Verilog HDL Case Statement information at Verilog_Final.v(305): all case item expressions in this case statement are onehot
+Warning (10240): Verilog HDL Always Construct warning at Verilog_Final.v(122): inferring latch(es) for variable "screen_col", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "screen_col[0]" at Verilog_Final.v(122)
+Info (10041): Inferred latch for "screen_col[1]" at Verilog_Final.v(122)
+Info (10041): Inferred latch for "screen_col[2]" at Verilog_Final.v(122)
+Info (10041): Inferred latch for "screen_col[3]" at Verilog_Final.v(122)
+Info (10041): Inferred latch for "screen_col[4]" at Verilog_Final.v(122)
+Info (10041): Inferred latch for "screen_col[5]" at Verilog_Final.v(122)
+Info (10041): Inferred latch for "screen_col[6]" at Verilog_Final.v(122)
+Info (10041): Inferred latch for "screen_col[7]" at Verilog_Final.v(122)
+Info (10041): Inferred latch for "screen_col[8]" at Verilog_Final.v(122)
+Info (10041): Inferred latch for "screen_col[9]" at Verilog_Final.v(122)
+Info (10041): Inferred latch for "screen_col[10]" at Verilog_Final.v(122)
+Info (10041): Inferred latch for "screen_col[11]" at Verilog_Final.v(122)
+Info (10041): Inferred latch for "screen_col[12]" at Verilog_Final.v(122)
+Info (10041): Inferred latch for "screen_col[13]" at Verilog_Final.v(122)
+Info (10041): Inferred latch for "screen_col[14]" at Verilog_Final.v(122)
+Info (10041): Inferred latch for "screen_col[15]" at Verilog_Final.v(122)
+Info (10041): Inferred latch for "screen_col[16]" at Verilog_Final.v(122)
+Info (10041): Inferred latch for "screen_col[17]" at Verilog_Final.v(122)
+Info (10041): Inferred latch for "screen_col[18]" at Verilog_Final.v(122)
+Info (10041): Inferred latch for "screen_col[19]" at Verilog_Final.v(122)
+Info (10041): Inferred latch for "screen_col[20]" at Verilog_Final.v(122)
+Info (10041): Inferred latch for "screen_col[21]" at Verilog_Final.v(122)
+Info (10041): Inferred latch for "screen_col[22]" at Verilog_Final.v(122)
+Info (10041): Inferred latch for "screen_col[23]" at Verilog_Final.v(122)
+Info (10041): Inferred latch for "screen_col[24]" at Verilog_Final.v(122)
+Info (10041): Inferred latch for "screen_col[25]" at Verilog_Final.v(122)
+Info (10041): Inferred latch for "screen_col[26]" at Verilog_Final.v(122)
+Info (10041): Inferred latch for "screen_col[27]" at Verilog_Final.v(122)
+Info (10041): Inferred latch for "screen_col[28]" at Verilog_Final.v(122)
+Info (10041): Inferred latch for "screen_col[29]" at Verilog_Final.v(122)
+Info (10041): Inferred latch for "screen_col[30]" at Verilog_Final.v(122)
+Info (10041): Inferred latch for "screen_col[31]" at Verilog_Final.v(122)
 Warning: Using design file LFSR_5bit.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info: Found entity 1: LFSR_5bit
 Info: Elaborating entity "LFSR_5bit" for hierarchy "LFSR_5bit:M1"
@@ -631,74 +614,73 @@ Warning: Using design file drop_random.v, which is not specified as a design fil
     Info: Found entity 1: drop_random
 Info: Elaborating entity "drop_random" for hierarchy "drop_random:M2"
 Warning: Latch screen_col[0]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0001
+    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0000
 Warning: Latch screen_col[1]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0001
+    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0000
 Warning: Latch screen_col[2]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0001
+    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0000
 Warning: Latch screen_col[3]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0001
+    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0000
 Warning: Latch screen_col[4]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0001
+    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0000
 Warning: Latch screen_col[5]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0001
+    Warning: Ports D and ENA on the latch are fed by the same signal screen_row[0]~reg0
 Warning: Latch screen_col[6]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0001
+    Warning: Ports D and ENA on the latch are fed by the same signal screen_row[0]~reg0
 Warning: Latch screen_col[7]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0001
+    Warning: Ports D and ENA on the latch are fed by the same signal screen_row[0]~reg0
 Warning: Latch screen_col[8]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0001
+    Warning: Ports D and ENA on the latch are fed by the same signal screen_row[0]~reg0
 Warning: Latch screen_col[9]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0001
+    Warning: Ports D and ENA on the latch are fed by the same signal screen_row[0]~reg0
 Warning: Latch screen_col[10]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0001
+    Warning: Ports D and ENA on the latch are fed by the same signal screen_row[0]~reg0
 Warning: Latch screen_col[11]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0001
+    Warning: Ports D and ENA on the latch are fed by the same signal screen_row[0]~reg0
 Warning: Latch screen_col[12]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0001
+    Warning: Ports D and ENA on the latch are fed by the same signal screen_row[0]~reg0
 Warning: Latch screen_col[13]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0001
+    Warning: Ports D and ENA on the latch are fed by the same signal screen_row[0]~reg0
 Warning: Latch screen_col[14]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0001
+    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0000
 Warning: Latch screen_col[15]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0001
+    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0000
 Warning: Latch screen_col[16]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0001
+    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0000
 Warning: Latch screen_col[17]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0001
+    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0000
 Warning: Latch screen_col[18]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0001
+    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0000
 Warning: Latch screen_col[19]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0001
+    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0000
 Warning: Latch screen_col[20]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0001
+    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0000
 Warning: Latch screen_col[21]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0001
+    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0000
 Warning: Latch screen_col[22]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0001
+    Warning: Ports D and ENA on the latch are fed by the same signal screen_row[0]~reg0
 Warning: Latch screen_col[23]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0001
+    Warning: Ports D and ENA on the latch are fed by the same signal screen_row[0]~reg0
 Warning: Latch screen_col[24]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0001
+    Warning: Ports D and ENA on the latch are fed by the same signal screen_row[0]~reg0
 Warning: Latch screen_col[25]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0001
+    Warning: Ports D and ENA on the latch are fed by the same signal screen_row[0]~reg0
 Warning: Latch screen_col[26]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0001
+    Warning: Ports D and ENA on the latch are fed by the same signal screen_row[0]~reg0
 Warning: Latch screen_col[27]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0001
+    Warning: Ports D and ENA on the latch are fed by the same signal screen_row[0]~reg0
 Warning: Latch screen_col[28]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0001
+    Warning: Ports D and ENA on the latch are fed by the same signal screen_row[0]~reg0
 Warning: Latch screen_col[29]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0001
+    Warning: Ports D and ENA on the latch are fed by the same signal screen_row[0]~reg0
 Warning: Latch screen_col[30]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0001
+    Warning: Ports D and ENA on the latch are fed by the same signal WideNor0
 Warning: Latch screen_col[31]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0001
+    Warning: Ports D and ENA on the latch are fed by the same signal screen_state.0000
 Warning: Output pins are stuck at VCC or GND
-    Warning (13410): Pin "out_state[1]" is stuck at GND
     Warning (13410): Pin "out_state[2]" is stuck at GND
     Warning (13410): Pin "out_state[3]" is stuck at GND
-Info: 9 registers lost all their fanouts during netlist optimizations. The first 9 are displayed below.
+Info: 11 registers lost all their fanouts during netlist optimizations. The first 11 are displayed below.
     Info: Register "drop_random:M2|D123456789[8]" lost all its fanouts during netlist optimizations.
     Info: Register "drop_random:M2|D123456789[7]" lost all its fanouts during netlist optimizations.
     Info: Register "drop_random:M2|D123456789[6]" lost all its fanouts during netlist optimizations.
@@ -706,18 +688,20 @@ Info: 9 registers lost all their fanouts during netlist optimizations. The first
     Info: Register "drop_random:M2|D123456789[4]" lost all its fanouts during netlist optimizations.
     Info: Register "drop_random:M2|D123456789[2]" lost all its fanouts during netlist optimizations.
     Info: Register "drop_random:M2|D123456789[0]" lost all its fanouts during netlist optimizations.
-    Info: Register "screen_state~304" lost all its fanouts during netlist optimizations.
-    Info: Register "screen_state~305" lost all its fanouts during netlist optimizations.
+    Info: Register "screen_state~405" lost all its fanouts during netlist optimizations.
+    Info: Register "screen_state~406" lost all its fanouts during netlist optimizations.
+    Info: Register "screen_state~407" lost all its fanouts during netlist optimizations.
+    Info: Register "screen_state~408" lost all its fanouts during netlist optimizations.
 Info: Generated suppressed messages file C:/Users/sam/Documents/Verilog/Verilog_Fianl_Project/Verilog_Final.map.smsg
-Info: Implemented 1187 device resources after synthesis - the final resource count might be different
+Info: Implemented 2419 device resources after synthesis - the final resource count might be different
     Info: Implemented 4 input pins
     Info: Implemented 52 output pins
-    Info: Implemented 1131 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 109 warnings
-    Info: Peak virtual memory: 267 megabytes
-    Info: Processing ended: Sun Dec 06 00:02:20 2020
-    Info: Elapsed time: 00:00:33
-    Info: Total CPU time (on all processors): 00:00:32
+    Info: Implemented 2363 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 111 warnings
+    Info: Peak virtual memory: 271 megabytes
+    Info: Processing ended: Sun Dec 06 14:59:10 2020
+    Info: Elapsed time: 00:01:55
+    Info: Total CPU time (on all processors): 00:01:52
 
 
 +------------------------------------------+

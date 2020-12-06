@@ -1,6 +1,7 @@
 
 State Machine - |Verilog_Final|screen_state
-Name screen_state.0000 screen_state.0010 screen_state.0001 
-screen_state.0000 0 0 0 
-screen_state.0001 1 0 1 
-screen_state.0010 1 1 0 
+Name screen_state.0011 screen_state.0010 screen_state.0001 screen_state.0000 
+screen_state.0000 0 0 0 0 
+screen_state.0001 0 0 1 1 
+screen_state.0010 0 1 0 1 
+screen_state.0011 1 0 0 1 
