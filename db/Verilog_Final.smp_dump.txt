@@ -1,4 +1,13 @@
 
+State Machine - |Verilog_Final|LCD_state
+Name LCD_state.0101 LCD_state.0100 LCD_state.0011 LCD_state.0010 LCD_state.0001 LCD_state.0000 
+LCD_state.0000 0 0 0 0 0 0 
+LCD_state.0001 0 0 0 0 1 1 
+LCD_state.0010 0 0 0 1 0 1 
+LCD_state.0011 0 0 1 0 0 1 
+LCD_state.0100 0 1 0 0 0 1 
+LCD_state.0101 1 0 0 0 0 1 
+
 State Machine - |Verilog_Final|screen_state
 Name screen_state.0011 screen_state.0010 screen_state.0001 screen_state.0000 
 screen_state.0000 0 0 0 0 

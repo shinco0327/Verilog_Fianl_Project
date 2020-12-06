@@ -1,5 +1,11 @@
-module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, clk, out_state);
+module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, clk, out_state, LCD_RW, LCD_EN, LCD_RS, LCD_RST);
 	input left_btn, right_btn, function_btn, clk;
+    //For LCD
+	output reg LCD_RW, LCD_EN, LCD_RS, LCD_RST;
+    reg	[3:0]	LCD_state;
+    reg	[17:0]	delay_counter;
+    reg [4:0] LCD_counter;
+    //End
 	output reg[15:0]screen_row;
 	output reg[31:0]screen_col;
 	//reg [15:0]reg_screen_row;
@@ -15,7 +21,7 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
 	parameter knife_size = 16;
 	
 	assign out_state = screen_state;
-	//screen_map M0(screen_state, screen_col, reg_screen_row,  human_col);
+	
 	LFSR_5bit M1(clk, prn);
 	drop_random M2(clk, easy_t, normal_t, extreme_t);
 
@@ -24,8 +30,7 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
 		//update screen
 		//##################################################################################
 			if(screen_row == 16'b1000_0000_0000_0000) screen_row = 16'b0000_0000_0000_0001;
-			else screen_row = {screen_row[14:0], 1'b0};
-			//reg_screen_row = screen_row;
+			else if(LCD_state == 4'd5)screen_row = {screen_row[14:0], 1'b0};
 		//##################################################################################
 
 		case(screen_state)
@@ -114,12 +119,61 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
 				screen_row = 16'b0000_0000_0000_0001;
 			end
 		endcase	
+		//##################################################################################
+        // LCD_state, LCD_counter, delay_counter;
+		case(LCD_state)
+			4'd0: begin
+                screen_row = 16'b0000_0000_0000_0000;
+				LCD_RW	<= 1'b1;
+				LCD_EN	<= 1'b1;
+				LCD_RS	<= 1'b0;
+				LCD_state <= 4'd1;
+				LCD_counter	<= 18'd0;
+                delay_counter <= 0;
+				LCD_RST		<= 1'b1;
+			end
+			4'd1: begin
+				LCD_RST		<= 1'b0;
+                LCD_state	<= 4'd2;
+				delay_counter <= 0;
+			end
+			4'd2: begin
+				LCD_RS	<= 1'b1;
+				LCD_RW	<= 1'b0;
+				LCD_RST	<= 1'b0;
+				//LCD_DATA <= DATA[7:0];
+				LCD_state <= 4'd3;
+			end
+			//delay
+			4'd3:begin
+				LCD_EN <= 0;
+				//if(delay_counter	< 18'd1) begin
+				//	delay_counter	<= delay_counter+18'd1;
+				//end
+				//else
+					LCD_state		<= 4'd4;
+			end
+			4'd4:begin
+				delay_counter	<= 18'd0;
+                if(LCD_counter == 5'b11111) LCD_state <= 4'd5;	
+				else begin
+                    LCD_counter = LCD_counter + 1;
+				    LCD_state		<= 4'd1;
+					LCD_EN	<= 1'b1;
+                end
+			end
+			4'd5: begin
+				LCD_state <= 4'd5;
+                screen_row <= 16'b0000_0000_0000_0001;
+			end
+		endcase
+        //##################################################################################
 	end
 
 	//##################################################################################
 	//##################################################################################
 	//Draw the screen
-	always @(screen_row) begin
+	always @(screen_row, LCD_counter) begin
 		integer i;
 
 		case(screen_state)
@@ -141,29 +195,47 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
 					16'b0010_0000_0000_0000: screen_col = 32'hFFFF_FFFF;
 					16'b0100_0000_0000_0000: screen_col = 32'hFFFF_FFFF;
 					16'b1000_0000_0000_0000: screen_col = 32'hFFFF_FFFF;
+                    default: begin
+                        case(LCD_counter)
+                            5'd0: screen_col = 32'h0000_0037; // first row 
+                            5'd1: screen_col = 32'h0000_0045; 
+                            5'd2: screen_col = 32'h0000_004c;
+                            5'd3: screen_col = 32'h0000_0043;
+                            5'd4: screen_col = 32'h0000_004f;
+                            5'd5: screen_col = 32'h0000_004d;
+                            5'd6: screen_col = 32'h0000_0045;
+                            5'd7: screen_col = 32'h0000_005F;
+                            5'd8: screen_col = 32'h0000_005F;
+                            5'd9: screen_col = 32'h0000_005F;
+                            5'd10: screen_col = 32'h0000_005F;
+                            5'd11: screen_col = 32'h0000_005F;
+                            5'd12: screen_col = 32'h0000_005F;
+                            5'd13: screen_col = 32'h0000_005F;
+                            5'd14: screen_col = 32'h0000_005F;
+                            5'd15: screen_col = 32'h0000_005F;
+                            5'd16: screen_col = 32'h0000_005F; // second row
+                            5'd17: screen_col = 32'h0000_005F;
+                            5'd18: screen_col = 32'h0000_005F;
+                            5'd19: screen_col = 32'h0000_005F;
+                            5'd20: screen_col = 32'h0000_005F;
+                            5'd21: screen_col = 32'h0000_005F;
+                            5'd22: screen_col = 32'h0000_005F;
+                            5'd23: screen_col = 32'h0000_005F;
+                            5'd24: screen_col = 32'h0000_005F;
+                            5'd25: screen_col = 32'h0000_005F;
+                            5'd26: screen_col = 32'h0000_005F;
+                            5'd27: screen_col = 32'h0000_005F;
+                            5'd28: screen_col = 32'h0000_005F;
+                            5'd29: screen_col = 32'h0000_005F;
+                            5'd30: screen_col = 32'h0000_005F;
+                            5'd31: screen_col = 32'h0000_005F; // finish
+                        endcase
+                    end
 				endcase
 			end
 			1: begin
 				screen_col = 0;
 				case(screen_row)
-					/*
-					16'b0000_0000_0000_0001: screen_col = 32'b0000_0000_0000_0000_0000_0000_0000_0000;
-					16'b0000_0000_0000_0010: screen_col = 32'b0000_0000_0000_0000_0000_0000_0000_0000;
-					16'b0000_0000_0000_0100: screen_col = 32'b0000_0000_0000_0000_0000_0000_0000_0000;
-					16'b0000_0000_0000_1000: screen_col = 32'b0000_0000_0000_0000_0000_0000_0000_0000;
-					16'b0000_0000_0001_0000: screen_col = 32'b0000_0000_0000_0000_0000_0000_0000_0000;
-					16'b0000_0000_0010_0000: screen_col = 32'b0000_0000_0000_0000_0000_0000_0000_0000;
-					16'b0000_0000_0100_0000: screen_col = 32'b0000_0000_0000_0000_0000_0000_0000_0000;
-					16'b0000_0000_1000_0000: screen_col = 32'b0000_0000_0000_0000_0000_0000_0000_0000;
-					16'b0000_0001_0000_0000: screen_col = 32'b0000_0000_0000_0000_0000_0000_0000_0000;
-					16'b0000_0010_0000_0000: screen_col = 32'b0000_0000_0000_0011_1000_0000_0000_0000;
-					16'b0000_0100_0000_0000: screen_col = 32'b0000_0000_0000_0011_1000_0000_0000_0000;
-					16'b0000_1000_0000_0000: screen_col = 32'b0000_0000_0000_0011_1000_0000_0000_0000;
-					16'b0001_0000_0000_0000: screen_col = 32'b0000_0000_0000_0101_0100_0000_0000_0000;
-					16'b0010_0000_0000_0000: screen_col = 32'b0000_0000_0000_0011_1000_0000_0000_0000;
-					16'b0100_0000_0000_0000: screen_col = 32'b0000_0000_0000_0100_0100_0000_0000_0000;
-					16'b1000_0000_0000_0000: screen_col = 32'hFFFF_FFFF;
-					*/
 					16'b0000_0000_0000_0001: begin
 						knife_movement(4'b1111);
 					end	
@@ -331,6 +403,7 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
 		integer i;
 		screen_row = 16'h0001;
 		//screen_state = 0;
+        LCD_state = 0;
 		for(i = 0; i < knife_size; i=i+1) knife[i] = 11'b111_1111_1111;
 	end
 	
@@ -414,23 +487,7 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
 		else if(knife[15] == 11'b111_1111_1111) begin
 			knife[15][10:5] = {1'b0, prn[4:0]};
 			knife[15][4:0] = {4'hf};
-		end	 /*
-		else if(knife[16] == 11'b111_1111_1111) begin
-			knife[16][10:5] = {1'b0, prn[4:0]};
-			knife[16][4:0] = {4'hf};
-		end	
-		else if(knife[17] == 11'b111_1111_1111) begin
-			knife[17][10:5] = {1'b0, prn[4:0]};
-			knife[17][4:0] = {4'hf};
-		end	
-		else if(knife[18] == 11'b111_1111_1111) begin
-			knife[18][10:5] = {1'b0, prn[4:0]};
-			knife[18][4:0] = {4'hf};
-		end	
-		else if(knife[19] == 11'b111_1111_1111) begin
-			knife[19][10:5] = {1'b0, prn[4:0]};
-			knife[19][4:0] = {4'hf};
-		end	 */
+		end	 
 	endtask
 endmodule
 
