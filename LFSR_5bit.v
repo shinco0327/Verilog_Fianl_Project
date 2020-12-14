@@ -10,7 +10,7 @@ module LFSR_5bit(clk, prn, rst, easy_t, normal_t, extreme_t);
     assign prn[1] = D123456789[1];
     assign prn[2] = D123456789[5];
     assign prn[3] = D123456789[3];
-    assign prn[4] = D123456789[2];
+    assign prn[4] = D123456789[7];
 
     assign easy_t = prn[2] & prn[0]; 
     assign normal_t = prn[1] | prn[2];
@@ -25,10 +25,10 @@ module LFSR_5bit(clk, prn, rst, easy_t, normal_t, extreme_t);
     else
         begin
             D123456789[1] <= D123456789[0];
-            D123456789[2] <= D123456789[1];
+            D123456789[2] <= D123456789[1] ^ D123456789[0];
             D123456789[3] <= D123456789[2];
             D123456789[4] <= D123456789[3];
-            D123456789[5] <= D123456789[4];
+            D123456789[5] <= D123456789[4] ^ D123456789[3];
             D123456789[6] <= D123456789[5];
             D123456789[7] <= D123456789[6];
             D123456789[8] <= D123456789[7];

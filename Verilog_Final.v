@@ -16,14 +16,16 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
 	wire easy_t, normal_t, extreme_t;
 	reg [10:0] knife[15:0]; //[row_x, row_4, row_3, row_2, row_1, row_0, col_4, col_3, col_2, col_1, col_0]
 	reg za_warudo;
-	reg [15:0] za_warudo_t, game_t;
+	reg [15:0] za_warudo_t, game_t, za_warudo_cc, drop_knife_t, drop_knife_limit;
+	parameter za_warudo_charge_t = 50;
 	output [3:0]out_state;
+	reg [1:0]game_mode;
 	parameter knife_size = 16;
 	reg lfsr_rst;
 	assign out_state = screen_state;
 	
-	LFSR_5bit M1((screen_row[1]| screen_row[9]| screen_row[15]| screen_row[6]), prn, lfsr_rst, easy_t, normal_t, extreme_t);
-	//drop_random M2(clk, easy_t, normal_t, extreme_t);
+	//LFSR_5bit M1((screen_row[1]| screen_row[9]| screen_row[15]| screen_row[6]), prn, lfsr_rst, easy_t, normal_t, extreme_t);
+	LFSR_5bit M1(clk, prn, lfsr_rst, easy_t, normal_t, extreme_t);
 	
 
 	always@(posedge clk) begin
@@ -50,17 +52,12 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
 				LCD_RS	<= 1'b1;
 				LCD_RW	<= 1'b0;
 				LCD_RST	<= 1'b0;
-				//LCD_DATA <= DATA[7:0];
 				LCD_state <= 4'd3;
 			end
 			//delay
 			4'd3:begin
 				LCD_EN <= 0;
-				//if(delay_counter	< 18'd1) begin
-				//	delay_counter	<= delay_counter+18'd1;
-				//end
-				//else
-					LCD_state		<= 4'd4;
+				LCD_state		<= 4'd4;
 			end
 			4'd4:begin
 				delay_counter	<= 18'd0;
@@ -94,9 +91,33 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
 					screen_state <= 4; 
 					LCD_state <= 4'd0;
 					timer = 0; 
-					game_t = 16'hffff;
+					human_col <= 0;
+					case(game_mode)
+						2'b00: drop_knife_limit = 16'd320;
+						2'b01: drop_knife_limit = 16'd200;
+						2'b10: drop_knife_limit = 16'd100;
+						default: drop_knife_limit = 16'd320;
+					endcase
+					game_t = 16'hd20000;
+					drop_knife_t = 0;
+					za_warudo_cc = 0;
 					end
 				else screen_state <= 0;
+				//Sel mode
+				if(timer >= 150) begin
+					timer = 0;
+					if(left_btn)  begin
+						LCD_state <= 4'd0;
+						game_mode = game_mode + 1;
+						if(game_mode == 4) game_mode = 2'd0;
+					end
+					else if(right_btn)begin
+						LCD_state <= 4'd0;
+						game_mode = game_mode - 1;
+						if(game_mode == 4) game_mode = 2'd3;
+					end
+				end
+				else timer = timer + 1;
 			end
 			//Main Game Mode
 			//-----------------------------------------------------------------------------
@@ -105,20 +126,9 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
 				if(easy_t) begin
 					create_knife();
 				end
-				if(timer >= 200) begin
+				if(drop_knife_t >= drop_knife_limit)begin
 					integer i;
-					timer = 0;
-					
-					//movement control of character
-					if(right_btn)begin 
-						if(human_col < 27) human_col = human_col + 1;
-					end
-					else if(left_btn)begin 
-						if(human_col > 0 ) human_col = human_col - 1;
-					end
-					
-					 
-					
+					drop_knife_t = 0;
 					if(!za_warudo) begin
 						for(i=0; i<knife_size; i=i+1)begin		//knife go down
 							if(knife[i] != 11'b111_1111_1111)begin
@@ -150,23 +160,51 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
 							end
 						end
 					end
+				end
+				else drop_knife_t = drop_knife_t + 1;
+
+				if(timer >= 160) begin
+					integer i;
+					timer = 0;
+					
+					//movement control of character
+					if(right_btn)begin 
+						if(human_col < 27) human_col = human_col + 1;
+					end
+					else if(left_btn)begin 
+						if(human_col > 0 ) human_col = human_col - 1;
+					end
+					
+					 
+					
+					if(!za_warudo) begin
+						za_warudo_cc = za_warudo_cc + 1;
+						if(za_warudo_cc == za_warudo_charge_t) LCD_state <= 4'd0;
+					end
 					else begin 
 						za_warudo_t = za_warudo_t - 1;
-						if(za_warudo_t == 0) za_warudo = 0; // toki wo ugokidasu
+						if(za_warudo_t == 0) begin
+							LCD_state <= 4'd0;
+							za_warudo = 0; // toki wo ugokidasu
+						end
 					end
 				end
 				else begin 
 					timer = timer+1;
 					game_t = game_t - 1;
 					
+
 					if(game_t == 0) begin
 						screen_state <= 3;
 						LCD_state <= 4'd0;
 					end
 					if(function_btn)begin   //za warudo  tomare toki wo
-						za_warudo = 1;
-						LCD_state <= 4'd0;
-						za_warudo_t = 16'h2f;
+						if(za_warudo_cc > za_warudo_charge_t)begin
+							za_warudo = 1;
+							za_warudo_cc = 0;
+							LCD_state <= 4'd0;
+							za_warudo_t = 16'h2f;
+						end
 					end
 				end
 
@@ -224,40 +262,152 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
 					16'b0100_0000_0000_0000: screen_col = 32'hFFFF_FFFF;
 					16'b1000_0000_0000_0000: screen_col = 32'hFFFF_FFFF;
                     default: begin
-                        case(LCD_counter)
-                            5'd0: screen_col = 32'h0000_0037; // first row 
-                            5'd1: screen_col = 32'h0000_0045; 
-                            5'd2: screen_col = 32'h0000_004c;
-                            5'd3: screen_col = 32'h0000_0043;
-                            5'd4: screen_col = 32'h0000_004f;
-                            5'd5: screen_col = 32'h0000_004d;
-                            5'd6: screen_col = 32'h0000_0045;
-                            5'd7: screen_col = 32'h0000_005F;
-                            5'd8: screen_col = 32'h0000_005F;
-                            5'd9: screen_col = 32'h0000_005F;
-                            5'd10: screen_col = 32'h0000_005F;
-                            5'd11: screen_col = 32'h0000_005F;
-                            5'd12: screen_col = 32'h0000_005F;
-                            5'd13: screen_col = 32'h0000_005F;
-                            5'd14: screen_col = 32'h0000_005F;
-                            5'd15: screen_col = 32'h0000_005F;
-                            5'd16: screen_col = 32'h0000_005F; // second row
-                            5'd17: screen_col = 32'h0000_005F;
-                            5'd18: screen_col = 32'h0000_005F;
-                            5'd19: screen_col = 32'h0000_005F;
-                            5'd20: screen_col = 32'h0000_005F;
-                            5'd21: screen_col = 32'h0000_005F;
-                            5'd22: screen_col = 32'h0000_005F;
-                            5'd23: screen_col = 32'h0000_005F;
-                            5'd24: screen_col = 32'h0000_005F;
-                            5'd25: screen_col = 32'h0000_005F;
-                            5'd26: screen_col = 32'h0000_005F;
-                            5'd27: screen_col = 32'h0000_005F;
-                            5'd28: screen_col = 32'h0000_005F;
-                            5'd29: screen_col = 32'h0000_005F;
-                            5'd30: screen_col = 32'h0000_005F;
-                            5'd31: screen_col = 32'h0000_005F; // finish
-                        endcase
+						case(game_mode)
+							2'b00: begin
+								case(LCD_counter)
+									5'd0: screen_col = 32'h0000_0033; // first row 
+									5'd1: screen_col = 32'h0000_0045; 
+									5'd2: screen_col = 32'h0000_004c;
+									5'd3: screen_col = 32'h0000_0045;
+									5'd4: screen_col = 32'h0000_0043;
+									5'd5: screen_col = 32'h0000_0054;
+									5'd6: screen_col = 32'h0000_005F;
+									5'd7: screen_col = 32'h0000_002D;
+									5'd8: screen_col = 32'h0000_004F;
+									5'd9: screen_col = 32'h0000_0044;
+									5'd10: screen_col = 32'h0000_0045;
+									5'd11: screen_col = 32'h0000_005F;
+									5'd12: screen_col = 32'h0000_005F;
+									5'd13: screen_col = 32'h0000_005F;
+									5'd14: screen_col = 32'h0000_005F;
+									5'd15: screen_col = 32'h0000_005F;
+									5'd16: screen_col = 32'h0000_0025; // second row
+									5'd17: screen_col = 32'h0000_0041;
+									5'd18: screen_col = 32'h0000_0053;
+									5'd19: screen_col = 32'h0000_0059;
+									5'd20: screen_col = 32'h0000_005F;
+									5'd21: screen_col = 32'h0000_005F;
+									5'd22: screen_col = 32'h0000_005F;
+									5'd23: screen_col = 32'h0000_005F;
+									5'd24: screen_col = 32'h0000_005F;
+									5'd25: screen_col = 32'h0000_005F;
+									5'd26: screen_col = 32'h0000_005F;
+									5'd27: screen_col = 32'h0000_005F;
+									5'd28: screen_col = 32'h0000_005F;
+									5'd29: screen_col = 32'h0000_005F;
+									5'd30: screen_col = 32'h0000_005F;
+									5'd31: screen_col = 32'h0000_005F; // finish
+								endcase
+							end
+							2'b01: begin
+								case(LCD_counter)
+									5'd0: screen_col = 32'h0000_0033; // first row 
+									5'd1: screen_col = 32'h0000_0045; 
+									5'd2: screen_col = 32'h0000_004c;
+									5'd3: screen_col = 32'h0000_0045;
+									5'd4: screen_col = 32'h0000_0043;
+									5'd5: screen_col = 32'h0000_0054;
+									5'd6: screen_col = 32'h0000_005F;
+									5'd7: screen_col = 32'h0000_002D;
+									5'd8: screen_col = 32'h0000_004F;
+									5'd9: screen_col = 32'h0000_0044;
+									5'd10: screen_col = 32'h0000_0045;
+									5'd11: screen_col = 32'h0000_005F;
+									5'd12: screen_col = 32'h0000_005F;
+									5'd13: screen_col = 32'h0000_005F;
+									5'd14: screen_col = 32'h0000_005F;
+									5'd15: screen_col = 32'h0000_005F;
+									5'd16: screen_col = 32'h0000_002E; // second row
+									5'd17: screen_col = 32'h0000_004F;
+									5'd18: screen_col = 32'h0000_0052;
+									5'd19: screen_col = 32'h0000_004D;
+									5'd20: screen_col = 32'h0000_0041;
+									5'd21: screen_col = 32'h0000_004C;
+									5'd22: screen_col = 32'h0000_005F;
+									5'd23: screen_col = 32'h0000_005F;
+									5'd24: screen_col = 32'h0000_005F;
+									5'd25: screen_col = 32'h0000_005F;
+									5'd26: screen_col = 32'h0000_005F;
+									5'd27: screen_col = 32'h0000_005F;
+									5'd28: screen_col = 32'h0000_005F;
+									5'd29: screen_col = 32'h0000_005F;
+									5'd30: screen_col = 32'h0000_005F;
+									5'd31: screen_col = 32'h0000_005F; // finish
+								endcase
+							end
+							2'b10: begin
+								case(LCD_counter)
+									5'd0: screen_col = 32'h0000_0033; // first row 
+									5'd1: screen_col = 32'h0000_0045; 
+									5'd2: screen_col = 32'h0000_004c;
+									5'd3: screen_col = 32'h0000_0045;
+									5'd4: screen_col = 32'h0000_0043;
+									5'd5: screen_col = 32'h0000_0054;
+									5'd6: screen_col = 32'h0000_005F;
+									5'd7: screen_col = 32'h0000_002D;
+									5'd8: screen_col = 32'h0000_004F;
+									5'd9: screen_col = 32'h0000_0044;
+									5'd10: screen_col = 32'h0000_0045;
+									5'd11: screen_col = 32'h0000_005F;
+									5'd12: screen_col = 32'h0000_005F;
+									5'd13: screen_col = 32'h0000_005F;
+									5'd14: screen_col = 32'h0000_005F;
+									5'd15: screen_col = 32'h0000_005F;
+									5'd16: screen_col = 32'h0000_0028; // second row
+									5'd17: screen_col = 32'h0000_0041;
+									5'd18: screen_col = 32'h0000_0052;
+									5'd19: screen_col = 32'h0000_0044;
+									5'd20: screen_col = 32'h0000_005F;
+									5'd21: screen_col = 32'h0000_005F;
+									5'd22: screen_col = 32'h0000_005F;
+									5'd23: screen_col = 32'h0000_005F;
+									5'd24: screen_col = 32'h0000_005F;
+									5'd25: screen_col = 32'h0000_005F;
+									5'd26: screen_col = 32'h0000_005F;
+									5'd27: screen_col = 32'h0000_005F;
+									5'd28: screen_col = 32'h0000_005F;
+									5'd29: screen_col = 32'h0000_005F;
+									5'd30: screen_col = 32'h0000_005F;
+									5'd31: screen_col = 32'h0000_005F; // finish
+								endcase
+							end
+							default: begin
+								case(LCD_counter)
+									5'd0: screen_col = 32'h0000_0033; // first row 
+									5'd1: screen_col = 32'h0000_0045; 
+									5'd2: screen_col = 32'h0000_004c;
+									5'd3: screen_col = 32'h0000_0045;
+									5'd4: screen_col = 32'h0000_0043;
+									5'd5: screen_col = 32'h0000_0054;
+									5'd6: screen_col = 32'h0000_005F;
+									5'd7: screen_col = 32'h0000_002D;
+									5'd8: screen_col = 32'h0000_004F;
+									5'd9: screen_col = 32'h0000_0044;
+									5'd10: screen_col = 32'h0000_0045;
+									5'd11: screen_col = 32'h0000_005F;
+									5'd12: screen_col = 32'h0000_005F;
+									5'd13: screen_col = 32'h0000_005F;
+									5'd14: screen_col = 32'h0000_005F;
+									5'd15: screen_col = 32'h0000_005F;
+									5'd16: screen_col = 32'h0000_0025; // second row
+									5'd17: screen_col = 32'h0000_0041;
+									5'd18: screen_col = 32'h0000_0053;
+									5'd19: screen_col = 32'h0000_0059;
+									5'd20: screen_col = 32'h0000_005F;
+									5'd21: screen_col = 32'h0000_005F;
+									5'd22: screen_col = 32'h0000_005F;
+									5'd23: screen_col = 32'h0000_005F;
+									5'd24: screen_col = 32'h0000_005F;
+									5'd25: screen_col = 32'h0000_005F;
+									5'd26: screen_col = 32'h0000_005F;
+									5'd27: screen_col = 32'h0000_005F;
+									5'd28: screen_col = 32'h0000_005F;
+									5'd29: screen_col = 32'h0000_005F;
+									5'd30: screen_col = 32'h0000_005F;
+									5'd31: screen_col = 32'h0000_005F; // finish
+								endcase
+							end
+						endcase
                     end
 				endcase
 			end
@@ -392,64 +542,101 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
 							endcase
 						end
 						else begin
-				
-							case(LCD_counter)
-								5'd0: screen_col = 32'h0000_0024; // first row 
-								5'd1: screen_col = 32'h0000_004F; 
-								5'd2: screen_col = 32'h0000_0044;
-								5'd3: screen_col = 32'h0000_0047;
-								5'd4: screen_col = 32'h0000_0045;
-								5'd5: screen_col = 32'h0000_005F;
-								5'd6: screen_col = 32'h0000_002B;
-								5'd7: screen_col = 32'h0000_004E;
-								5'd8: screen_col = 32'h0000_0049;
-								5'd9: screen_col = 32'h0000_0046;
-								5'd10: screen_col = 32'h0000_0045;
-								5'd11: screen_col = 32'h0000_0053;
-								5'd12: screen_col = 32'h0000_005F;
-								5'd13: screen_col = 32'h0000_005F;
-								5'd14: screen_col = 32'h0000_005F;
-								5'd15: screen_col = 32'h0000_005F;
-								5'd16: screen_col = 32'h0000_005F; // second row
-								5'd17: screen_col = 32'h0000_005F;
-								5'd18: screen_col = 32'h0000_005F;
-								5'd19: screen_col = 32'h0000_005F;
-								5'd20: screen_col = 32'h0000_005F;
-								5'd21: screen_col = 32'h0000_005F;
-								5'd22: screen_col = 32'h0000_005F;
-								5'd23: screen_col = 32'h0000_005F;
-								5'd24: screen_col = 32'h0000_005F;
-								5'd25: screen_col = 32'h0000_005F;
-								5'd26: screen_col = 32'h0000_005F;
-								5'd27: screen_col = 32'h0000_005F;
-								5'd28: screen_col = 32'h0000_005F;
-								5'd29: screen_col = 32'h0000_005F;
-								5'd30: screen_col = 32'h0000_005F;
-								5'd31: screen_col = 32'h0000_005F; // finish
-							endcase
+							if(za_warudo_cc < za_warudo_charge_t)begin
+								case(LCD_counter)
+									5'd0: screen_col = 32'h0000_0024; // first row 
+									5'd1: screen_col = 32'h0000_004F; 
+									5'd2: screen_col = 32'h0000_0044;
+									5'd3: screen_col = 32'h0000_0047;
+									5'd4: screen_col = 32'h0000_0045;
+									5'd5: screen_col = 32'h0000_005F;
+									5'd6: screen_col = 32'h0000_002B;
+									5'd7: screen_col = 32'h0000_004E;
+									5'd8: screen_col = 32'h0000_0049;
+									5'd9: screen_col = 32'h0000_0046;
+									5'd10: screen_col = 32'h0000_0045;
+									5'd11: screen_col = 32'h0000_0053;
+									5'd12: screen_col = 32'h0000_005F;
+									5'd13: screen_col = 32'h0000_005F;
+									5'd14: screen_col = 32'h0000_005F;
+									5'd15: screen_col = 32'h0000_005F;
+									5'd16: screen_col = 32'h0000_0023; // second row
+									5'd17: screen_col = 32'h0000_0048;
+									5'd18: screen_col = 32'h0000_0041;
+									5'd19: screen_col = 32'h0000_0052;
+									5'd20: screen_col = 32'h0000_0047;
+									5'd21: screen_col = 32'h0000_0049;
+									5'd22: screen_col = 32'h0000_004E;
+									5'd23: screen_col = 32'h0000_0047;
+									5'd24: screen_col = 32'h0000_005F;
+									5'd25: screen_col = 32'h0000_005F;
+									5'd26: screen_col = 32'h0000_005F;
+									5'd27: screen_col = 32'h0000_005F;
+									5'd28: screen_col = 32'h0000_005F;
+									5'd29: screen_col = 32'h0000_005F;
+									5'd30: screen_col = 32'h0000_005F;
+									5'd31: screen_col = 32'h0000_005F; // finish
+								endcase
+							end
+							else begin
+								case(LCD_counter)
+									5'd0: screen_col = 32'h0000_0024; // first row 
+									5'd1: screen_col = 32'h0000_004F; 
+									5'd2: screen_col = 32'h0000_0044;
+									5'd3: screen_col = 32'h0000_0047;
+									5'd4: screen_col = 32'h0000_0045;
+									5'd5: screen_col = 32'h0000_005F;
+									5'd6: screen_col = 32'h0000_002B;
+									5'd7: screen_col = 32'h0000_004E;
+									5'd8: screen_col = 32'h0000_0049;
+									5'd9: screen_col = 32'h0000_0046;
+									5'd10: screen_col = 32'h0000_0045;
+									5'd11: screen_col = 32'h0000_0053;
+									5'd12: screen_col = 32'h0000_005F;
+									5'd13: screen_col = 32'h0000_005F;
+									5'd14: screen_col = 32'h0000_005F;
+									5'd15: screen_col = 32'h0000_005F;
+									5'd16: screen_col = 32'h0000_0023; // second row
+									5'd17: screen_col = 32'h0000_0048;
+									5'd18: screen_col = 32'h0000_0041;
+									5'd19: screen_col = 32'h0000_0052;
+									5'd20: screen_col = 32'h0000_0047;
+									5'd21: screen_col = 32'h0000_0045;
+									5'd22: screen_col = 32'h0000_0044;
+									5'd23: screen_col = 32'h0000_005F;
+									5'd24: screen_col = 32'h0000_005F;
+									5'd25: screen_col = 32'h0000_005F;
+									5'd26: screen_col = 32'h0000_005F;
+									5'd27: screen_col = 32'h0000_005F;
+									5'd28: screen_col = 32'h0000_005F;
+									5'd29: screen_col = 32'h0000_005F;
+									5'd30: screen_col = 32'h0000_005F;
+									5'd31: screen_col = 32'h0000_005F; // finish
+								endcase
+							end
 						end
 					end
 				endcase
 			end
-			2: begin
+			2: begin //Lose
 				screen_col = 0;
 				case(screen_row)
 					16'b0000_0000_0000_0001: screen_col = 32'b0000_0000_0000_0000_0000_0000_0000_0000;
-					16'b0000_0000_0000_0010: screen_col = 32'b0011_1111_1110_0000_0100_0000_0000_0000;
-					16'b0000_0000_0000_0100: screen_col = 32'b0010_0000_0010_0000_0100_0000_0000_0000;
-					16'b0000_0000_0000_1000: screen_col = 32'b0010_0000_0010_0000_0100_0000_0000_0000;
-					16'b0000_0000_0001_0000: screen_col = 32'b0010_0000_0010_0000_0100_0000_0000_0000;
-					16'b0000_0000_0010_0000: screen_col = 32'b0010_0000_0010_0000_0100_0000_0000_0000;
-					16'b0000_0000_0100_0000: screen_col = 32'b0011_1111_1110_0000_0111_1111_1100_0000;
+					16'b0000_0000_0000_0010: screen_col = 32'b0000_0111_1111_1100_0000_0000_0000_1000;
+					16'b0000_0000_0000_0100: screen_col = 32'b0000_0100_0000_0100_0000_0000_0000_1000;
+					16'b0000_0000_0000_1000: screen_col = 32'b0000_0100_0000_0100_0000_0000_0000_1000;
+					16'b0000_0000_0001_0000: screen_col = 32'b0000_0100_0000_0100_0000_0000_0000_1000;
+					16'b0000_0000_0010_0000: screen_col = 32'b0000_0100_0000_0100_0000_0000_0000_1000;
+					16'b0000_0000_0100_0000: screen_col = 32'b0000_0111_1111_1100_0000_1111_1111_1000;
 					16'b0000_0000_1000_0000: screen_col = 32'b0000_0000_0000_0000_0000_0000_0000_0000;
 					
 					16'b0000_0001_0000_0000: screen_col = 32'b0000_0000_0000_0000_0000_0000_0000_0000;
-					16'b0000_0010_0000_0000: screen_col = 32'b0011_1111_1110_0000_0111_1111_1100_0000;
-					16'b0000_0100_0000_0000: screen_col = 32'b0010_0000_0000_0000_0100_0000_0000_0000;
-					16'b0000_1000_0000_0000: screen_col = 32'b0010_0000_0000_0000_0100_0000_0000_0000;
-					16'b0001_0000_0000_0000: screen_col = 32'b0011_1111_1110_0000_0111_1111_1100_0000;
-					16'b0010_0000_0000_0000: screen_col = 32'b0010_0000_0000_0000_0000_0000_0100_0000;
-					16'b0100_0000_0000_0000: screen_col = 32'b0011_1111_1110_0000_0111_1111_1100_0000;
+					16'b0000_0010_0000_0000: screen_col = 32'b0000_0111_1111_1100_0000_1111_1111_1000;
+					16'b0000_0100_0000_0000: screen_col = 32'b0000_0000_0000_0100_0000_0000_0000_1000;
+					16'b0000_1000_0000_0000: screen_col = 32'b0000_0000_0000_0100_0000_0000_0000_1000;
+					16'b0001_0000_0000_0000: screen_col = 32'b0000_0111_1111_1100_0000_1111_1111_1000;
+					16'b0010_0000_0000_0000: screen_col = 32'b0000_0000_0000_0100_0000_1000_0000_0000;
+					16'b0100_0000_0000_0000: screen_col = 32'b0000_0111_1111_1100_0000_1111_1111_1000;
 					16'b1000_0000_0000_0000: screen_col = 32'b0000_0000_0000_0000_0000_0000_0000_0000;
 					default: begin
                         case(LCD_counter)
@@ -489,26 +676,26 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
 					end
 				endcase
 			end
-			3: begin
+			3: begin //Win
 				screen_col = 0;
 				case(screen_row)
 					16'b0000_0000_0000_0001: screen_col = 32'b0000_0000_0000_0000_0000_0000_0000_0000;
-					16'b0000_0000_0000_0010: screen_col = 32'b0100_0100_0010_0000_0011_1111_1110_0000;
-					16'b0000_0000_0000_0100: screen_col = 32'b0100_0100_0010_0000_0000_0010_0000_0000;
-					16'b0000_0000_0000_1000: screen_col = 32'b0100_0100_0010_0000_0000_0010_0000_0000;
-					16'b0000_0000_0001_0000: screen_col = 32'b0100_0100_0010_0000_0000_0010_0000_0000;
-					16'b0000_0000_0010_0000: screen_col = 32'b0100_0100_0010_0000_0000_0010_0000_0000;
-					16'b0000_0000_0100_0000: screen_col = 32'b0111_1111_1110_0000_0011_1111_1110_0000;
+					16'b0000_0000_0000_0010: screen_col = 32'b0000_0111_1111_1100_0000_1000_1000_1000;
+					16'b0000_0000_0000_0100: screen_col = 32'b0000_0000_0100_0000_0000_1000_1000_1000;
+					16'b0000_0000_0000_1000: screen_col = 32'b0000_0000_0100_0000_0000_1000_1000_1000;
+					16'b0000_0000_0001_0000: screen_col = 32'b0000_0000_0100_0000_0000_1000_1000_1000;
+					16'b0000_0000_0010_0000: screen_col = 32'b0000_0000_0100_0000_0000_1000_1000_1000;
+					16'b0000_0000_0100_0000: screen_col = 32'b0000_0111_1111_1100_0000_1111_1111_1000;
 					16'b0000_0000_1000_0000: screen_col = 32'b0000_0000_0000_0000_0000_0000_0000_0000;
 					
 					16'b0000_0001_0000_0000: screen_col = 32'b0000_0000_0000_0000_0000_0000_0000_0000;
-					16'b0000_0010_0000_0000: screen_col = 32'b0110_0000_1000_0000_0000_0001_1000_0000;
-					16'b0000_0100_0000_0000: screen_col = 32'b0101_0000_1000_0000_0000_0001_1000_0000;
-					16'b0000_1000_0000_0000: screen_col = 32'b0100_1000_1000_0000_0000_0001_1000_0000;
-					16'b0001_0000_0000_0000: screen_col = 32'b0100_0100_1000_0000_0000_0001_1000_0000;
-					16'b0010_0000_0000_0000: screen_col = 32'b0100_0010_1000_0000_0000_0000_0000_0000;
-					16'b0100_0000_0000_0000: screen_col = 32'b0100_0001_1000_0000_0000_0001_1000_0000;
-					16'b1000_0000_0000_0000: screen_col = 32'b0000_0000_0000_0000_0000_0001_1000_0000;
+					16'b0000_0010_0000_0000: screen_col = 32'b0000_0000_0110_0000_0000_1000_0001_1000;
+					16'b0000_0100_0000_0000: screen_col = 32'b0000_0000_0110_0000_0000_1000_0010_1000;
+					16'b0000_1000_0000_0000: screen_col = 32'b0000_0000_0110_0000_0000_1000_0100_1000;
+					16'b0001_0000_0000_0000: screen_col = 32'b0000_0000_0110_0000_0000_1000_1000_1000;
+					16'b0010_0000_0000_0000: screen_col = 32'b0000_0000_0000_0000_0000_1001_0000_1000;
+					16'b0100_0000_0000_0000: screen_col = 32'b0000_0000_0110_0000_0000_1010_0000_1000;
+					16'b1000_0000_0000_0000: screen_col = 32'b0000_0000_0110_0000_0000_1100_0000_1000;
 					default: begin
                         case(LCD_counter)
                             5'd0: screen_col = 32'h0000_0037; // first row 
