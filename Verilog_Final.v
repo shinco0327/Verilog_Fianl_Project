@@ -133,12 +133,12 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
 			//Main Game Mode
 			//-----------------------------------------------------------------------------
 			1: begin
-				//generate new knife
-				if(easy_t) begin
-					create_knife();
-				end
 				if(drop_knife_t >= drop_knife_limit)begin
 					integer i;
+					//generate new knife
+					if(easy_t) begin
+						create_knife();
+					end
 					drop_knife_t = 0;
 					if(!za_warudo) begin
 						for(i=0; i<knife_size; i=i+1)begin		//knife go down
