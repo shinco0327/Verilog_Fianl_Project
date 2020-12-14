@@ -16,7 +16,7 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
 	wire easy_t, normal_t, extreme_t;
 	reg [10:0] knife[15:0]; //[row_x, row_4, row_3, row_2, row_1, row_0, col_4, col_3, col_2, col_1, col_0]
 	reg za_warudo;
-	reg [15:0] za_warudo_t, game_t, za_warudo_cc, drop_knife_t, drop_knife_limit;
+	reg [15:0] za_warudo_t, game_t, za_warudo_cc, drop_knife_t, drop_knife_limit, za_warudo_max;
 	parameter za_warudo_charge_t = 50;
 	output [3:0]out_state;
 	reg [1:0]game_mode;
@@ -24,8 +24,7 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
 	reg lfsr_rst;
 	assign out_state = screen_state;
 	
-	//LFSR_5bit M1((screen_row[1]| screen_row[9]| screen_row[15]| screen_row[6]), prn, lfsr_rst, easy_t, normal_t, extreme_t);
-	LFSR_5bit M1(clk, prn, lfsr_rst, easy_t, normal_t, extreme_t);
+	LFSR_5bit M1((screen_row[1]| screen_row[9]| screen_row[15]| screen_row[6]), prn, lfsr_rst, easy_t, normal_t, extreme_t);
 	
 
 	always@(posedge clk) begin
@@ -93,10 +92,22 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
 					timer = 0; 
 					human_col <= 0;
 					case(game_mode)
-						2'b00: drop_knife_limit = 16'd320;
-						2'b01: drop_knife_limit = 16'd200;
-						2'b10: drop_knife_limit = 16'd100;
-						default: drop_knife_limit = 16'd320;
+						2'b00: begin
+							drop_knife_limit = 16'd320;
+							za_warudo_max = 16'h2f;
+						end
+						2'b01: begin
+							drop_knife_limit = 16'd200;
+							za_warudo_max = 16'h20;
+						end
+						2'b10: begin
+							drop_knife_limit = 16'd100;
+							za_warudo_max = 16'h12;
+						end
+						default: begin
+							drop_knife_limit = 16'd320;
+							za_warudo_max = 16'h2f;
+						end
 					endcase
 					game_t = 16'hd20000;
 					drop_knife_t = 0;
@@ -104,14 +115,14 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
 					end
 				else screen_state <= 0;
 				//Sel mode
-				if(timer >= 150) begin
+				if(timer >= 100) begin
 					timer = 0;
-					if(left_btn)  begin
+					if(right_btn)  begin
 						LCD_state <= 4'd0;
 						game_mode = game_mode + 1;
 						if(game_mode == 4) game_mode = 2'd0;
 					end
-					else if(right_btn)begin
+					else if(left_btn)begin
 						LCD_state <= 4'd0;
 						game_mode = game_mode - 1;
 						if(game_mode == 4) game_mode = 2'd3;
@@ -203,7 +214,7 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
 							za_warudo = 1;
 							za_warudo_cc = 0;
 							LCD_state <= 4'd0;
-							za_warudo_t = 16'h2f;
+							za_warudo_t = za_warudo_max;
 						end
 					end
 				end
