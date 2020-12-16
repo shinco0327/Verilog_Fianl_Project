@@ -64,8 +64,8 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
 			4'd3:begin
 				LCD_EN <= 0;
 				if(delay_counter != 0)begin
-					if(delay_counter < 3)begin
-						screen_row = old_screen_row;
+					if(delay_counter == 1) screen_row = old_screen_row;
+					if(delay_counter < 4)begin
 						if(screen_row == 16'b1000_0000_0000_0000) screen_row = 16'b0000_0000_0000_0001;
 						else screen_row = {screen_row[14:0], 1'b0};
 					end
