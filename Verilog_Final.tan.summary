@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 18.184 ns
+Actual Time    : 17.339 ns
 From           : right_btn
-To             : LCD_state.0001
+To             : LCD_state.0100
 From Clock     : --
 To Clock       : clk
 Failed Paths   : 0
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 26.182 ns
-From           : screen_col[3]$latch
-To             : screen_col[3]
+Actual Time    : 23.857 ns
+From           : screen_col[15]$latch
+To             : screen_col[15]
 From Clock     : clk
 To Clock       : --
 Failed Paths   : 0
@@ -25,9 +25,9 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : -5.324 ns
+Actual Time    : -5.169 ns
 From           : function_btn
-To             : screen_state.0000
+To             : lfsr_rst
 From Clock     : --
 To Clock       : clk
 Failed Paths   : 0
@@ -35,9 +35,9 @@ Failed Paths   : 0
 Type           : Clock Setup: 'clk'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 38.41 MHz ( period = 26.037 ns )
+Actual Time    : 40.19 MHz ( period = 24.881 ns )
 From           : LFSR_5bit:M1|D123456789[5]
-To             : screen_state.0010
+To             : LCD_state.0100
 From Clock     : clk
 To Clock       : clk
 Failed Paths   : 0
@@ -47,10 +47,10 @@ Slack          : Not operational: Clock Skew > Data Delay
 Required Time  : None
 Actual Time    : N/A
 From           : screen_state.0001
-To             : screen_col[13]$latch
+To             : screen_col[9]$latch
 From Clock     : clk
 To Clock       : clk
-Failed Paths   : 2010
+Failed Paths   : 2081
 
 Type           : Total number of failed paths
 Slack          : 
@@ -60,7 +60,7 @@ From           :
 To             : 
 From Clock     : 
 To Clock       : 
-Failed Paths   : 2010
+Failed Paths   : 2081
 
 --------------------------------------------------------------------------------------
 
