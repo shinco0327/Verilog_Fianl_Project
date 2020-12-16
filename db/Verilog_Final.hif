@@ -21,8 +21,8 @@ VHSM_ON
 # entity
 LFSR_5bit
 # storage
-db|Verilog_Final.(1).cnf
-db|Verilog_Final.(1).cnf
+db|Verilog_Final.(2).cnf
+db|Verilog_Final.(2).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -30,7 +30,7 @@ ON
 # case_sensitive
 # source_file
 LFSR_5bit.v
-f3fedce38cc44867ac36bf6d85caab
+aa2afce3102b6f37cddd7734a93e2a0
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -66,7 +66,7 @@ ON
 # case_sensitive
 # source_file
 Verilog_Final.v
-9264e256b895efb9ef708918322bb
+a9b549602e1b8fae183b46b55fbb5c
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT

@@ -86,26 +86,28 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
 				integer i;
 				for(i = 0; i < knife_size; i=i+1) knife[i] = 11'b111_1111_1111;
 				za_warudo = 0;
+				lfsr_rst = 1;
 				if(function_btn) begin 
+					lfsr_rst = 0;
 					screen_state <= 4; 
 					LCD_state <= 4'd0;
 					timer = 0; 
 					human_col <= 0;
 					case(game_mode)
 						2'b00: begin
-							drop_knife_limit = 16'd320;
+							drop_knife_limit = 16'd200;
 							za_warudo_max = 16'h2f;
 						end
 						2'b01: begin
-							drop_knife_limit = 16'd200;
+							drop_knife_limit = 16'd100;
 							za_warudo_max = 16'h20;
 						end
 						2'b10: begin
-							drop_knife_limit = 16'd100;
+							drop_knife_limit = 16'd50;
 							za_warudo_max = 16'h12;
 						end
 						default: begin
-							drop_knife_limit = 16'd320;
+							drop_knife_limit = 16'd200;
 							za_warudo_max = 16'h2f;
 						end
 					endcase
@@ -776,7 +778,6 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
 		screen_row = 16'h0001;
 		//screen_state = 0;
         LCD_state = 0;
-		lfsr_rst = 1;
 		for(i = 0; i < knife_size; i=i+1) knife[i] = 11'b111_1111_1111;
 	end
 	
@@ -802,7 +803,14 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
 			knife[0][4:0] = {4'hf};
 		end	
 		else if(knife[1] == 11'b111_1111_1111) begin
-			knife[1][10:5] = {1'b0, prn[4:0]};
+			case(prn[2:1])
+				3'b000: knife[1][10:5] = {1'b0, 5'b00000};
+				3'b001: knife[1][10:5] = {1'b0, 5'b00001};
+				3'b010: knife[1][10:5] = {1'b0, 5'b00010};
+				3'b011: knife[1][10:5] = {1'b0, 5'b00011};
+				3'b100: knife[1][10:5] = {1'b0, 5'b00100};
+				default: knife[1][10:5] = {1'b0, prn[4:0]};
+			endcase
 			knife[1][4:0] = {4'hf};
 		end	
 		else if(knife[2] == 11'b111_1111_1111) begin

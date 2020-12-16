@@ -4,13 +4,13 @@ module LFSR_5bit(clk, prn, rst, easy_t, normal_t, extreme_t);
     output easy_t, normal_t, extreme_t;
  
 
-    reg [9:0] D123456789 = 10'd1; //NEVER 000000
+    reg [9:0] D123456789; //NEVER 000000
 
-    assign prn[0] = D123456789[9];
-    assign prn[1] = D123456789[1];
+    assign prn[0] = D123456789[1];
+    assign prn[1] = D123456789[3];
     assign prn[2] = D123456789[5];
-    assign prn[3] = D123456789[3];
-    assign prn[4] = D123456789[7];
+    assign prn[3] = D123456789[7];
+    assign prn[4] = D123456789[9];
 
     assign easy_t = prn[2] & prn[0]; 
     assign normal_t = prn[1] | prn[2];
@@ -20,7 +20,7 @@ module LFSR_5bit(clk, prn, rst, easy_t, normal_t, extreme_t);
     always @ (posedge rst or posedge clk)
     if (rst)
         begin
-            D123456789 <= 10'd88;
+            D123456789 <= 10'b11_1111_1111;
         end
     else
         begin
