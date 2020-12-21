@@ -146,7 +146,7 @@ LCD_EN                       : 75        : output : 3.3-V LVCMOS      :         
 LCD_RS                       : 76        : output : 3.3-V LVCMOS      :         : 4         : Y              
 RESERVED_INPUT               : 77        :        :                   :         : 4         :                
 RESERVED_INPUT               : 78        :        :                   :         : 4         :                
-out_state[0]                 : 79        : output : 3.3-V LVCMOS      :         : 4         : N              
+RESERVED_INPUT               : 79        :        :                   :         : 4         :                
 RESERVED_INPUT               : 80        :        :                   :         : 4         :                
 RESERVED_INPUT               : 81        :        :                   :         : 4         :                
 RESERVED_INPUT               : 82        :        :                   :         : 4         :                
@@ -187,7 +187,7 @@ RESERVED_INPUT               : 116       :        :                   :         
 RESERVED_INPUT               : 117       :        :                   :         : 4         :                
 RESERVED_INPUT               : 118       :        :                   :         : 4         :                
 RESERVED_INPUT               : 119       :        :                   :         : 4         :                
-RESERVED_INPUT               : 120       :        :                   :         : 4         :                
+out_state[3]                 : 120       : output : 3.3-V LVCMOS      :         : 4         : N              
 RESERVED_INPUT               : 121       :        :                   :         : 3         :                
 RESERVED_INPUT               : 122       :        :                   :         : 3         :                
 RESERVED_INPUT               : 123       :        :                   :         : 3         :                
@@ -283,7 +283,7 @@ GND                          : 212       : gnd    :                   :         
 RESERVED_INPUT               : 213       :        :                   :         : 2         :                
 RESERVED_INPUT               : 214       :        :                   :         : 2         :                
 RESERVED_INPUT               : 215       :        :                   :         : 2         :                
-out_state[3]                 : 216       : output : 3.3-V LVCMOS      :         : 2         : N              
+RESERVED_INPUT               : 216       :        :                   :         : 2         :                
 RESERVED_INPUT               : 217       :        :                   :         : 2         :                
 RESERVED_INPUT               : 218       :        :                   :         : 2         :                
 RESERVED_INPUT               : 219       :        :                   :         : 2         :                
@@ -294,8 +294,8 @@ RESERVED_INPUT               : 223       :        :                   :         
 right_btn                    : 224       : input  : 3.3-V LVCMOS      :         : 2         : Y              
 left_btn                     : 225       : input  : 3.3-V LVCMOS      :         : 2         : Y              
 function_btn                 : 226       : input  : 3.3-V LVCMOS      :         : 2         : Y              
-out_state[2]                 : 227       : output : 3.3-V LVCMOS      :         : 2         : N              
-out_state[1]                 : 228       : output : 3.3-V LVCMOS      :         : 2         : N              
+out_state[1]                 : 227       : output : 3.3-V LVCMOS      :         : 2         : N              
+out_state[0]                 : 228       : output : 3.3-V LVCMOS      :         : 2         : N              
 VCCINT                       : 229       : power  :                   : 1.5V    :           :                
 GND                          : 230       : gnd    :                   :         :           :                
 VCCIO2                       : 231       : power  :                   : 3.3V    : 2         :                
@@ -306,5 +306,5 @@ screen_row[13]               : 235       : output : 3.3-V LVCMOS      :         
 screen_row[12]               : 236       : output : 3.3-V LVCMOS      :         : 2         : Y              
 screen_row[11]               : 237       : output : 3.3-V LVCMOS      :         : 2         : Y              
 screen_row[10]               : 238       : output : 3.3-V LVCMOS      :         : 2         : Y              
-RESERVED_INPUT               : 239       :        :                   :         : 2         :                
+out_state[2]                 : 239       : output : 3.3-V LVCMOS      :         : 2         : N              
 RESERVED_INPUT               : 240       :        :                   :         : 2         :                

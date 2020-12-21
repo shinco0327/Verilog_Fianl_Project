@@ -107,8 +107,8 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
 				lfsr_rst = 1;
 				if(function_btn) begin 
 					lfsr_rst = 0;
-					t_tens = 4'd6;
-					t_units = 4'd0;
+					t_tens = 4'd3;
+					t_units = 4'd1;
 					screen_state <= 4; 
 					LCD_state <= 4'd0;
 					timer = 0; 
@@ -120,7 +120,7 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
 							za_warudo_max = 16'h2f;
 						end
 						2'b01: begin
-							drop_knife_limit = 16'd100;
+							drop_knife_limit = 16'd150;
 							za_warudo_max = 16'h20;
 						end
 						2'b10: begin
@@ -137,12 +137,12 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
 					end
 				else screen_state <= 0;
 				//Sel mode
-				if(timer >= 100) begin
+				if(timer >= 300) begin
 					timer = 0;
 					if(right_btn)  begin
 						LCD_state <= 4'd0;
 						game_mode = game_mode + 1;
-						if(game_mode == 4) game_mode = 2'd0;
+						if(game_mode >= 3) game_mode = 2'd0;
 					end
 					else if(left_btn)begin
 						LCD_state <= 4'd0;
@@ -175,7 +175,7 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
 					integer i;
 					//generate new knife
 					if(easy_t) begin
-						create_knife();
+						if(!za_warudo) create_knife();
 					end
 					drop_knife_t = 0;
 					if(!za_warudo) begin
@@ -185,25 +185,40 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
 								else knife[i][4:0] = knife[i][4:0] - 1;
 								case(knife[i][4:0]) //detect got shot
 									5'b00000: begin
+										if(knife[i][9:5] == (human_col)) begin screen_state <= 2;  LCD_state <= 4'd0;end
 										if(knife[i][9:5] == (human_col + 1)) begin screen_state <= 2;  LCD_state <= 4'd0;end
 										if(knife[i][9:5] == (human_col + 2)) begin screen_state <= 2;  LCD_state <= 4'd0;end
-										if(knife[i][9:5] == (human_col + 3)) begin screen_state <= 2;  LCD_state <= 4'd0;end 
+										if(knife[i][9:5] == (human_col + 3)) begin screen_state <= 2;  LCD_state <= 4'd0;end
+										if(knife[i][9:5] == (human_col + 4)) begin screen_state <= 2;  LCD_state <= 4'd0;end
 									end
 									5'b00001: begin
-										
+										if(knife[i][9:5] == (human_col)) begin screen_state <= 2;  LCD_state <= 4'd0;end
+										if(knife[i][9:5] == (human_col + 1)) begin screen_state <= 2;  LCD_state <= 4'd0;end
+										if(knife[i][9:5] == (human_col + 2)) begin screen_state <= 2;  LCD_state <= 4'd0;end
+										if(knife[i][9:5] == (human_col + 3)) begin screen_state <= 2;  LCD_state <= 4'd0;end
+										if(knife[i][9:5] == (human_col + 4)) begin screen_state <= 2;  LCD_state <= 4'd0;end
 									end
 									5'b00010: begin
-										
+										if(knife[i][9:5] == (human_col)) begin screen_state <= 2;  LCD_state <= 4'd0;end
+										if(knife[i][9:5] == (human_col + 1)) begin screen_state <= 2;  LCD_state <= 4'd0;end
+										if(knife[i][9:5] == (human_col + 2)) begin screen_state <= 2;  LCD_state <= 4'd0;end
+										if(knife[i][9:5] == (human_col + 3)) begin screen_state <= 2;  LCD_state <= 4'd0;end
+										if(knife[i][9:5] == (human_col + 4)) begin screen_state <= 2;  LCD_state <= 4'd0;end
 									end
 									5'b00011: begin
 										if(knife[i][9:5] == (human_col)) begin screen_state <= 2;  LCD_state <= 4'd0;end
+										if(knife[i][9:5] == (human_col + 2)) begin screen_state <= 2;  LCD_state <= 4'd0;end
 										if(knife[i][9:5] == (human_col + 4)) begin screen_state <= 2;  LCD_state <= 4'd0;end
 									end
 									5'b00100: begin
-										
+										if(knife[i][9:5] == (human_col + 1)) begin screen_state <= 2;  LCD_state <= 4'd0;end
+										if(knife[i][9:5] == (human_col + 2)) begin screen_state <= 2;  LCD_state <= 4'd0;end
+										if(knife[i][9:5] == (human_col + 3)) begin screen_state <= 2;  LCD_state <= 4'd0;end 	
 									end
 									5'b00101: begin
-										
+										if(knife[i][9:5] == (human_col + 1)) begin screen_state <= 2;  LCD_state <= 4'd0;end
+										if(knife[i][9:5] == (human_col + 2)) begin screen_state <= 2;  LCD_state <= 4'd0;end
+										if(knife[i][9:5] == (human_col + 3)) begin screen_state <= 2;  LCD_state <= 4'd0;end 	
 									end
 								endcase 
 							end
@@ -775,9 +790,9 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
                             5'd2: screen_col = 32'h0000_005F;
                             5'd3: screen_col = 32'h0000_002E;
                             5'd4: screen_col = 32'h0000_002F;
-                            5'd5: screen_col = 32'h0000_005F;
-                            5'd6: screen_col = 32'h0000_005F;
-                            5'd7: screen_col = 32'h0000_005F;
+                            5'd5: screen_col = 32'h0000_000E;
+                            5'd6: screen_col = 32'h0000_000E;
+                            5'd7: screen_col = 32'h0000_000E;
                             5'd8: screen_col = 32'h0000_005F;
                             5'd9: screen_col = 32'h0000_005F;
                             5'd10: screen_col = 32'h0000_005F;
@@ -786,19 +801,19 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
                             5'd13: screen_col = 32'h0000_005F;
                             5'd14: screen_col = 32'h0000_005F;
                             5'd15: screen_col = 32'h0000_005F;
-                            5'd16: screen_col = 32'h0000_005F; // second row
-                            5'd17: screen_col = 32'h0000_005F;
-                            5'd18: screen_col = 32'h0000_005F;
+                            5'd16: screen_col = 32'h0000_0039; // second row
+                            5'd17: screen_col = 32'h0000_004F;
+                            5'd18: screen_col = 32'h0000_0055;
                             5'd19: screen_col = 32'h0000_005F;
-                            5'd20: screen_col = 32'h0000_005F;
-                            5'd21: screen_col = 32'h0000_005F;
-                            5'd22: screen_col = 32'h0000_005F;
+                            5'd20: screen_col = 32'h0000_0041;
+                            5'd21: screen_col = 32'h0000_0052;
+                            5'd22: screen_col = 32'h0000_0045;
                             5'd23: screen_col = 32'h0000_005F;
-                            5'd24: screen_col = 32'h0000_005F;
-                            5'd25: screen_col = 32'h0000_005F;
-                            5'd26: screen_col = 32'h0000_005F;
-                            5'd27: screen_col = 32'h0000_005F;
-                            5'd28: screen_col = 32'h0000_005F;
+                            5'd24: screen_col = 32'h0000_0044;
+                            5'd25: screen_col = 32'h0000_0045;
+                            5'd26: screen_col = 32'h0000_0041;
+                            5'd27: screen_col = 32'h0000_0044;
+                            5'd28: screen_col = 32'h0000_0001;
                             5'd29: screen_col = 32'h0000_005F;
                             5'd30: screen_col = 32'h0000_005F;
                             5'd31: screen_col = 32'h0000_005F; // finish
@@ -828,21 +843,21 @@ module Verilog_Final(left_btn, right_btn, function_btn, screen_row, screen_col, 
 					16'b1000_0000_0000_0000: screen_col = 32'b0000_0000_0110_0000_0000_1100_0000_1000;
 					default: begin
                         case(LCD_counter)
-                            5'd0: screen_col = 32'h0000_0037; // first row 
-                            5'd1: screen_col = 32'h0000_0049; 
+                            5'd0: screen_col = 32'h0000_0023; // first row 
+                            5'd1: screen_col = 32'h0000_004F; 
                             5'd2: screen_col = 32'h0000_004E;
-                            5'd3: screen_col = 32'h0000_005F;
-                            5'd4: screen_col = 32'h0000_0028;
-                            5'd5: screen_col = 32'h0000_0021;
-                            5'd6: screen_col = 32'h0000_0028;
-                            5'd7: screen_col = 32'h0000_0021;
-                            5'd8: screen_col = 32'h0000_005F;
-                            5'd9: screen_col = 32'h0000_005F;
-                            5'd10: screen_col = 32'h0000_005F;
-                            5'd11: screen_col = 32'h0000_005F;
-                            5'd12: screen_col = 32'h0000_005F;
-                            5'd13: screen_col = 32'h0000_005F;
-                            5'd14: screen_col = 32'h0000_005F;
+                            5'd3: screen_col = 32'h0000_0047;
+                            5'd4: screen_col = 32'h0000_0052;
+                            5'd5: screen_col = 32'h0000_0041;
+                            5'd6: screen_col = 32'h0000_0054;
+                            5'd7: screen_col = 32'h0000_0055;
+                            5'd8: screen_col = 32'h0000_004C;
+                            5'd9: screen_col = 32'h0000_0041;
+                            5'd10: screen_col = 32'h0000_054;
+                            5'd11: screen_col = 32'h0000_0049;
+                            5'd12: screen_col = 32'h0000_004F;
+                            5'd13: screen_col = 32'h0000_004E;
+                            5'd14: screen_col = 32'h0000_005E;
                             5'd15: screen_col = 32'h0000_005F;
                             5'd16: screen_col = 32'h0000_005F; // second row
                             5'd17: screen_col = 32'h0000_005F;

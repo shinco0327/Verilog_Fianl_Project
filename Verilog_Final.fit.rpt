@@ -1,5 +1,5 @@
 Fitter report for Verilog_Final
-Wed Dec 16 21:13:43 2020
+Mon Dec 21 17:26:21 2020
 Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition
 
 
@@ -64,14 +64,14 @@ applicable agreement for further details.
 +-----------------------------------------------------------------+
 ; Fitter Summary                                                  ;
 +-----------------------+-----------------------------------------+
-; Fitter Status         ; Successful - Wed Dec 16 21:13:43 2020   ;
+; Fitter Status         ; Successful - Mon Dec 21 17:26:21 2020   ;
 ; Quartus II Version    ; 9.0 Build 132 02/25/2009 SJ Web Edition ;
 ; Revision Name         ; Verilog_Final                           ;
 ; Top-level Entity Name ; Verilog_Final                           ;
 ; Family                ; Cyclone                                 ;
 ; Device                ; EP1C6Q240C8                             ;
 ; Timing Models         ; Final                                   ;
-; Total logic elements  ; 3,609 / 5,980 ( 60 % )                  ;
+; Total logic elements  ; 3,736 / 5,980 ( 62 % )                  ;
 ; Total pins            ; 60 / 185 ( 32 % )                       ;
 ; Total virtual pins    ; 0                                       ;
 ; Total memory bits     ; 0 / 92,160 ( 0 % )                      ;
@@ -143,8 +143,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                    ; Value               ;
 +-------------------------+---------------------+
 ; Placement               ;                     ;
-;     -- Requested        ; 0 / 3674 ( 0.00 % ) ;
-;     -- Achieved         ; 0 / 3674 ( 0.00 % ) ;
+;     -- Requested        ; 0 / 3801 ( 0.00 % ) ;
+;     -- Achieved         ; 0 / 3801 ( 0.00 % ) ;
 ;                         ;                     ;
 ; Routing (by Connection) ;                     ;
 ;     -- Requested        ; 0 / 0 ( 0.00 % )    ;
@@ -166,14 +166,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +----------------+---------+-------------------+-------------------------+-------------------+
-; Top            ; 3674    ; 0                 ; N/A                     ; Source File       ;
+; Top            ; 3801    ; 0                 ; N/A                     ; Source File       ;
 +----------------+---------+-------------------+-------------------------+-------------------+
 
 
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/User/Documents/Verilog_Fianl_Project/Verilog_Final.pin.
+The pin-out file can be found in C:/Users/User/Desktop/Verilog_Fianl_Project/Verilog_Final.pin.
 
 
 +----------------------------------------------------------------------+
@@ -181,28 +181,28 @@ The pin-out file can be found in C:/Users/User/Documents/Verilog_Fianl_Project/V
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Total logic elements                        ; 3,609 / 5,980 ( 60 % ) ;
-;     -- Combinational with no register       ; 3297                   ;
+; Total logic elements                        ; 3,736 / 5,980 ( 62 % ) ;
+;     -- Combinational with no register       ; 3425                   ;
 ;     -- Register only                        ; 4                      ;
-;     -- Combinational with a register        ; 308                    ;
+;     -- Combinational with a register        ; 307                    ;
 ;                                             ;                        ;
 ; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 2630                   ;
-;     -- 3 input functions                    ; 638                    ;
-;     -- 2 input functions                    ; 326                    ;
-;     -- 1 input functions                    ; 11                     ;
+;     -- 4 input functions                    ; 2738                   ;
+;     -- 3 input functions                    ; 675                    ;
+;     -- 2 input functions                    ; 309                    ;
+;     -- 1 input functions                    ; 10                     ;
 ;     -- 0 input functions                    ; 0                      ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 3521                   ;
+;     -- normal mode                          ; 3648                   ;
 ;     -- arithmetic mode                      ; 88                     ;
 ;     -- qfbk mode                            ; 5                      ;
 ;     -- register cascade mode                ; 0                      ;
 ;     -- synchronous clear/load mode          ; 70                     ;
 ;     -- asynchronous clear/load mode         ; 10                     ;
 ;                                             ;                        ;
-; Total registers                             ; 312 / 6,523 ( 5 % )    ;
-; Total LABs                                  ; 453 / 598 ( 76 % )     ;
+; Total registers                             ; 311 / 6,523 ( 5 % )    ;
+; Total LABs                                  ; 457 / 598 ( 76 % )     ;
 ; Logic elements in carry chains              ; 96                     ;
 ; User inserted logic elements                ; 0                      ;
 ; Virtual pins                                ; 0                      ;
@@ -217,14 +217,14 @@ The pin-out file can be found in C:/Users/User/Documents/Verilog_Fianl_Project/V
 ; JTAGs                                       ; 0 / 1 ( 0 % )          ;
 ; ASMI Blocks                                 ; 0 / 1 ( 0 % )          ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )          ;
-; Average interconnect usage (total/H/V)      ; 45% / 48% / 42%        ;
-; Peak interconnect usage (total/H/V)         ; 70% / 78% / 62%        ;
+; Average interconnect usage (total/H/V)      ; 45% / 45% / 45%        ;
+; Peak interconnect usage (total/H/V)         ; 58% / 59% / 57%        ;
 ; Maximum fan-out node                        ; clk                    ;
-; Maximum fan-out                             ; 302                    ;
+; Maximum fan-out                             ; 301                    ;
 ; Highest non-global fan-out signal           ; screen_state.0001      ;
 ; Highest non-global fan-out                  ; 232                    ;
-; Total fan-out                               ; 13851                  ;
-; Average fan-out                             ; 3.77                   ;
+; Total fan-out                               ; 14356                  ;
+; Average fan-out                             ; 3.78                   ;
 +---------------------------------------------+------------------------+
 
 
@@ -233,10 +233,10 @@ The pin-out file can be found in C:/Users/User/Documents/Verilog_Fianl_Project/V
 +--------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 ; Name         ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
 +--------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
-; clk          ; 28    ; 1        ; 0            ; 12           ; 2           ; 302                   ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVCMOS ; Off         ; User                 ;
+; clk          ; 28    ; 1        ; 0            ; 12           ; 2           ; 301                   ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVCMOS ; Off         ; User                 ;
 ; function_btn ; 226   ; 2        ; 8            ; 21           ; 1           ; 24                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVCMOS ; Off         ; User                 ;
-; left_btn     ; 225   ; 2        ; 8            ; 21           ; 0           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVCMOS ; Off         ; User                 ;
-; right_btn    ; 224   ; 2        ; 10           ; 21           ; 2           ; 10                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVCMOS ; Off         ; User                 ;
+; left_btn     ; 225   ; 2        ; 8            ; 21           ; 0           ; 5                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVCMOS ; Off         ; User                 ;
+; right_btn    ; 224   ; 2        ; 10           ; 21           ; 2           ; 11                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVCMOS ; Off         ; User                 ;
 +--------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
 
@@ -249,10 +249,10 @@ The pin-out file can be found in C:/Users/User/Documents/Verilog_Fianl_Project/V
 ; LCD_RS         ; 76    ; 4        ; 8            ; 0            ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 12mA             ; Off         ; User                 ; 10 pF ;
 ; LCD_RST        ; 4     ; 1        ; 0            ; 19           ; 1           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 12mA             ; Off         ; User                 ; 10 pF ;
 ; LCD_RW         ; 5     ; 1        ; 0            ; 19           ; 2           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 12mA             ; Off         ; User                 ; 10 pF ;
-; out_state[0]   ; 79    ; 4        ; 10           ; 0            ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 12mA             ; Off         ; Fitter               ; 10 pF ;
-; out_state[1]   ; 228   ; 2        ; 6            ; 21           ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 12mA             ; Off         ; Fitter               ; 10 pF ;
-; out_state[2]   ; 227   ; 2        ; 8            ; 21           ; 2           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 12mA             ; Off         ; Fitter               ; 10 pF ;
-; out_state[3]   ; 216   ; 2        ; 14           ; 21           ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 12mA             ; Off         ; Fitter               ; 10 pF ;
+; out_state[0]   ; 228   ; 2        ; 6            ; 21           ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 12mA             ; Off         ; Fitter               ; 10 pF ;
+; out_state[1]   ; 227   ; 2        ; 8            ; 21           ; 2           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 12mA             ; Off         ; Fitter               ; 10 pF ;
+; out_state[2]   ; 239   ; 2        ; 2            ; 21           ; 1           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 12mA             ; Off         ; Fitter               ; 10 pF ;
+; out_state[3]   ; 120   ; 4        ; 34           ; 0            ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 12mA             ; Off         ; Fitter               ; 10 pF ;
 ; screen_col[0]  ; 74    ; 4        ; 8            ; 0            ; 2           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 12mA             ; Off         ; User                 ; 10 pF ;
 ; screen_col[10] ; 48    ; 1        ; 0            ; 4            ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 12mA             ; Off         ; User                 ; 10 pF ;
 ; screen_col[11] ; 47    ; 1        ; 0            ; 5            ; 1           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 12mA             ; Off         ; User                 ; 10 pF ;
@@ -399,7 +399,7 @@ The pin-out file can be found in C:/Users/User/Documents/Verilog_Fianl_Project/V
 ; 76       ; 62         ; 4        ; LCD_RS                                   ; output ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; 77       ; 63         ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 78       ; 64         ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 79       ; 65         ; 4        ; out_state[0]                             ; output ; 3.3-V LVCMOS ;         ; Column I/O ; N               ; no       ; Off          ;
+; 79       ; 65         ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 80       ; 66         ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 81       ; 67         ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 82       ; 68         ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -440,7 +440,7 @@ The pin-out file can be found in C:/Users/User/Documents/Verilog_Fianl_Project/V
 ; 117      ; 95         ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 118      ; 96         ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 119      ; 97         ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 120      ; 98         ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 120      ; 98         ; 4        ; out_state[3]                             ; output ; 3.3-V LVCMOS ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 121      ; 99         ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 122      ; 100        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 123      ; 101        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -536,7 +536,7 @@ The pin-out file can be found in C:/Users/User/Documents/Verilog_Fianl_Project/V
 ; 213      ; 174        ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 214      ; 175        ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 215      ; 176        ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 216      ; 177        ; 2        ; out_state[3]                             ; output ; 3.3-V LVCMOS ;         ; Column I/O ; N               ; no       ; Off          ;
+; 216      ; 177        ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 217      ; 178        ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 218      ; 179        ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 219      ; 180        ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -547,8 +547,8 @@ The pin-out file can be found in C:/Users/User/Documents/Verilog_Fianl_Project/V
 ; 224      ; 185        ; 2        ; right_btn                                ; input  ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; 225      ; 186        ; 2        ; left_btn                                 ; input  ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; 226      ; 187        ; 2        ; function_btn                             ; input  ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
-; 227      ; 188        ; 2        ; out_state[2]                             ; output ; 3.3-V LVCMOS ;         ; Column I/O ; N               ; no       ; Off          ;
-; 228      ; 189        ; 2        ; out_state[1]                             ; output ; 3.3-V LVCMOS ;         ; Column I/O ; N               ; no       ; Off          ;
+; 227      ; 188        ; 2        ; out_state[1]                             ; output ; 3.3-V LVCMOS ;         ; Column I/O ; N               ; no       ; Off          ;
+; 228      ; 189        ; 2        ; out_state[0]                             ; output ; 3.3-V LVCMOS ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 229      ;            ;          ; VCCINT                                   ; power  ;              ; 1.5V    ; --         ;                 ; --       ; --           ;
 ; 230      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 231      ;            ; 2        ; VCCIO2                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -559,7 +559,7 @@ The pin-out file can be found in C:/Users/User/Documents/Verilog_Fianl_Project/V
 ; 236      ; 193        ; 2        ; screen_row[12]                           ; output ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; 237      ; 194        ; 2        ; screen_row[11]                           ; output ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; 238      ; 195        ; 2        ; screen_row[10]                           ; output ; 3.3-V LVCMOS ;         ; Column I/O ; Y               ; no       ; Off          ;
-; 239      ; 196        ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 239      ; 196        ; 2        ; out_state[2]                             ; output ; 3.3-V LVCMOS ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 240      ; 197        ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 +----------+------------+----------+------------------------------------------+--------+--------------+---------+------------+-----------------+----------+--------------+
 Note: Pin directions (input, output or bidir) are based on device operating in user mode.
@@ -592,8 +592,8 @@ Note: User assignments will override these defaults. The user specified values a
 +----------------------------+-------------+--------------+-------------+------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; Memory Bits ; M4Ks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name         ; Library Name ;
 +----------------------------+-------------+--------------+-------------+------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------+--------------+
-; |Verilog_Final             ; 3609 (3599) ; 312          ; 0           ; 0    ; 60   ; 0            ; 3297 (3297)  ; 4 (1)             ; 308 (301)        ; 96 (96)         ; 5 (4)      ; |Verilog_Final              ; work         ;
-;    |LFSR_5bit:M1|          ; 10 (10)     ; 10           ; 0           ; 0    ; 0    ; 0            ; 0 (0)        ; 3 (3)             ; 7 (7)            ; 0 (0)           ; 1 (1)      ; |Verilog_Final|LFSR_5bit:M1 ; work         ;
+; |Verilog_Final             ; 3736 (3726) ; 311          ; 0           ; 0    ; 60   ; 0            ; 3425 (3425)  ; 4 (1)             ; 307 (300)        ; 96 (96)         ; 5 (5)      ; |Verilog_Final              ; work         ;
+;    |LFSR_5bit:M1|          ; 10 (10)     ; 10           ; 0           ; 0    ; 0    ; 0            ; 0 (0)        ; 3 (3)             ; 7 (7)            ; 0 (0)           ; 0 (0)      ; |Verilog_Final|LFSR_5bit:M1 ; work         ;
 +----------------------------+-------------+--------------+-------------+------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -673,77 +673,80 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------+-------------------+---------+
 ; clk                       ;                   ;         ;
 ; function_btn              ;                   ;         ;
-;      - screen_state.0000  ; 0                 ; ON      ;
-;      - screen_state.0010  ; 0                 ; ON      ;
-;      - screen_state.0101  ; 0                 ; ON      ;
-;      - Selector444~0      ; 0                 ; ON      ;
-;      - Selector445~0      ; 0                 ; ON      ;
-;      - Selector443~1      ; 0                 ; ON      ;
-;      - Selector446~73     ; 0                 ; ON      ;
-;      - Selector446~74     ; 0                 ; ON      ;
-;      - LessThan1~1        ; 0                 ; ON      ;
-;      - Selector446~77     ; 0                 ; ON      ;
-;      - Selector446~81     ; 0                 ; ON      ;
-;      - Selector446~93     ; 0                 ; ON      ;
-;      - Selector451~2      ; 0                 ; ON      ;
-;      - Selector451~3      ; 0                 ; ON      ;
-;      - Selector447~0      ; 0                 ; ON      ;
-;      - screen_state~876   ; 0                 ; ON      ;
-;      - Selector441~1      ; 0                 ; ON      ;
-;      - za_warudo~5        ; 0                 ; ON      ;
-;      - game_mode[1]~6     ; 0                 ; ON      ;
-;      - za_warudo_cc[7]~80 ; 0                 ; ON      ;
-;      - za_warudo_t[0]~64  ; 0                 ; ON      ;
-;      - lfsr_rst           ; 0                 ; ON      ;
-;      - t_counter[1]~34    ; 0                 ; ON      ;
-;      - timer[4]~46        ; 0                 ; ON      ;
+;      - screen_state.0010  ; 1                 ; ON      ;
+;      - screen_state.0101  ; 1                 ; ON      ;
+;      - screen_state.0000  ; 1                 ; ON      ;
+;      - screen_state.0100  ; 1                 ; ON      ;
+;      - Selector444~2      ; 1                 ; ON      ;
+;      - Selector445~0      ; 1                 ; ON      ;
+;      - Selector443~1      ; 1                 ; ON      ;
+;      - Selector450~44     ; 1                 ; ON      ;
+;      - Selector450~45     ; 1                 ; ON      ;
+;      - LessThan1~0        ; 1                 ; ON      ;
+;      - Selector450~48     ; 1                 ; ON      ;
+;      - Selector450~56     ; 1                 ; ON      ;
+;      - Selector446~0      ; 1                 ; ON      ;
+;      - Selector450~71     ; 1                 ; ON      ;
+;      - Selector451~3      ; 1                 ; ON      ;
+;      - Selector448~17     ; 1                 ; ON      ;
+;      - screen_state~1240  ; 1                 ; ON      ;
+;      - Selector441~1      ; 1                 ; ON      ;
+;      - za_warudo~5        ; 1                 ; ON      ;
+;      - za_warudo_cc[5]~81 ; 1                 ; ON      ;
+;      - za_warudo_t[0]~64  ; 1                 ; ON      ;
+;      - lfsr_rst           ; 1                 ; ON      ;
+;      - t_counter[4]~34    ; 1                 ; ON      ;
+;      - timer[9]~46        ; 1                 ; ON      ;
 ; right_btn                 ;                   ;         ;
-;      - human_col[4]       ; 1                 ; ON      ;
-;      - human_col[3]       ; 1                 ; ON      ;
-;      - human_col[2]       ; 1                 ; ON      ;
-;      - human_col[1]       ; 1                 ; ON      ;
-;      - human_col[0]       ; 1                 ; ON      ;
-;      - game_mode[1]       ; 1                 ; ON      ;
-;      - Selector446~75     ; 1                 ; ON      ;
-;      - LCD_state~689      ; 1                 ; ON      ;
-;      - human_col[1]~33    ; 1                 ; ON      ;
-;      - human_col[1]~34    ; 1                 ; ON      ;
+;      - human_col[4]       ; 0                 ; ON      ;
+;      - human_col[3]       ; 0                 ; ON      ;
+;      - human_col[2]       ; 0                 ; ON      ;
+;      - human_col[1]       ; 0                 ; ON      ;
+;      - human_col[0]       ; 0                 ; ON      ;
+;      - game_mode[1]       ; 0                 ; ON      ;
+;      - game_mode[0]       ; 0                 ; ON      ;
+;      - Selector450~46     ; 0                 ; ON      ;
+;      - Selector451~2      ; 0                 ; ON      ;
+;      - human_col[3]~33    ; 0                 ; ON      ;
+;      - human_col[3]~34    ; 0                 ; ON      ;
 ; left_btn                  ;                   ;         ;
-;      - Selector446~76     ; 0                 ; ON      ;
-;      - LCD_state~689      ; 0                 ; ON      ;
-;      - human_col[1]~33    ; 0                 ; ON      ;
+;      - game_mode[1]       ; 1                 ; ON      ;
+;      - game_mode[0]       ; 1                 ; ON      ;
+;      - Selector450~46     ; 1                 ; ON      ;
+;      - Selector451~2      ; 1                 ; ON      ;
+;      - human_col[3]~33    ; 1                 ; ON      ;
 +---------------------------+-------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                          ;
-+--------------------+--------------+---------+-------------------------+--------+----------------------+------------------+
-; Name               ; Location     ; Fan-Out ; Usage                   ; Global ; Global Resource Used ; Global Line Name ;
-+--------------------+--------------+---------+-------------------------+--------+----------------------+------------------+
-; LCD_state.0100     ; LC_X7_Y3_N9  ; 13      ; Sync. load              ; no     ; --                   ; --               ;
-; LCD_state.0101     ; LC_X7_Y6_N6  ; 20      ; Sync. load              ; no     ; --                   ; --               ;
-; Selector34~0       ; LC_X6_Y4_N6  ; 2       ; Clock enable            ; no     ; --                   ; --               ;
-; Selector444~0      ; LC_X7_Y5_N2  ; 17      ; Clock enable            ; no     ; --                   ; --               ;
-; Selector541~2      ; LC_X8_Y10_N9 ; 32      ; Latch enable            ; yes    ; Global Clock         ; GCLK0            ;
-; WideOr42~0         ; LC_X25_Y1_N4 ; 10      ; Clock enable            ; no     ; --                   ; --               ;
-; clk                ; PIN_28       ; 302     ; Clock                   ; yes    ; Global Clock         ; GCLK2            ;
-; comb~3             ; LC_X7_Y8_N0  ; 10      ; Clock                   ; yes    ; Global Clock         ; GCLK1            ;
-; game_mode[1]~6     ; LC_X7_Y5_N6  ; 2       ; Clock enable            ; no     ; --                   ; --               ;
-; human_col[1]~35    ; LC_X7_Y5_N8  ; 5       ; Clock enable            ; no     ; --                   ; --               ;
-; knife[0][5]~2489   ; LC_X25_Y1_N3 ; 127     ; Clock enable            ; no     ; --                   ; --               ;
-; knife[0][5]~2508   ; LC_X25_Y1_N1 ; 16      ; Sync. clear             ; no     ; --                   ; --               ;
-; lfsr_rst           ; LC_X4_Y4_N4  ; 10      ; Async. clear            ; yes    ; Global Clock         ; GCLK3            ;
-; screen_row[2]~117  ; LC_X7_Y4_N0  ; 15      ; Sync. clear             ; no     ; --                   ; --               ;
-; screen_row[2]~118  ; LC_X7_Y4_N9  ; 15      ; Clock enable            ; no     ; --                   ; --               ;
-; screen_state.0000  ; LC_X8_Y10_N8 ; 36      ; Clock enable            ; no     ; --                   ; --               ;
-; screen_state.0001  ; LC_X8_Y10_N7 ; 232     ; Sync. clear, Sync. load ; no     ; --                   ; --               ;
-; t_counter[1]~34    ; LC_X4_Y4_N3  ; 26      ; Clock enable            ; no     ; --                   ; --               ;
-; t_counter[1]~35    ; LC_X3_Y6_N2  ; 10      ; Sync. clear             ; no     ; --                   ; --               ;
-; t_units[3]~17      ; LC_X3_Y14_N2 ; 4       ; Sync. load              ; no     ; --                   ; --               ;
-; timer[4]~46        ; LC_X7_Y5_N0  ; 10      ; Sync. clear             ; no     ; --                   ; --               ;
-; za_warudo_cc[7]~81 ; LC_X4_Y4_N1  ; 16      ; Clock enable            ; no     ; --                   ; --               ;
-; za_warudo_t[0]~66  ; LC_X4_Y4_N2  ; 16      ; Clock enable            ; no     ; --                   ; --               ;
-+--------------------+--------------+---------+-------------------------+--------+----------------------+------------------+
++---------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                           ;
++--------------------+---------------+---------+-------------------------+--------+----------------------+------------------+
+; Name               ; Location      ; Fan-Out ; Usage                   ; Global ; Global Resource Used ; Global Line Name ;
++--------------------+---------------+---------+-------------------------+--------+----------------------+------------------+
+; LCD_state.0100     ; LC_X10_Y12_N6 ; 13      ; Sync. load              ; no     ; --                   ; --               ;
+; LCD_state.0101     ; LC_X8_Y12_N2  ; 20      ; Sync. load              ; no     ; --                   ; --               ;
+; Selector34~0       ; LC_X4_Y15_N6  ; 2       ; Clock enable            ; no     ; --                   ; --               ;
+; Selector444~2      ; LC_X7_Y14_N3  ; 16      ; Clock enable            ; no     ; --                   ; --               ;
+; Selector448~17     ; LC_X7_Y16_N4  ; 3       ; Clock enable            ; no     ; --                   ; --               ;
+; Selector541~2      ; LC_X8_Y10_N8  ; 32      ; Latch enable            ; yes    ; Global Clock         ; GCLK0            ;
+; WideOr42~0         ; LC_X11_Y2_N9  ; 18      ; Clock enable            ; no     ; --                   ; --               ;
+; clk                ; PIN_28        ; 301     ; Clock                   ; yes    ; Global Clock         ; GCLK2            ;
+; comb~3             ; LC_X7_Y13_N2  ; 10      ; Clock                   ; yes    ; Global Clock         ; GCLK1            ;
+; human_col[3]~35    ; LC_X7_Y16_N1  ; 5       ; Clock enable            ; no     ; --                   ; --               ;
+; knife[0][4]~2680   ; LC_X11_Y2_N3  ; 126     ; Clock enable            ; no     ; --                   ; --               ;
+; knife[0][4]~2698   ; LC_X11_Y2_N4  ; 16      ; Sync. clear             ; no     ; --                   ; --               ;
+; lfsr_rst           ; LC_X7_Y15_N8  ; 10      ; Async. clear            ; yes    ; Global Clock         ; GCLK3            ;
+; screen_row[4]~117  ; LC_X4_Y14_N5  ; 15      ; Sync. clear             ; no     ; --                   ; --               ;
+; screen_row[4]~118  ; LC_X8_Y12_N6  ; 15      ; Clock enable            ; no     ; --                   ; --               ;
+; screen_state.0000  ; LC_X7_Y14_N6  ; 29      ; Clock enable            ; no     ; --                   ; --               ;
+; screen_state.0001  ; LC_X8_Y10_N9  ; 232     ; Sync. clear, Sync. load ; no     ; --                   ; --               ;
+; t_counter[4]~34    ; LC_X7_Y14_N1  ; 26      ; Clock enable            ; no     ; --                   ; --               ;
+; t_counter[4]~35    ; LC_X7_Y2_N5   ; 10      ; Sync. clear             ; no     ; --                   ; --               ;
+; t_units[3]~16      ; LC_X2_Y5_N7   ; 4       ; Sync. load              ; no     ; --                   ; --               ;
+; timer[9]~46        ; LC_X9_Y15_N4  ; 10      ; Sync. clear             ; no     ; --                   ; --               ;
+; za_warudo_cc[5]~82 ; LC_X6_Y16_N4  ; 16      ; Clock enable            ; no     ; --                   ; --               ;
+; za_warudo_t[0]~66  ; LC_X6_Y16_N8  ; 16      ; Clock enable            ; no     ; --                   ; --               ;
++--------------------+---------------+---------+-------------------------+--------+----------------------+------------------+
 
 
 +----------------------------------------------------------------------------------+
@@ -751,69 +754,69 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------+--------------+---------+----------------------+------------------+
 ; Name          ; Location     ; Fan-Out ; Global Resource Used ; Global Line Name ;
 +---------------+--------------+---------+----------------------+------------------+
-; Selector541~2 ; LC_X8_Y10_N9 ; 32      ; Global Clock         ; GCLK0            ;
-; clk           ; PIN_28       ; 302     ; Global Clock         ; GCLK2            ;
-; comb~3        ; LC_X7_Y8_N0  ; 10      ; Global Clock         ; GCLK1            ;
-; lfsr_rst      ; LC_X4_Y4_N4  ; 10      ; Global Clock         ; GCLK3            ;
+; Selector541~2 ; LC_X8_Y10_N8 ; 32      ; Global Clock         ; GCLK0            ;
+; clk           ; PIN_28       ; 301     ; Global Clock         ; GCLK2            ;
+; comb~3        ; LC_X7_Y13_N2 ; 10      ; Global Clock         ; GCLK1            ;
+; lfsr_rst      ; LC_X7_Y15_N8 ; 10      ; Global Clock         ; GCLK3            ;
 +---------------+--------------+---------+----------------------+------------------+
 
 
-+---------------------------------+
-; Non-Global High Fan-Out Signals ;
-+-------------------+-------------+
-; Name              ; Fan-Out     ;
-+-------------------+-------------+
-; screen_state.0001 ; 232         ;
-; human_col[1]      ; 129         ;
-; knife[0][5]~2489  ; 127         ;
-; human_col[0]      ; 110         ;
-; human_col[4]      ; 105         ;
-; human_col[3]      ; 94          ;
-; human_col[2]      ; 93          ;
-; LCD_counter[0]    ; 53          ;
-; za_warudo         ; 48          ;
-; LCD_counter[1]    ; 48          ;
-; LCD_counter[4]    ; 44          ;
-; LCD_counter[2]    ; 43          ;
-; LCD_counter[3]    ; 42          ;
-; LessThan5~0       ; 40          ;
-; Add29~2           ; 36          ;
-; screen_state.0000 ; 36          ;
-; knife[8][0]       ; 31          ;
-; knife[11][0]      ; 31          ;
-; knife[14][0]      ; 29          ;
-; knife[12][0]      ; 29          ;
-; Equal135~1        ; 29          ;
-; knife[8][1]       ; 28          ;
-; knife[9][0]       ; 28          ;
-; knife[6][0]       ; 28          ;
-; knife[1][0]       ; 28          ;
-; knife[2][0]       ; 27          ;
-; knife[13][0]      ; 27          ;
-; knife[0][1]       ; 27          ;
-; knife[1][1]       ; 27          ;
-; WideNor0          ; 27          ;
-; t_counter[1]~34   ; 26          ;
-; knife[5][0]       ; 26          ;
-; knife[7][0]       ; 26          ;
-; knife[11][1]      ; 26          ;
-; knife[3][0]       ; 26          ;
-; knife[10][0]      ; 26          ;
-; knife[4][0]       ; 26          ;
-; Selector446~72    ; 25          ;
-; knife[0][0]       ; 25          ;
-; knife[9][2]       ; 25          ;
-; LCD_state.0011    ; 25          ;
-; function_btn      ; 24          ;
-; knife[7][1]       ; 24          ;
-; knife[14][1]      ; 24          ;
-; knife[14][2]      ; 24          ;
-; knife[2][1]       ; 24          ;
-; knife[13][2]      ; 24          ;
-; knife[12][1]      ; 24          ;
-; knife[12][2]      ; 24          ;
-; knife[6][1]       ; 24          ;
-+-------------------+-------------+
++--------------------------------------+
+; Non-Global High Fan-Out Signals      ;
++----------------------------+---------+
+; Name                       ; Fan-Out ;
++----------------------------+---------+
+; screen_state.0001          ; 232     ;
+; human_col[1]               ; 130     ;
+; knife[0][4]~2680           ; 126     ;
+; human_col[4]               ; 111     ;
+; human_col[3]               ; 92      ;
+; human_col[0]               ; 82      ;
+; human_col[2]               ; 71      ;
+; za_warudo                  ; 54      ;
+; LCD_counter[1]             ; 52      ;
+; LCD_counter[0]             ; 51      ;
+; LCD_counter[2]             ; 50      ;
+; LCD_counter[3]             ; 47      ;
+; LCD_counter[4]             ; 45      ;
+; LessThan6~1                ; 41      ;
+; knife[0][0]                ; 35      ;
+; Add29~2                    ; 34      ;
+; knife[0][1]                ; 34      ;
+; knife[8][0]                ; 31      ;
+; knife[8][1]                ; 30      ;
+; knife[10][0]               ; 29      ;
+; knife[9][0]                ; 29      ;
+; WideNor0                   ; 29      ;
+; screen_state.0000          ; 29      ;
+; LFSR_5bit:M1|D123456789[3] ; 28      ;
+; knife[6][0]                ; 28      ;
+; knife[7][0]                ; 28      ;
+; knife[10][1]               ; 28      ;
+; knife[5][0]                ; 28      ;
+; knife[9][1]                ; 28      ;
+; knife[4][0]                ; 28      ;
+; knife[3][0]                ; 28      ;
+; knife[2][1]                ; 28      ;
+; LFSR_5bit:M1|D123456789[7] ; 27      ;
+; knife[6][1]                ; 27      ;
+; knife[7][1]                ; 27      ;
+; knife[5][1]                ; 27      ;
+; knife[4][1]                ; 27      ;
+; knife[3][1]                ; 27      ;
+; knife[1][0]                ; 27      ;
+; t_counter[4]~34            ; 26      ;
+; LFSR_5bit:M1|D123456789[9] ; 26      ;
+; knife[1][1]                ; 26      ;
+; Equal135~1                 ; 26      ;
+; knife[13][0]               ; 25      ;
+; knife[15][0]               ; 25      ;
+; knife[11][0]               ; 25      ;
+; LCD_state.0011             ; 25      ;
+; function_btn               ; 24      ;
+; LessThan5~7                ; 24      ;
+; knife[8][2]                ; 23      ;
++----------------------------+---------+
 
 
 +------------------------------------------------------+
@@ -821,46 +824,45 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------+-------------------------+
 ; Interconnect Resource Type ; Usage                   ;
 +----------------------------+-------------------------+
-; C4s                        ; 6,000 / 16,320 ( 37 % ) ;
-; Direct links               ; 384 / 21,944 ( 2 % )    ;
+; C4s                        ; 6,443 / 16,320 ( 39 % ) ;
+; Direct links               ; 455 / 21,944 ( 2 % )    ;
 ; Global clocks              ; 4 / 8 ( 50 % )          ;
-; LAB clocks                 ; 42 / 240 ( 18 % )       ;
-; LUT chains                 ; 501 / 5,382 ( 9 % )     ;
-; Local interconnects        ; 7,083 / 21,944 ( 32 % ) ;
+; LAB clocks                 ; 49 / 240 ( 20 % )       ;
+; LUT chains                 ; 555 / 5,382 ( 10 % )    ;
+; Local interconnects        ; 7,150 / 21,944 ( 33 % ) ;
 ; M4K buffers                ; 0 / 720 ( 0 % )         ;
-; R4s                        ; 6,736 / 14,640 ( 46 % ) ;
+; R4s                        ; 6,352 / 14,640 ( 43 % ) ;
 +----------------------------+-------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +--------------------------------------------+-------------------------------+
-; Number of Logic Elements  (Average = 7.97) ; Number of LABs  (Total = 453) ;
+; Number of Logic Elements  (Average = 8.18) ; Number of LABs  (Total = 457) ;
 +--------------------------------------------+-------------------------------+
-; 1                                          ; 10                            ;
-; 2                                          ; 4                             ;
-; 3                                          ; 7                             ;
-; 4                                          ; 15                            ;
-; 5                                          ; 20                            ;
-; 6                                          ; 50                            ;
-; 7                                          ; 69                            ;
-; 8                                          ; 55                            ;
-; 9                                          ; 43                            ;
-; 10                                         ; 180                           ;
+; 1                                          ; 9                             ;
+; 2                                          ; 0                             ;
+; 3                                          ; 8                             ;
+; 4                                          ; 13                            ;
+; 5                                          ; 31                            ;
+; 6                                          ; 34                            ;
+; 7                                          ; 54                            ;
+; 8                                          ; 57                            ;
+; 9                                          ; 52                            ;
+; 10                                         ; 199                           ;
 +--------------------------------------------+-------------------------------+
 
 
 +--------------------------------------------------------------------+
 ; LAB-wide Signals                                                   ;
 +------------------------------------+-------------------------------+
-; LAB-wide Signals  (Average = 0.40) ; Number of LABs  (Total = 453) ;
+; LAB-wide Signals  (Average = 0.41) ; Number of LABs  (Total = 457) ;
 +------------------------------------+-------------------------------+
-; 1 Async. clear                     ; 5                             ;
+; 1 Async. clear                     ; 4                             ;
 ; 1 Clock                            ; 94                            ;
-; 1 Clock enable                     ; 65                            ;
-; 1 Sync. clear                      ; 9                             ;
-; 1 Sync. load                       ; 7                             ;
-; 2 Clock enables                    ; 2                             ;
+; 1 Clock enable                     ; 70                            ;
+; 1 Sync. clear                      ; 11                            ;
+; 1 Sync. load                       ; 8                             ;
 ; 2 Clocks                           ; 1                             ;
 +------------------------------------+-------------------------------+
 
@@ -868,20 +870,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +---------------------------------------------+-------------------------------+
-; Number of Signals Sourced  (Average = 7.98) ; Number of LABs  (Total = 453) ;
+; Number of Signals Sourced  (Average = 8.19) ; Number of LABs  (Total = 457) ;
 +---------------------------------------------+-------------------------------+
 ; 0                                           ; 0                             ;
-; 1                                           ; 10                            ;
-; 2                                           ; 4                             ;
+; 1                                           ; 9                             ;
+; 2                                           ; 0                             ;
 ; 3                                           ; 7                             ;
-; 4                                           ; 15                            ;
-; 5                                           ; 20                            ;
-; 6                                           ; 50                            ;
-; 7                                           ; 69                            ;
-; 8                                           ; 55                            ;
-; 9                                           ; 43                            ;
-; 10                                          ; 177                           ;
-; 11                                          ; 2                             ;
+; 4                                           ; 14                            ;
+; 5                                           ; 31                            ;
+; 6                                           ; 34                            ;
+; 7                                           ; 54                            ;
+; 8                                           ; 57                            ;
+; 9                                           ; 52                            ;
+; 10                                          ; 197                           ;
+; 11                                          ; 1                             ;
 ; 12                                          ; 0                             ;
 ; 13                                          ; 1                             ;
 +---------------------------------------------+-------------------------------+
@@ -890,52 +892,51 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                         ;
 +-------------------------------------------------+-------------------------------+
-; Number of Signals Sourced Out  (Average = 4.78) ; Number of LABs  (Total = 453) ;
+; Number of Signals Sourced Out  (Average = 4.93) ; Number of LABs  (Total = 457) ;
 +-------------------------------------------------+-------------------------------+
 ; 0                                               ; 0                             ;
-; 1                                               ; 76                            ;
-; 2                                               ; 63                            ;
-; 3                                               ; 60                            ;
-; 4                                               ; 33                            ;
-; 5                                               ; 35                            ;
-; 6                                               ; 36                            ;
-; 7                                               ; 44                            ;
-; 8                                               ; 42                            ;
-; 9                                               ; 27                            ;
-; 10                                              ; 35                            ;
+; 1                                               ; 72                            ;
+; 2                                               ; 55                            ;
+; 3                                               ; 59                            ;
+; 4                                               ; 39                            ;
+; 5                                               ; 36                            ;
+; 6                                               ; 39                            ;
+; 7                                               ; 49                            ;
+; 8                                               ; 31                            ;
+; 9                                               ; 38                            ;
+; 10                                              ; 37                            ;
 ; 11                                              ; 1                             ;
-; 12                                              ; 0                             ;
-; 13                                              ; 1                             ;
+; 12                                              ; 1                             ;
 +-------------------------------------------------+-------------------------------+
 
 
 +------------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                          ;
 +----------------------------------------------+-------------------------------+
-; Number of Distinct Inputs  (Average = 14.64) ; Number of LABs  (Total = 453) ;
+; Number of Distinct Inputs  (Average = 14.56) ; Number of LABs  (Total = 457) ;
 +----------------------------------------------+-------------------------------+
 ; 0                                            ; 0                             ;
-; 1                                            ; 1                             ;
+; 1                                            ; 0                             ;
 ; 2                                            ; 4                             ;
-; 3                                            ; 5                             ;
-; 4                                            ; 5                             ;
-; 5                                            ; 15                            ;
-; 6                                            ; 12                            ;
-; 7                                            ; 15                            ;
-; 8                                            ; 20                            ;
-; 9                                            ; 18                            ;
-; 10                                           ; 18                            ;
-; 11                                           ; 23                            ;
-; 12                                           ; 16                            ;
-; 13                                           ; 23                            ;
-; 14                                           ; 19                            ;
-; 15                                           ; 15                            ;
-; 16                                           ; 25                            ;
-; 17                                           ; 13                            ;
-; 18                                           ; 39                            ;
-; 19                                           ; 67                            ;
-; 20                                           ; 98                            ;
-; 21                                           ; 1                             ;
+; 3                                            ; 7                             ;
+; 4                                            ; 10                            ;
+; 5                                            ; 11                            ;
+; 6                                            ; 14                            ;
+; 7                                            ; 14                            ;
+; 8                                            ; 22                            ;
+; 9                                            ; 11                            ;
+; 10                                           ; 15                            ;
+; 11                                           ; 18                            ;
+; 12                                           ; 23                            ;
+; 13                                           ; 17                            ;
+; 14                                           ; 24                            ;
+; 15                                           ; 19                            ;
+; 16                                           ; 46                            ;
+; 17                                           ; 16                            ;
+; 18                                           ; 36                            ;
+; 19                                           ; 55                            ;
+; 20                                           ; 91                            ;
+; 21                                           ; 3                             ;
 ; 22                                           ; 1                             ;
 +----------------------------------------------+-------------------------------+
 
@@ -962,7 +963,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; clk             ; clk                  ; 128.246           ;
+; clk             ; clk                  ; 179.006           ;
 +-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using either the TimeQuest Timing Analyzer or the Classic Timing Analyzer.
@@ -984,32 +985,32 @@ This will disable optimization of problematic paths and expose them for further 
 +--------------------------------------------------------------------------------+---------------------+
 ; Name                                                                           ; Value               ;
 +--------------------------------------------------------------------------------+---------------------+
-; Mid Wire Use - Fit Attempt 1                                                   ; 41                  ;
-; Mid Slack - Fit Attempt 1                                                      ; -23705              ;
-; Internal Atom Count - Fit Attempt 1                                            ; 3610                ;
-; LE/ALM Count - Fit Attempt 1                                                   ; 3610                ;
-; LAB Count - Fit Attempt 1                                                      ; 454                 ;
-; Outputs per Lab - Fit Attempt 1                                                ; 4.773               ;
-; Inputs per LAB - Fit Attempt 1                                                 ; 14.383              ;
-; Global Inputs per LAB - Fit Attempt 1                                          ; 0.222               ;
-; LAB Constraint 'non-global clock / CE pair + async load' - Fit Attempt 1       ; 0:454               ;
-; LAB Constraint 'ce + sync load' - Fit Attempt 1                                ; 0:383;1:63;2:8      ;
-; LAB Constraint 'non-global controls' - Fit Attempt 1                           ; 0:383;1:58;2:9;3:4  ;
-; LAB Constraint 'un-route combination' - Fit Attempt 1                          ; 0:383;1:58;2:9;3:4  ;
-; LAB Constraint 'non-global with asyn_clear' - Fit Attempt 1                    ; 0:379;1:61;2:10;3:4 ;
-; LAB Constraint 'un-route with async_clear' - Fit Attempt 1                     ; 0:379;1:61;2:10;3:4 ;
-; LAB Constraint 'non-global async clear + sync clear' - Fit Attempt 1           ; 0:445;1:9           ;
-; LAB Constraint 'global non-clock/non-asynch_clear' - Fit Attempt 1             ; 0:431;1:23          ;
-; LAB Constraint 'ygr_cl_ngclk_gclkce_sload_aload_constraint' - Fit Attempt 1    ; 0:383;1:66;2:5      ;
-; LAB Constraint 'global control signals' - Fit Attempt 1                        ; 0:336;1:113;2:4;3:1 ;
-; LAB Constraint 'clock / ce pair constraint' - Fit Attempt 1                    ; 0:359;1:81;2:14     ;
-; LAB Constraint 'aload_aclr pair with aload used' - Fit Attempt 1               ; 0:454               ;
-; LAB Constraint 'aload_aclr pair' - Fit Attempt 1                               ; 0:359;1:94;2:1      ;
-; LAB Constraint 'sload_sclear pair' - Fit Attempt 1                             ; 0:439;1:15          ;
-; LAB Constraint 'invert_a constraint' - Fit Attempt 1                           ; 0:15;1:439          ;
-; LAB Constraint 'has placement constraint' - Fit Attempt 1                      ; 0:446;1:8           ;
-; LAB Constraint 'use of ADATA or SDATA by registers constraint' - Fit Attempt 1 ; 0:454               ;
-; LAB Constraint 'group hierarchy constraint' - Fit Attempt 1                    ; 0:1;1:453           ;
+; Mid Wire Use - Fit Attempt 1                                                   ; 42                  ;
+; Mid Slack - Fit Attempt 1                                                      ; -26048              ;
+; Internal Atom Count - Fit Attempt 1                                            ; 3737                ;
+; LE/ALM Count - Fit Attempt 1                                                   ; 3737                ;
+; LAB Count - Fit Attempt 1                                                      ; 458                 ;
+; Outputs per Lab - Fit Attempt 1                                                ; 4.924               ;
+; Inputs per LAB - Fit Attempt 1                                                 ; 14.301              ;
+; Global Inputs per LAB - Fit Attempt 1                                          ; 0.218               ;
+; LAB Constraint 'non-global clock / CE pair + async load' - Fit Attempt 1       ; 0:458               ;
+; LAB Constraint 'ce + sync load' - Fit Attempt 1                                ; 0:383;1:69;2:6      ;
+; LAB Constraint 'non-global controls' - Fit Attempt 1                           ; 0:383;1:63;2:7;3:5  ;
+; LAB Constraint 'un-route combination' - Fit Attempt 1                          ; 0:383;1:63;2:7;3:5  ;
+; LAB Constraint 'non-global with asyn_clear' - Fit Attempt 1                    ; 0:380;1:65;2:8;3:5  ;
+; LAB Constraint 'un-route with async_clear' - Fit Attempt 1                     ; 0:380;1:65;2:8;3:5  ;
+; LAB Constraint 'non-global async clear + sync clear' - Fit Attempt 1           ; 0:447;1:11          ;
+; LAB Constraint 'global non-clock/non-asynch_clear' - Fit Attempt 1             ; 0:435;1:23          ;
+; LAB Constraint 'ygr_cl_ngclk_gclkce_sload_aload_constraint' - Fit Attempt 1    ; 0:383;1:69;2:6      ;
+; LAB Constraint 'global control signals' - Fit Attempt 1                        ; 0:340;1:114;2:3;3:1 ;
+; LAB Constraint 'clock / ce pair constraint' - Fit Attempt 1                    ; 0:363;1:79;2:16     ;
+; LAB Constraint 'aload_aclr pair with aload used' - Fit Attempt 1               ; 0:458               ;
+; LAB Constraint 'aload_aclr pair' - Fit Attempt 1                               ; 0:363;1:94;2:1      ;
+; LAB Constraint 'sload_sclear pair' - Fit Attempt 1                             ; 0:441;1:17          ;
+; LAB Constraint 'invert_a constraint' - Fit Attempt 1                           ; 0:13;1:445          ;
+; LAB Constraint 'has placement constraint' - Fit Attempt 1                      ; 0:450;1:8           ;
+; LAB Constraint 'use of ADATA or SDATA by registers constraint' - Fit Attempt 1 ; 0:458               ;
+; LAB Constraint 'group hierarchy constraint' - Fit Attempt 1                    ; 0:1;1:457           ;
 ; LEs in Chains - Fit Attempt 1                                                  ; 96                  ;
 ; LEs in Long Chains - Fit Attempt 1                                             ; 66                  ;
 ; LABs with Chains - Fit Attempt 1                                               ; 12                  ;
@@ -1025,23 +1026,23 @@ This will disable optimization of problematic paths and expose them for further 
 ; Name                                ; Value  ;
 +-------------------------------------+--------+
 ; Auto Fit Point 2 - Fit Attempt 1    ; f0     ;
-; Early Wire Use - Fit Attempt 1      ; 24     ;
-; Early Slack - Fit Attempt 1         ; -35620 ;
+; Early Wire Use - Fit Attempt 1      ; 23     ;
+; Early Slack - Fit Attempt 1         ; -35166 ;
 ; Auto Fit Point 2 - Fit Attempt 1    ; ff     ;
 ; Auto Fit Point 5 - Fit Attempt 1    ; ff     ;
-; Mid Wire Use - Fit Attempt 1        ; 39     ;
-; Mid Slack - Fit Attempt 1           ; -28614 ;
+; Mid Wire Use - Fit Attempt 1        ; 42     ;
+; Mid Slack - Fit Attempt 1           ; -29996 ;
 ; Auto Fit Point 6 - Fit Attempt 1    ; ff     ;
 ; Auto Fit Point 6 - Fit Attempt 1    ; ff     ;
 ; Auto Fit Point 6 - Fit Attempt 1    ; ff     ;
 ; Auto Fit Point 5 - Fit Attempt 1    ; ff     ;
-; Mid Wire Use - Fit Attempt 1        ; 39     ;
-; Mid Slack - Fit Attempt 1           ; -28614 ;
+; Mid Wire Use - Fit Attempt 1        ; 40     ;
+; Mid Slack - Fit Attempt 1           ; -29996 ;
 ; Auto Fit Point 6 - Fit Attempt 1    ; ff     ;
 ; Auto Fit Point 6 - Fit Attempt 1    ; ff     ;
 ; Auto Fit Point 6 - Fit Attempt 1    ; ff     ;
-; Late Wire Use - Fit Attempt 1       ; 43     ;
-; Late Slack - Fit Attempt 1          ; -28566 ;
+; Late Wire Use - Fit Attempt 1       ; 44     ;
+; Late Slack - Fit Attempt 1          ; -30013 ;
 ; Peak Regional Wire - Fit Attempt 1  ; 0.000  ;
 ; Time - Fit Attempt 1                ; 2      ;
 ; Time in tsm_tan.dll - Fit Attempt 1 ; 0.094  ;
@@ -1053,14 +1054,14 @@ This will disable optimization of problematic paths and expose them for further 
 +-------------------------------------+-------------+
 ; Name                                ; Value       ;
 +-------------------------------------+-------------+
-; Early Slack - Fit Attempt 1         ; -21905      ;
-; Early Wire Use - Fit Attempt 1      ; 42          ;
-; Peak Regional Wire - Fit Attempt 1  ; 62          ;
-; Mid Slack - Fit Attempt 1           ; -24645      ;
+; Early Slack - Fit Attempt 1         ; -22417      ;
+; Early Wire Use - Fit Attempt 1      ; 43          ;
+; Peak Regional Wire - Fit Attempt 1  ; 52          ;
+; Mid Slack - Fit Attempt 1           ; -25519      ;
 ; Late Slack - Fit Attempt 1          ; -2147483648 ;
 ; Late Wire Use - Fit Attempt 1       ; 43          ;
 ; Time - Fit Attempt 1                ; 7           ;
-; Time in tsm_tan.dll - Fit Attempt 1 ; 0.297       ;
+; Time in tsm_tan.dll - Fit Attempt 1 ; 0.344       ;
 +-------------------------------------+-------------+
 
 
@@ -1070,7 +1071,7 @@ This will disable optimization of problematic paths and expose them for further 
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 9.0 Build 132 02/25/2009 SJ Web Edition
-    Info: Processing started: Wed Dec 16 21:13:26 2020
+    Info: Processing started: Mon Dec 21 17:26:04 2020
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off Verilog_Final -c Verilog_Final
 Info: Selected device EP1C6Q240C8 for design "Verilog_Final"
 Info: Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
@@ -1118,96 +1119,98 @@ Info: Fitter placement preparation operations ending: elapsed time is 00:00:04
 Info: Fitter placement operations beginning
 Info: Fitter placement was successful
 Info: Fitter placement operations ending: elapsed time is 00:00:02
-Info: Slack time is -27.317 ns between source register "LFSR_5bit:M1|D123456789[5]" and destination register "LCD_state.0011"
-    Info: + Largest register to register requirement is -5.443 ns
+Info: Slack time is -28.764 ns between source register "LFSR_5bit:M1|D123456789[5]" and destination register "LCD_state.0011"
+    Info: + Largest register to register requirement is -5.457 ns
     Info:   Shortest clock path from clock "clk" to destination register is 2.931 ns
-        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = Unassigned; Fanout = 302; CLK Node = 'clk'
+        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = Unassigned; Fanout = 301; CLK Node = 'clk'
         Info: 2: + IC(0.751 ns) + CELL(0.711 ns) = 2.931 ns; Loc. = Unassigned; Fanout = 25; REG Node = 'LCD_state.0011'
         Info: Total cell delay = 2.180 ns ( 74.38 % )
         Info: Total interconnect delay = 0.751 ns ( 25.62 % )
     Info:   Longest clock path from clock "clk" to destination register is 2.931 ns
-        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = Unassigned; Fanout = 302; CLK Node = 'clk'
+        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = Unassigned; Fanout = 301; CLK Node = 'clk'
         Info: 2: + IC(0.751 ns) + CELL(0.711 ns) = 2.931 ns; Loc. = Unassigned; Fanout = 25; REG Node = 'LCD_state.0011'
         Info: Total cell delay = 2.180 ns ( 74.38 % )
         Info: Total interconnect delay = 0.751 ns ( 25.62 % )
-    Info:   Shortest clock path from clock "clk" to source register is 8.498 ns
-        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = Unassigned; Fanout = 302; CLK Node = 'clk'
+    Info:   Shortest clock path from clock "clk" to source register is 8.511 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = Unassigned; Fanout = 301; CLK Node = 'clk'
         Info: 2: + IC(0.751 ns) + CELL(0.935 ns) = 3.155 ns; Loc. = Unassigned; Fanout = 10; REG Node = 'screen_row[15]~reg0'
         Info: 3: + IC(0.615 ns) + CELL(0.114 ns) = 3.884 ns; Loc. = Unassigned; Fanout = 10; COMB Node = 'comb~3'
-        Info: 4: + IC(3.903 ns) + CELL(0.711 ns) = 8.498 ns; Loc. = Unassigned; Fanout = 3; REG Node = 'LFSR_5bit:M1|D123456789[5]'
-        Info: Total cell delay = 3.229 ns ( 38.00 % )
-        Info: Total interconnect delay = 5.269 ns ( 62.00 % )
-    Info:   Longest clock path from clock "clk" to source register is 9.113 ns
-        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = Unassigned; Fanout = 302; CLK Node = 'clk'
-        Info: 2: + IC(0.751 ns) + CELL(0.935 ns) = 3.155 ns; Loc. = Unassigned; Fanout = 11; REG Node = 'screen_row[1]~reg0'
-        Info: 3: + IC(0.754 ns) + CELL(0.590 ns) = 4.499 ns; Loc. = Unassigned; Fanout = 10; COMB Node = 'comb~3'
-        Info: 4: + IC(3.903 ns) + CELL(0.711 ns) = 9.113 ns; Loc. = Unassigned; Fanout = 3; REG Node = 'LFSR_5bit:M1|D123456789[5]'
-        Info: Total cell delay = 3.705 ns ( 40.66 % )
-        Info: Total interconnect delay = 5.408 ns ( 59.34 % )
+        Info: 4: + IC(3.916 ns) + CELL(0.711 ns) = 8.511 ns; Loc. = Unassigned; Fanout = 2; REG Node = 'LFSR_5bit:M1|D123456789[5]'
+        Info: Total cell delay = 3.229 ns ( 37.94 % )
+        Info: Total interconnect delay = 5.282 ns ( 62.06 % )
+    Info:   Longest clock path from clock "clk" to source register is 9.127 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = Unassigned; Fanout = 301; CLK Node = 'clk'
+        Info: 2: + IC(0.751 ns) + CELL(0.935 ns) = 3.155 ns; Loc. = Unassigned; Fanout = 9; REG Node = 'screen_row[6]~reg0'
+        Info: 3: + IC(0.903 ns) + CELL(0.442 ns) = 4.500 ns; Loc. = Unassigned; Fanout = 10; COMB Node = 'comb~3'
+        Info: 4: + IC(3.916 ns) + CELL(0.711 ns) = 9.127 ns; Loc. = Unassigned; Fanout = 2; REG Node = 'LFSR_5bit:M1|D123456789[5]'
+        Info: Total cell delay = 3.557 ns ( 38.97 % )
+        Info: Total interconnect delay = 5.570 ns ( 61.03 % )
     Info:   Micro clock to output delay of source is 0.224 ns
     Info:   Micro setup delay of destination is 0.037 ns
-    Info: - Longest register to register delay is 21.874 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = Unassigned; Fanout = 3; REG Node = 'LFSR_5bit:M1|D123456789[5]'
-        Info: 2: + IC(0.668 ns) + CELL(0.114 ns) = 0.782 ns; Loc. = Unassigned; Fanout = 5; COMB Node = 'LFSR_5bit:M1|easy_t'
-        Info: 3: + IC(0.539 ns) + CELL(0.114 ns) = 1.435 ns; Loc. = Unassigned; Fanout = 9; COMB Node = 'knife~2446'
-        Info: 4: + IC(1.545 ns) + CELL(0.114 ns) = 3.094 ns; Loc. = Unassigned; Fanout = 10; COMB Node = 'Equal23~2'
-        Info: 5: + IC(0.063 ns) + CELL(0.590 ns) = 3.747 ns; Loc. = Unassigned; Fanout = 4; COMB Node = 'knife~2452'
-        Info: 6: + IC(0.778 ns) + CELL(0.114 ns) = 4.639 ns; Loc. = Unassigned; Fanout = 1; COMB Node = 'screen_state~819'
-        Info: 7: + IC(0.063 ns) + CELL(0.590 ns) = 5.292 ns; Loc. = Unassigned; Fanout = 2; COMB Node = 'screen_state~820'
-        Info: 8: + IC(0.211 ns) + CELL(0.442 ns) = 5.945 ns; Loc. = Unassigned; Fanout = 1; COMB Node = 'Selector446~62'
-        Info: 9: + IC(0.539 ns) + CELL(0.114 ns) = 6.598 ns; Loc. = Unassigned; Fanout = 4; COMB Node = 'Selector446~63'
-        Info: 10: + IC(1.251 ns) + CELL(0.114 ns) = 7.963 ns; Loc. = Unassigned; Fanout = 1; COMB Node = 'Selector446~111'
-        Info: 11: + IC(0.674 ns) + CELL(0.590 ns) = 9.227 ns; Loc. = Unassigned; Fanout = 1; COMB Node = 'Selector446~112'
-        Info: 12: + IC(0.063 ns) + CELL(0.590 ns) = 9.880 ns; Loc. = Unassigned; Fanout = 1; COMB Node = 'Selector446~113'
-        Info: 13: + IC(0.063 ns) + CELL(0.590 ns) = 10.533 ns; Loc. = Unassigned; Fanout = 1; COMB Node = 'Selector446~114'
-        Info: 14: + IC(0.063 ns) + CELL(0.590 ns) = 11.186 ns; Loc. = Unassigned; Fanout = 1; COMB Node = 'Selector446~115'
-        Info: 15: + IC(0.063 ns) + CELL(0.590 ns) = 11.839 ns; Loc. = Unassigned; Fanout = 1; COMB Node = 'Selector446~116'
-        Info: 16: + IC(0.063 ns) + CELL(0.590 ns) = 12.492 ns; Loc. = Unassigned; Fanout = 1; COMB Node = 'Selector446~117'
-        Info: 17: + IC(0.063 ns) + CELL(0.590 ns) = 13.145 ns; Loc. = Unassigned; Fanout = 1; COMB Node = 'Selector446~118'
-        Info: 18: + IC(1.421 ns) + CELL(0.590 ns) = 15.156 ns; Loc. = Unassigned; Fanout = 1; COMB Node = 'Selector446~119'
-        Info: 19: + IC(0.063 ns) + CELL(0.590 ns) = 15.809 ns; Loc. = Unassigned; Fanout = 1; COMB Node = 'Selector446~120'
-        Info: 20: + IC(0.063 ns) + CELL(0.590 ns) = 16.462 ns; Loc. = Unassigned; Fanout = 1; COMB Node = 'Selector446~121'
-        Info: 21: + IC(0.063 ns) + CELL(0.590 ns) = 17.115 ns; Loc. = Unassigned; Fanout = 1; COMB Node = 'Selector446~122'
-        Info: 22: + IC(0.828 ns) + CELL(0.442 ns) = 18.385 ns; Loc. = Unassigned; Fanout = 1; COMB Node = 'Selector446~123'
-        Info: 23: + IC(0.211 ns) + CELL(0.442 ns) = 19.038 ns; Loc. = Unassigned; Fanout = 2; COMB Node = 'Selector446~124'
-        Info: 24: + IC(0.539 ns) + CELL(0.114 ns) = 19.691 ns; Loc. = Unassigned; Fanout = 1; COMB Node = 'Selector448~3'
-        Info: 25: + IC(0.893 ns) + CELL(0.442 ns) = 21.026 ns; Loc. = Unassigned; Fanout = 2; COMB Node = 'Selector448~7'
-        Info: 26: + IC(0.539 ns) + CELL(0.309 ns) = 21.874 ns; Loc. = Unassigned; Fanout = 25; REG Node = 'LCD_state.0011'
-        Info: Total cell delay = 10.545 ns ( 48.21 % )
-        Info: Total interconnect delay = 11.329 ns ( 51.79 % )
-Info: Estimated most critical path is register to register delay of 21.874 ns
-    Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LAB_X20_Y4; Fanout = 3; REG Node = 'LFSR_5bit:M1|D123456789[5]'
-    Info: 2: + IC(0.668 ns) + CELL(0.114 ns) = 0.782 ns; Loc. = LAB_X20_Y4; Fanout = 5; COMB Node = 'LFSR_5bit:M1|easy_t'
-    Info: 3: + IC(0.539 ns) + CELL(0.114 ns) = 1.435 ns; Loc. = LAB_X20_Y4; Fanout = 9; COMB Node = 'knife~2446'
-    Info: 4: + IC(1.545 ns) + CELL(0.114 ns) = 3.094 ns; Loc. = LAB_X22_Y5; Fanout = 10; COMB Node = 'Equal23~2'
-    Info: 5: + IC(0.063 ns) + CELL(0.590 ns) = 3.747 ns; Loc. = LAB_X22_Y5; Fanout = 4; COMB Node = 'knife~2452'
-    Info: 6: + IC(0.778 ns) + CELL(0.114 ns) = 4.639 ns; Loc. = LAB_X23_Y5; Fanout = 1; COMB Node = 'screen_state~819'
-    Info: 7: + IC(0.063 ns) + CELL(0.590 ns) = 5.292 ns; Loc. = LAB_X23_Y5; Fanout = 2; COMB Node = 'screen_state~820'
-    Info: 8: + IC(0.211 ns) + CELL(0.442 ns) = 5.945 ns; Loc. = LAB_X23_Y5; Fanout = 1; COMB Node = 'Selector446~62'
-    Info: 9: + IC(0.539 ns) + CELL(0.114 ns) = 6.598 ns; Loc. = LAB_X23_Y5; Fanout = 4; COMB Node = 'Selector446~63'
-    Info: 10: + IC(1.251 ns) + CELL(0.114 ns) = 7.963 ns; Loc. = LAB_X23_Y2; Fanout = 1; COMB Node = 'Selector446~111'
-    Info: 11: + IC(0.674 ns) + CELL(0.590 ns) = 9.227 ns; Loc. = LAB_X21_Y2; Fanout = 1; COMB Node = 'Selector446~112'
-    Info: 12: + IC(0.063 ns) + CELL(0.590 ns) = 9.880 ns; Loc. = LAB_X21_Y2; Fanout = 1; COMB Node = 'Selector446~113'
-    Info: 13: + IC(0.063 ns) + CELL(0.590 ns) = 10.533 ns; Loc. = LAB_X21_Y2; Fanout = 1; COMB Node = 'Selector446~114'
-    Info: 14: + IC(0.063 ns) + CELL(0.590 ns) = 11.186 ns; Loc. = LAB_X21_Y2; Fanout = 1; COMB Node = 'Selector446~115'
-    Info: 15: + IC(0.063 ns) + CELL(0.590 ns) = 11.839 ns; Loc. = LAB_X21_Y2; Fanout = 1; COMB Node = 'Selector446~116'
-    Info: 16: + IC(0.063 ns) + CELL(0.590 ns) = 12.492 ns; Loc. = LAB_X21_Y2; Fanout = 1; COMB Node = 'Selector446~117'
-    Info: 17: + IC(0.063 ns) + CELL(0.590 ns) = 13.145 ns; Loc. = LAB_X21_Y2; Fanout = 1; COMB Node = 'Selector446~118'
-    Info: 18: + IC(1.421 ns) + CELL(0.590 ns) = 15.156 ns; Loc. = LAB_X12_Y3; Fanout = 1; COMB Node = 'Selector446~119'
-    Info: 19: + IC(0.063 ns) + CELL(0.590 ns) = 15.809 ns; Loc. = LAB_X12_Y3; Fanout = 1; COMB Node = 'Selector446~120'
-    Info: 20: + IC(0.063 ns) + CELL(0.590 ns) = 16.462 ns; Loc. = LAB_X12_Y3; Fanout = 1; COMB Node = 'Selector446~121'
-    Info: 21: + IC(0.063 ns) + CELL(0.590 ns) = 17.115 ns; Loc. = LAB_X12_Y3; Fanout = 1; COMB Node = 'Selector446~122'
-    Info: 22: + IC(0.828 ns) + CELL(0.442 ns) = 18.385 ns; Loc. = LAB_X8_Y3; Fanout = 1; COMB Node = 'Selector446~123'
-    Info: 23: + IC(0.211 ns) + CELL(0.442 ns) = 19.038 ns; Loc. = LAB_X8_Y3; Fanout = 2; COMB Node = 'Selector446~124'
-    Info: 24: + IC(0.539 ns) + CELL(0.114 ns) = 19.691 ns; Loc. = LAB_X8_Y3; Fanout = 1; COMB Node = 'Selector448~3'
-    Info: 25: + IC(0.893 ns) + CELL(0.442 ns) = 21.026 ns; Loc. = LAB_X7_Y4; Fanout = 2; COMB Node = 'Selector448~7'
-    Info: 26: + IC(0.539 ns) + CELL(0.309 ns) = 21.874 ns; Loc. = LAB_X7_Y4; Fanout = 25; REG Node = 'LCD_state.0011'
-    Info: Total cell delay = 10.545 ns ( 48.21 % )
-    Info: Total interconnect delay = 11.329 ns ( 51.79 % )
+    Info: - Longest register to register delay is 23.307 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = Unassigned; Fanout = 2; REG Node = 'LFSR_5bit:M1|D123456789[5]'
+        Info: 2: + IC(0.907 ns) + CELL(0.114 ns) = 1.021 ns; Loc. = Unassigned; Fanout = 8; COMB Node = 'knife~2554'
+        Info: 3: + IC(1.700 ns) + CELL(0.114 ns) = 2.835 ns; Loc. = Unassigned; Fanout = 7; COMB Node = 'knife~2670'
+        Info: 4: + IC(0.264 ns) + CELL(0.442 ns) = 3.541 ns; Loc. = Unassigned; Fanout = 5; COMB Node = 'knife~2672'
+        Info: 5: + IC(0.539 ns) + CELL(0.114 ns) = 4.194 ns; Loc. = Unassigned; Fanout = 1; COMB Node = 'Equal12~0'
+        Info: 6: + IC(0.211 ns) + CELL(0.442 ns) = 4.847 ns; Loc. = Unassigned; Fanout = 3; COMB Node = 'Equal12~1'
+        Info: 7: + IC(0.972 ns) + CELL(0.292 ns) = 6.111 ns; Loc. = Unassigned; Fanout = 2; COMB Node = 'screen_state~1218'
+        Info: 8: + IC(0.361 ns) + CELL(0.292 ns) = 6.764 ns; Loc. = Unassigned; Fanout = 3; COMB Node = 'Selector450~47'
+        Info: 9: + IC(0.063 ns) + CELL(0.590 ns) = 7.417 ns; Loc. = Unassigned; Fanout = 4; COMB Node = 'Selector450~58'
+        Info: 10: + IC(1.221 ns) + CELL(0.114 ns) = 8.752 ns; Loc. = Unassigned; Fanout = 2; COMB Node = 'Selector450~121'
+        Info: 11: + IC(1.341 ns) + CELL(0.442 ns) = 10.535 ns; Loc. = Unassigned; Fanout = 1; COMB Node = 'Selector450~74'
+        Info: 12: + IC(0.211 ns) + CELL(0.442 ns) = 11.188 ns; Loc. = Unassigned; Fanout = 1; COMB Node = 'Selector450~76'
+        Info: 13: + IC(0.063 ns) + CELL(0.590 ns) = 11.841 ns; Loc. = Unassigned; Fanout = 1; COMB Node = 'Selector450~78'
+        Info: 14: + IC(0.063 ns) + CELL(0.590 ns) = 12.494 ns; Loc. = Unassigned; Fanout = 1; COMB Node = 'Selector450~80'
+        Info: 15: + IC(0.063 ns) + CELL(0.590 ns) = 13.147 ns; Loc. = Unassigned; Fanout = 1; COMB Node = 'Selector450~82'
+        Info: 16: + IC(0.063 ns) + CELL(0.590 ns) = 13.800 ns; Loc. = Unassigned; Fanout = 1; COMB Node = 'Selector450~84'
+        Info: 17: + IC(0.763 ns) + CELL(0.590 ns) = 15.153 ns; Loc. = Unassigned; Fanout = 1; COMB Node = 'Selector450~86'
+        Info: 18: + IC(0.063 ns) + CELL(0.590 ns) = 15.806 ns; Loc. = Unassigned; Fanout = 1; COMB Node = 'Selector450~88'
+        Info: 19: + IC(0.063 ns) + CELL(0.590 ns) = 16.459 ns; Loc. = Unassigned; Fanout = 1; COMB Node = 'Selector450~90'
+        Info: 20: + IC(0.063 ns) + CELL(0.590 ns) = 17.112 ns; Loc. = Unassigned; Fanout = 1; COMB Node = 'Selector450~92'
+        Info: 21: + IC(0.063 ns) + CELL(0.590 ns) = 17.765 ns; Loc. = Unassigned; Fanout = 1; COMB Node = 'Selector450~94'
+        Info: 22: + IC(0.063 ns) + CELL(0.590 ns) = 18.418 ns; Loc. = Unassigned; Fanout = 1; COMB Node = 'Selector450~96'
+        Info: 23: + IC(0.780 ns) + CELL(0.590 ns) = 19.788 ns; Loc. = Unassigned; Fanout = 1; COMB Node = 'Selector450~98'
+        Info: 24: + IC(0.063 ns) + CELL(0.590 ns) = 20.441 ns; Loc. = Unassigned; Fanout = 1; COMB Node = 'Selector450~100'
+        Info: 25: + IC(0.063 ns) + CELL(0.590 ns) = 21.094 ns; Loc. = Unassigned; Fanout = 2; COMB Node = 'Selector450~102'
+        Info: 26: + IC(1.251 ns) + CELL(0.114 ns) = 22.459 ns; Loc. = Unassigned; Fanout = 2; COMB Node = 'Selector448~19'
+        Info: 27: + IC(0.539 ns) + CELL(0.309 ns) = 23.307 ns; Loc. = Unassigned; Fanout = 25; REG Node = 'LCD_state.0011'
+        Info: Total cell delay = 11.491 ns ( 49.30 % )
+        Info: Total interconnect delay = 11.816 ns ( 50.70 % )
+Info: Estimated most critical path is register to register delay of 23.307 ns
+    Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LAB_X12_Y9; Fanout = 2; REG Node = 'LFSR_5bit:M1|D123456789[5]'
+    Info: 2: + IC(0.907 ns) + CELL(0.114 ns) = 1.021 ns; Loc. = LAB_X11_Y9; Fanout = 8; COMB Node = 'knife~2554'
+    Info: 3: + IC(1.700 ns) + CELL(0.114 ns) = 2.835 ns; Loc. = LAB_X11_Y16; Fanout = 7; COMB Node = 'knife~2670'
+    Info: 4: + IC(0.264 ns) + CELL(0.442 ns) = 3.541 ns; Loc. = LAB_X11_Y16; Fanout = 5; COMB Node = 'knife~2672'
+    Info: 5: + IC(0.539 ns) + CELL(0.114 ns) = 4.194 ns; Loc. = LAB_X11_Y16; Fanout = 1; COMB Node = 'Equal12~0'
+    Info: 6: + IC(0.211 ns) + CELL(0.442 ns) = 4.847 ns; Loc. = LAB_X11_Y16; Fanout = 3; COMB Node = 'Equal12~1'
+    Info: 7: + IC(0.972 ns) + CELL(0.292 ns) = 6.111 ns; Loc. = LAB_X9_Y16; Fanout = 2; COMB Node = 'screen_state~1218'
+    Info: 8: + IC(0.361 ns) + CELL(0.292 ns) = 6.764 ns; Loc. = LAB_X9_Y16; Fanout = 3; COMB Node = 'Selector450~47'
+    Info: 9: + IC(0.063 ns) + CELL(0.590 ns) = 7.417 ns; Loc. = LAB_X9_Y16; Fanout = 4; COMB Node = 'Selector450~58'
+    Info: 10: + IC(1.221 ns) + CELL(0.114 ns) = 8.752 ns; Loc. = LAB_X10_Y15; Fanout = 2; COMB Node = 'Selector450~121'
+    Info: 11: + IC(1.341 ns) + CELL(0.442 ns) = 10.535 ns; Loc. = LAB_X10_Y10; Fanout = 1; COMB Node = 'Selector450~74'
+    Info: 12: + IC(0.211 ns) + CELL(0.442 ns) = 11.188 ns; Loc. = LAB_X10_Y10; Fanout = 1; COMB Node = 'Selector450~76'
+    Info: 13: + IC(0.063 ns) + CELL(0.590 ns) = 11.841 ns; Loc. = LAB_X10_Y10; Fanout = 1; COMB Node = 'Selector450~78'
+    Info: 14: + IC(0.063 ns) + CELL(0.590 ns) = 12.494 ns; Loc. = LAB_X10_Y10; Fanout = 1; COMB Node = 'Selector450~80'
+    Info: 15: + IC(0.063 ns) + CELL(0.590 ns) = 13.147 ns; Loc. = LAB_X10_Y10; Fanout = 1; COMB Node = 'Selector450~82'
+    Info: 16: + IC(0.063 ns) + CELL(0.590 ns) = 13.800 ns; Loc. = LAB_X10_Y10; Fanout = 1; COMB Node = 'Selector450~84'
+    Info: 17: + IC(0.763 ns) + CELL(0.590 ns) = 15.153 ns; Loc. = LAB_X9_Y8; Fanout = 1; COMB Node = 'Selector450~86'
+    Info: 18: + IC(0.063 ns) + CELL(0.590 ns) = 15.806 ns; Loc. = LAB_X9_Y8; Fanout = 1; COMB Node = 'Selector450~88'
+    Info: 19: + IC(0.063 ns) + CELL(0.590 ns) = 16.459 ns; Loc. = LAB_X9_Y8; Fanout = 1; COMB Node = 'Selector450~90'
+    Info: 20: + IC(0.063 ns) + CELL(0.590 ns) = 17.112 ns; Loc. = LAB_X9_Y8; Fanout = 1; COMB Node = 'Selector450~92'
+    Info: 21: + IC(0.063 ns) + CELL(0.590 ns) = 17.765 ns; Loc. = LAB_X9_Y8; Fanout = 1; COMB Node = 'Selector450~94'
+    Info: 22: + IC(0.063 ns) + CELL(0.590 ns) = 18.418 ns; Loc. = LAB_X9_Y8; Fanout = 1; COMB Node = 'Selector450~96'
+    Info: 23: + IC(0.780 ns) + CELL(0.590 ns) = 19.788 ns; Loc. = LAB_X10_Y12; Fanout = 1; COMB Node = 'Selector450~98'
+    Info: 24: + IC(0.063 ns) + CELL(0.590 ns) = 20.441 ns; Loc. = LAB_X10_Y12; Fanout = 1; COMB Node = 'Selector450~100'
+    Info: 25: + IC(0.063 ns) + CELL(0.590 ns) = 21.094 ns; Loc. = LAB_X10_Y12; Fanout = 2; COMB Node = 'Selector450~102'
+    Info: 26: + IC(1.251 ns) + CELL(0.114 ns) = 22.459 ns; Loc. = LAB_X11_Y15; Fanout = 2; COMB Node = 'Selector448~19'
+    Info: 27: + IC(0.539 ns) + CELL(0.309 ns) = 23.307 ns; Loc. = LAB_X11_Y15; Fanout = 25; REG Node = 'LCD_state.0011'
+    Info: Total cell delay = 11.491 ns ( 49.30 % )
+    Info: Total interconnect delay = 11.816 ns ( 50.70 % )
 Info: Fitter routing operations beginning
-Info: 2 (of 13293) connections in the design require a large routing delay to satisfy hold requirements. Refer to the Fitter report for a summary of the relevant clock transfers. Also, check the circuit's timing constraints and clocking methodology, especially multicycles and gated clocks.
+Info: 2 (of 13805) connections in the design require a large routing delay to satisfy hold requirements. Refer to the Fitter report for a summary of the relevant clock transfers. Also, check the circuit's timing constraints and clocking methodology, especially multicycles and gated clocks.
 Info: Average interconnect usage is 38% of the available device resources
-    Info: Peak interconnect usage is 62% of the available device resources in the region that extends from location X12_Y11 to location X23_Y21
+    Info: Peak interconnect usage is 52% of the available device resources in the region that extends from location X12_Y0 to location X23_Y10
 Info: Fitter routing operations ending: elapsed time is 00:00:07
 Info: The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info: Optimizations that may affect the design's routability were skipped
@@ -1219,9 +1222,9 @@ Info: Completed Auto Delay Chain Operation
 Warning: Following 1 pins have nothing, GND, or VCC driving datain port -- changes to this connectivity may change fitting results
     Info: Pin out_state[3] has GND driving its datain port
 Info: Quartus II Fitter was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 282 megabytes
-    Info: Processing ended: Wed Dec 16 21:13:43 2020
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:17
+    Info: Peak virtual memory: 283 megabytes
+    Info: Processing ended: Mon Dec 21 17:26:22 2020
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:18
 
 

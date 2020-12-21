@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Verilog_Final
-Wed Dec 16 21:13:25 2020
+Mon Dec 21 17:26:03 2020
 Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition
 
 
@@ -49,12 +49,12 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                          ;
 +-----------------------------+-----------------------------------------+
-; Analysis & Synthesis Status ; Successful - Wed Dec 16 21:13:25 2020   ;
+; Analysis & Synthesis Status ; Successful - Mon Dec 21 17:26:03 2020   ;
 ; Quartus II Version          ; 9.0 Build 132 02/25/2009 SJ Web Edition ;
 ; Revision Name               ; Verilog_Final                           ;
 ; Top-level Entity Name       ; Verilog_Final                           ;
 ; Family                      ; Cyclone                                 ;
-; Total logic elements        ; 3,614                                   ;
+; Total logic elements        ; 3,741                                   ;
 ; Total pins                  ; 60                                      ;
 ; Total virtual pins          ; 0                                       ;
 ; Total memory bits           ; 0                                       ;
@@ -134,14 +134,14 @@ applicable agreement for further details.
 +----------------------------------------------------------------+--------------------+--------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                            ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                  ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------+
-; Verilog_Final.v                  ; yes             ; User Verilog HDL File        ; C:/Users/User/Documents/Verilog_Fianl_Project/Verilog_Final.v ;
-; LFSR_5bit.v                      ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/User/Documents/Verilog_Fianl_Project/LFSR_5bit.v     ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                          ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------+
+; Verilog_Final.v                  ; yes             ; User Verilog HDL File        ; C:/Users/User/Desktop/Verilog_Fianl_Project/Verilog_Final.v ;
+; LFSR_5bit.v                      ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/User/Desktop/Verilog_Fianl_Project/LFSR_5bit.v     ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -149,33 +149,33 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 3614  ;
-;     -- Combinational with no register       ; 3302  ;
+; Total logic elements                        ; 3741  ;
+;     -- Combinational with no register       ; 3430  ;
 ;     -- Register only                        ; 9     ;
-;     -- Combinational with a register        ; 303   ;
+;     -- Combinational with a register        ; 302   ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 2630  ;
-;     -- 3 input functions                    ; 638   ;
-;     -- 2 input functions                    ; 326   ;
-;     -- 1 input functions                    ; 11    ;
+;     -- 4 input functions                    ; 2738  ;
+;     -- 3 input functions                    ; 675   ;
+;     -- 2 input functions                    ; 309   ;
+;     -- 1 input functions                    ; 10    ;
 ;     -- 0 input functions                    ; 0     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 3526  ;
+;     -- normal mode                          ; 3653  ;
 ;     -- arithmetic mode                      ; 88    ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
-;     -- synchronous clear/load mode          ; 64    ;
+;     -- synchronous clear/load mode          ; 63    ;
 ;     -- asynchronous clear/load mode         ; 10    ;
 ;                                             ;       ;
-; Total registers                             ; 312   ;
+; Total registers                             ; 311   ;
 ; Total logic cells in carry chains           ; 96    ;
 ; I/O pins                                    ; 60    ;
 ; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 302   ;
-; Total fan-out                               ; 13807 ;
-; Average fan-out                             ; 3.76  ;
+; Maximum fan-out                             ; 301   ;
+; Total fan-out                               ; 14312 ;
+; Average fan-out                             ; 3.77  ;
 +---------------------------------------------+-------+
 
 
@@ -184,8 +184,8 @@ applicable agreement for further details.
 +----------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name         ; Library Name ;
 +----------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------+--------------+
-; |Verilog_Final             ; 3614 (3603) ; 312          ; 0           ; 60   ; 0            ; 3302 (3301)  ; 9 (2)             ; 303 (300)        ; 96 (96)         ; 0 (0)      ; |Verilog_Final              ; work         ;
-;    |LFSR_5bit:M1|          ; 11 (11)     ; 10           ; 0           ; 0    ; 0            ; 1 (1)        ; 7 (7)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |Verilog_Final|LFSR_5bit:M1 ; work         ;
+; |Verilog_Final             ; 3741 (3731) ; 311          ; 0           ; 60   ; 0            ; 3430 (3430)  ; 9 (2)             ; 302 (299)        ; 96 (96)         ; 0 (0)      ; |Verilog_Final              ; work         ;
+;    |LFSR_5bit:M1|          ; 10 (10)     ; 10           ; 0           ; 0    ; 0            ; 0 (0)        ; 7 (7)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |Verilog_Final|LFSR_5bit:M1 ; work         ;
 +----------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -270,12 +270,13 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; drop_knife_limit[0,8..15]              ; Stuck at GND due to stuck port data_in ;
 ; za_warudo_max[6..15]                   ; Stuck at GND due to stuck port data_in ;
 ; knife[1][8]                            ; Merged with knife[1][10]               ;
-; knife[1][7]                            ; Merged with knife[1][9]                ;
-; drop_knife_limit[3,5]                  ; Merged with drop_knife_limit[7]        ;
-; za_warudo_max[0,2..3]                  ; Merged with drop_knife_limit[7]        ;
-; drop_knife_limit[1,4]                  ; Merged with drop_knife_limit[6]        ;
-; za_warudo_max[4..5]                    ; Merged with drop_knife_limit[6]        ;
+; knife[1][9]                            ; Merged with knife[1][10]               ;
+; drop_knife_limit[5]                    ; Merged with drop_knife_limit[7]        ;
+; za_warudo_max[4..5]                    ; Merged with drop_knife_limit[7]        ;
+; drop_knife_limit[1,3..4]               ; Merged with drop_knife_limit[6]        ;
+; za_warudo_max[0,2..3]                  ; Merged with drop_knife_limit[6]        ;
 ; za_warudo_max[1]                       ; Merged with drop_knife_limit[2]        ;
+; knife[1][7]                            ; Merged with knife[1][10]               ;
 ; knife[0][7]                            ; Stuck at VCC due to stuck port data_in ;
 ; knife[0][5]                            ; Stuck at VCC due to stuck port data_in ;
 ; knife[1][6]                            ; Stuck at VCC due to stuck port data_in ;
@@ -297,25 +298,25 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; knife[9][5]                            ; Stuck at VCC due to stuck port data_in ;
 ; knife[10][7]                           ; Stuck at VCC due to stuck port data_in ;
 ; knife[10][5]                           ; Stuck at VCC due to stuck port data_in ;
-; knife[11][7]                           ; Stuck at VCC due to stuck port data_in ;
 ; knife[11][5]                           ; Stuck at VCC due to stuck port data_in ;
-; knife[12][7]                           ; Stuck at VCC due to stuck port data_in ;
+; knife[11][7]                           ; Stuck at VCC due to stuck port data_in ;
 ; knife[12][5]                           ; Stuck at VCC due to stuck port data_in ;
-; knife[13][7]                           ; Stuck at VCC due to stuck port data_in ;
+; knife[12][7]                           ; Stuck at VCC due to stuck port data_in ;
 ; knife[13][5]                           ; Stuck at VCC due to stuck port data_in ;
-; knife[14][7]                           ; Stuck at VCC due to stuck port data_in ;
+; knife[13][7]                           ; Stuck at VCC due to stuck port data_in ;
 ; knife[14][5]                           ; Stuck at VCC due to stuck port data_in ;
+; knife[14][7]                           ; Stuck at VCC due to stuck port data_in ;
 ; knife[15][5]                           ; Stuck at VCC due to stuck port data_in ;
 ; knife[15][7]                           ; Stuck at VCC due to stuck port data_in ;
-; screen_state~619                       ; Lost fanout                            ;
-; screen_state~620                       ; Lost fanout                            ;
-; screen_state~621                       ; Lost fanout                            ;
-; screen_state~622                       ; Lost fanout                            ;
-; LCD_state~679                          ; Lost fanout                            ;
-; LCD_state~680                          ; Lost fanout                            ;
-; LCD_state~681                          ; Lost fanout                            ;
-; LCD_state~682                          ; Lost fanout                            ;
-; Total Number of Removed Registers = 70 ;                                        ;
+; screen_state~1099                      ; Lost fanout                            ;
+; screen_state~1100                      ; Lost fanout                            ;
+; screen_state~1101                      ; Lost fanout                            ;
+; screen_state~1102                      ; Lost fanout                            ;
+; LCD_state~1159                         ; Lost fanout                            ;
+; LCD_state~1160                         ; Lost fanout                            ;
+; LCD_state~1161                         ; Lost fanout                            ;
+; LCD_state~1162                         ; Lost fanout                            ;
+; Total Number of Removed Registers = 71 ;                                        ;
 +----------------------------------------+----------------------------------------+
 
 
@@ -327,8 +328,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; drop_knife_limit[15] ; Stuck at GND              ; knife[0][7], knife[0][5], knife[1][6], knife[2][7], knife[2][5], knife[3][7], knife[3][5],   ;
 ;                      ; due to stuck port data_in ; knife[4][7], knife[4][5], knife[5][7], knife[5][5], knife[6][7], knife[6][5], knife[7][7],   ;
 ;                      ;                           ; knife[7][5], knife[8][7], knife[8][5], knife[9][7], knife[9][5], knife[10][7], knife[10][5], ;
-;                      ;                           ; knife[11][7], knife[11][5], knife[12][7], knife[12][5], knife[13][7], knife[13][5],          ;
-;                      ;                           ; knife[14][7], knife[14][5], knife[15][5], knife[15][7]                                       ;
+;                      ;                           ; knife[11][5], knife[11][7], knife[12][5], knife[12][7], knife[13][5], knife[13][7],          ;
+;                      ;                           ; knife[14][5], knife[14][7], knife[15][5], knife[15][7]                                       ;
 +----------------------+---------------------------+----------------------------------------------------------------------------------------------+
 
 
@@ -337,12 +338,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 312   ;
+; Total registers                              ; 311   ;
 ; Number of registers using Synchronous Clear  ; 56    ;
-; Number of registers using Synchronous Load   ; 23    ;
+; Number of registers using Synchronous Load   ; 22    ;
 ; Number of registers using Asynchronous Clear ; 10    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 223   ;
+; Number of registers using Clock Enable       ; 222   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -353,106 +354,106 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Inverted Register                         ; Fan out ;
 +-------------------------------------------+---------+
 ; screen_row[0]~reg0                        ; 8       ;
-; knife[1][9]                               ; 11      ;
-; knife[1][5]                               ; 11      ;
-; knife[1][10]                              ; 13      ;
-; knife[1][4]                               ; 10      ;
-; knife[1][3]                               ; 14      ;
-; knife[1][0]                               ; 28      ;
-; knife[1][2]                               ; 17      ;
-; knife[1][1]                               ; 27      ;
-; knife[6][9]                               ; 10      ;
-; knife[6][6]                               ; 9       ;
-; knife[6][8]                               ; 9       ;
-; knife[15][9]                              ; 12      ;
-; knife[15][6]                              ; 11      ;
-; knife[15][8]                              ; 12      ;
-; knife[15][3]                              ; 18      ;
-; knife[15][1]                              ; 20      ;
-; knife[15][4]                              ; 21      ;
-; knife[15][2]                              ; 23      ;
-; knife[15][0]                              ; 23      ;
-; knife[6][4]                               ; 10      ;
-; knife[6][3]                               ; 10      ;
-; knife[6][2]                               ; 24      ;
-; knife[6][0]                               ; 28      ;
-; knife[6][1]                               ; 24      ;
-; knife[9][9]                               ; 11      ;
-; knife[9][6]                               ; 10      ;
-; knife[9][8]                               ; 10      ;
+; knife[1][5]                               ; 10      ;
+; knife[1][10]                              ; 9       ;
+; knife[1][4]                               ; 13      ;
+; knife[1][3]                               ; 12      ;
+; knife[1][0]                               ; 27      ;
+; knife[1][2]                               ; 21      ;
+; knife[1][1]                               ; 26      ;
+; knife[11][9]                              ; 11      ;
+; knife[11][6]                              ; 10      ;
+; knife[11][8]                              ; 10      ;
 ; knife[12][9]                              ; 12      ;
-; knife[12][6]                              ; 12      ;
-; knife[12][8]                              ; 12      ;
-; knife[12][4]                              ; 12      ;
-; knife[12][3]                              ; 9       ;
-; knife[12][2]                              ; 24      ;
-; knife[12][0]                              ; 29      ;
-; knife[12][1]                              ; 24      ;
-; knife[9][4]                               ; 12      ;
-; knife[9][3]                               ; 11      ;
-; knife[9][2]                               ; 25      ;
-; knife[9][0]                               ; 28      ;
-; knife[9][1]                               ; 22      ;
-; knife[0][9]                               ; 11      ;
-; knife[0][6]                               ; 11      ;
-; knife[0][8]                               ; 11      ;
-; knife[4][9]                               ; 13      ;
-; knife[4][6]                               ; 11      ;
-; knife[4][8]                               ; 11      ;
-; knife[4][4]                               ; 8       ;
-; knife[4][3]                               ; 10      ;
-; knife[4][2]                               ; 23      ;
-; knife[4][0]                               ; 26      ;
-; knife[4][1]                               ; 23      ;
-; knife[0][3]                               ; 11      ;
-; knife[0][4]                               ; 10      ;
-; knife[0][2]                               ; 14      ;
-; knife[0][0]                               ; 25      ;
-; knife[0][1]                               ; 27      ;
-; knife[10][9]                              ; 16      ;
-; knife[10][6]                              ; 14      ;
-; knife[10][8]                              ; 14      ;
-; knife[13][9]                              ; 10      ;
-; knife[13][6]                              ; 9       ;
-; knife[13][8]                              ; 9       ;
-; knife[13][4]                              ; 11      ;
-; knife[13][3]                              ; 11      ;
-; knife[13][2]                              ; 24      ;
-; knife[13][0]                              ; 27      ;
-; knife[13][1]                              ; 22      ;
-; knife[10][4]                              ; 8       ;
-; knife[10][3]                              ; 10      ;
-; knife[10][2]                              ; 23      ;
-; knife[10][0]                              ; 26      ;
-; knife[10][1]                              ; 23      ;
-; knife[14][9]                              ; 10      ;
-; knife[14][6]                              ; 9       ;
-; knife[14][8]                              ; 9       ;
+; knife[12][6]                              ; 10      ;
+; knife[12][8]                              ; 10      ;
+; knife[12][4]                              ; 20      ;
+; knife[12][0]                              ; 22      ;
+; knife[12][3]                              ; 21      ;
+; knife[12][1]                              ; 22      ;
+; knife[12][2]                              ; 22      ;
+; knife[11][0]                              ; 25      ;
+; knife[11][3]                              ; 22      ;
+; knife[11][4]                              ; 16      ;
+; knife[11][1]                              ; 22      ;
+; knife[11][2]                              ; 22      ;
+; knife[15][9]                              ; 11      ;
+; knife[15][6]                              ; 10      ;
+; knife[15][8]                              ; 10      ;
 ; knife[2][9]                               ; 10      ;
-; knife[2][6]                               ; 9       ;
+; knife[2][6]                               ; 10      ;
 ; knife[2][8]                               ; 10      ;
-; knife[2][4]                               ; 10      ;
-; knife[2][3]                               ; 10      ;
-; knife[2][2]                               ; 23      ;
-; knife[2][0]                               ; 27      ;
-; knife[2][1]                               ; 24      ;
-; knife[14][4]                              ; 9       ;
-; knife[14][3]                              ; 9       ;
-; knife[14][2]                              ; 24      ;
-; knife[14][0]                              ; 29      ;
-; knife[14][1]                              ; 24      ;
-; knife[11][9]                              ; 9       ;
-; knife[11][6]                              ; 9       ;
-; knife[11][8]                              ; 9       ;
+; knife[2][3]                               ; 22      ;
+; knife[2][4]                               ; 13      ;
+; knife[2][0]                               ; 21      ;
+; knife[2][2]                               ; 14      ;
+; knife[2][1]                               ; 28      ;
+; knife[15][0]                              ; 25      ;
+; knife[15][3]                              ; 22      ;
+; knife[15][4]                              ; 16      ;
+; knife[15][1]                              ; 22      ;
+; knife[15][2]                              ; 22      ;
+; knife[14][9]                              ; 13      ;
+; knife[14][6]                              ; 12      ;
+; knife[14][8]                              ; 12      ;
+; knife[13][9]                              ; 15      ;
+; knife[13][6]                              ; 14      ;
+; knife[13][8]                              ; 14      ;
+; knife[13][0]                              ; 25      ;
+; knife[13][3]                              ; 22      ;
+; knife[13][4]                              ; 15      ;
+; knife[13][1]                              ; 22      ;
+; knife[13][2]                              ; 22      ;
+; knife[14][0]                              ; 23      ;
+; knife[14][3]                              ; 21      ;
+; knife[14][4]                              ; 18      ;
+; knife[14][1]                              ; 21      ;
+; knife[14][2]                              ; 21      ;
+; knife[4][9]                               ; 11      ;
+; knife[4][6]                               ; 10      ;
+; knife[4][8]                               ; 10      ;
 ; knife[3][9]                               ; 10      ;
 ; knife[3][6]                               ; 9       ;
 ; knife[3][8]                               ; 9       ;
-; knife[3][4]                               ; 11      ;
-; knife[3][3]                               ; 11      ;
+; knife[3][4]                               ; 9       ;
+; knife[3][3]                               ; 13      ;
 ; knife[3][2]                               ; 23      ;
-; knife[3][0]                               ; 26      ;
-; knife[3][1]                               ; 22      ;
-; Total number of inverted registers = 154* ;         ;
+; knife[3][0]                               ; 28      ;
+; knife[3][1]                               ; 27      ;
+; knife[4][4]                               ; 11      ;
+; knife[4][3]                               ; 11      ;
+; knife[4][2]                               ; 22      ;
+; knife[4][0]                               ; 28      ;
+; knife[4][1]                               ; 27      ;
+; knife[9][9]                               ; 12      ;
+; knife[9][6]                               ; 10      ;
+; knife[9][8]                               ; 10      ;
+; knife[0][9]                               ; 10      ;
+; knife[0][6]                               ; 10      ;
+; knife[0][8]                               ; 10      ;
+; knife[0][3]                               ; 13      ;
+; knife[0][4]                               ; 11      ;
+; knife[0][2]                               ; 17      ;
+; knife[0][0]                               ; 35      ;
+; knife[0][1]                               ; 34      ;
+; knife[9][4]                               ; 11      ;
+; knife[9][3]                               ; 11      ;
+; knife[9][2]                               ; 22      ;
+; knife[9][0]                               ; 29      ;
+; knife[9][1]                               ; 28      ;
+; knife[10][9]                              ; 10      ;
+; knife[10][6]                              ; 9       ;
+; knife[10][8]                              ; 9       ;
+; knife[5][9]                               ; 11      ;
+; knife[5][6]                               ; 10      ;
+; knife[5][8]                               ; 10      ;
+; knife[5][4]                               ; 11      ;
+; knife[5][3]                               ; 11      ;
+; knife[5][2]                               ; 22      ;
+; knife[5][0]                               ; 28      ;
+; knife[5][1]                               ; 27      ;
+; knife[10][4]                              ; 9       ;
+; Total number of inverted registers = 153* ;         ;
 +-------------------------------------------+---------+
 * Table truncated at 100 items. To change the number of inverted registers reported, set the "Number of Inverted Registers Reported" option under Assignments->Settings->Analysis and Synthesis Settings->More Settings
 
@@ -462,71 +463,70 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 0 LEs                ; 4 LEs                  ; Yes        ; |Verilog_Final|game_mode[0]       ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|za_warudo_t[6]     ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; Yes        ; |Verilog_Final|za_warudo_t[0]     ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|t_counter[1]       ;
-; 5:1                ; 16 bits   ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |Verilog_Final|old_screen_row[3]  ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|timer[4]           ;
-; 5:1                ; 16 bits   ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |Verilog_Final|drop_knife_t[14]   ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|za_warudo_t[10]    ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; Yes        ; |Verilog_Final|za_warudo_t[5]     ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|t_counter[4]       ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |Verilog_Final|old_screen_row[0]  ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|timer[9]           ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |Verilog_Final|drop_knife_t[13]   ;
 ; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Verilog_Final|t_units[3]         ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Verilog_Final|t_tens[2]          ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 16 LEs               ; 64 LEs                 ; Yes        ; |Verilog_Final|za_warudo_cc[7]    ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|human_col[1]       ;
-; 10:1               ; 15 bits   ; 90 LEs        ; 30 LEs               ; 60 LEs                 ; Yes        ; |Verilog_Final|screen_row[2]~reg0 ;
-; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[0][5]        ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |Verilog_Final|knife[1][2]        ;
-; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[2][6]        ;
-; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[3][6]        ;
-; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[4][9]        ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Verilog_Final|t_tens[0]          ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 16 LEs               ; 64 LEs                 ; Yes        ; |Verilog_Final|za_warudo_cc[5]    ;
+; 9:1                ; 5 bits    ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|human_col[3]       ;
+; 10:1               ; 15 bits   ; 90 LEs        ; 30 LEs               ; 60 LEs                 ; Yes        ; |Verilog_Final|screen_row[4]~reg0 ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[0][4]        ;
+; 6:1                ; 7 bits    ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |Verilog_Final|knife[1][4]        ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[2][3]        ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[3][0]        ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[4][0]        ;
 ; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[5][9]        ;
-; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[6][5]        ;
-; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[7][5]        ;
-; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[8][5]        ;
-; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[9][1]        ;
-; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[10][0]       ;
-; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[11][8]       ;
-; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[12][6]       ;
-; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[13][5]       ;
-; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[14][0]       ;
-; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[15][9]       ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[6][9]        ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[7][0]        ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[8][1]        ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[9][8]        ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[10][2]       ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[11][7]       ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[12][5]       ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[13][3]       ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[14][3]       ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Verilog_Final|knife[15][0]       ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |Verilog_Final|Add4               ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |Verilog_Final|knife~1661         ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; No         ; |Verilog_Final|knife~1666         ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |Verilog_Final|LCD_state~9        ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; No         ; |Verilog_Final|knife~1660         ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |Verilog_Final|knife~1654         ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |Verilog_Final|knife~1649         ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; No         ; |Verilog_Final|knife~1643         ;
-; 6:1                ; 6 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; No         ; |Verilog_Final|knife~1628         ;
-; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; No         ; |Verilog_Final|knife~1632         ;
-; 7:1                ; 6 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; No         ; |Verilog_Final|knife~1623         ;
-; 7:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; No         ; |Verilog_Final|knife~1618         ;
-; 8:1                ; 6 bits    ; 30 LEs        ; 6 LEs                ; 24 LEs                 ; No         ; |Verilog_Final|knife~1613         ;
-; 8:1                ; 5 bits    ; 25 LEs        ; 5 LEs                ; 20 LEs                 ; No         ; |Verilog_Final|knife~1607         ;
-; 9:1                ; 6 bits    ; 36 LEs        ; 6 LEs                ; 30 LEs                 ; No         ; |Verilog_Final|knife~1603         ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 5 LEs                ; 25 LEs                 ; No         ; |Verilog_Final|knife~1596         ;
-; 10:1               ; 6 bits    ; 36 LEs        ; 6 LEs                ; 30 LEs                 ; No         ; |Verilog_Final|knife~1594         ;
-; 10:1               ; 5 bits    ; 30 LEs        ; 5 LEs                ; 25 LEs                 ; No         ; |Verilog_Final|knife~1587         ;
-; 11:1               ; 6 bits    ; 42 LEs        ; 6 LEs                ; 36 LEs                 ; No         ; |Verilog_Final|knife~1573         ;
-; 11:1               ; 5 bits    ; 35 LEs        ; 5 LEs                ; 30 LEs                 ; No         ; |Verilog_Final|knife~1577         ;
-; 12:1               ; 6 bits    ; 48 LEs        ; 6 LEs                ; 42 LEs                 ; No         ; |Verilog_Final|knife~1570         ;
-; 12:1               ; 5 bits    ; 40 LEs        ; 5 LEs                ; 35 LEs                 ; No         ; |Verilog_Final|knife~1563         ;
-; 13:1               ; 6 bits    ; 48 LEs        ; 6 LEs                ; 42 LEs                 ; No         ; |Verilog_Final|knife~1561         ;
-; 13:1               ; 5 bits    ; 40 LEs        ; 5 LEs                ; 35 LEs                 ; No         ; |Verilog_Final|knife~1552         ;
-; 14:1               ; 6 bits    ; 54 LEs        ; 6 LEs                ; 48 LEs                 ; No         ; |Verilog_Final|knife~1547         ;
-; 14:1               ; 5 bits    ; 45 LEs        ; 5 LEs                ; 40 LEs                 ; No         ; |Verilog_Final|knife~1543         ;
-; 15:1               ; 6 bits    ; 60 LEs        ; 6 LEs                ; 54 LEs                 ; No         ; |Verilog_Final|knife~1539         ;
-; 15:1               ; 5 bits    ; 50 LEs        ; 5 LEs                ; 45 LEs                 ; No         ; |Verilog_Final|knife~1530         ;
-; 16:1               ; 6 bits    ; 60 LEs        ; 6 LEs                ; 54 LEs                 ; No         ; |Verilog_Final|knife~1518         ;
-; 16:1               ; 5 bits    ; 50 LEs        ; 5 LEs                ; 45 LEs                 ; No         ; |Verilog_Final|knife~1519         ;
-; 17:1               ; 6 bits    ; 66 LEs        ; 6 LEs                ; 60 LEs                 ; No         ; |Verilog_Final|knife~1517         ;
-; 17:1               ; 5 bits    ; 55 LEs        ; 5 LEs                ; 50 LEs                 ; No         ; |Verilog_Final|knife~1509         ;
-; 18:1               ; 6 bits    ; 72 LEs        ; 6 LEs                ; 66 LEs                 ; No         ; |Verilog_Final|knife~1505         ;
-; 18:1               ; 5 bits    ; 60 LEs        ; 5 LEs                ; 55 LEs                 ; No         ; |Verilog_Final|knife~1501         ;
-; 84:1               ; 2 bits    ; 112 LEs       ; 4 LEs                ; 108 LEs                ; No         ; |Verilog_Final|screen_state~603   ;
-; 92:1               ; 2 bits    ; 122 LEs       ; 2 LEs                ; 120 LEs                ; No         ; |Verilog_Final|Selector448        ;
-; 92:1               ; 2 bits    ; 122 LEs       ; 8 LEs                ; 114 LEs                ; No         ; |Verilog_Final|Selector446        ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |Verilog_Final|knife~1847         ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; No         ; |Verilog_Final|knife~1841         ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |Verilog_Final|knife~1834         ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; No         ; |Verilog_Final|knife~1831         ;
+; 6:1                ; 6 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; No         ; |Verilog_Final|knife~1815         ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; No         ; |Verilog_Final|knife~1820         ;
+; 7:1                ; 6 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; No         ; |Verilog_Final|knife~1811         ;
+; 7:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; No         ; |Verilog_Final|knife~1809         ;
+; 8:1                ; 6 bits    ; 30 LEs        ; 6 LEs                ; 24 LEs                 ; No         ; |Verilog_Final|knife~1801         ;
+; 8:1                ; 5 bits    ; 25 LEs        ; 5 LEs                ; 20 LEs                 ; No         ; |Verilog_Final|knife~1798         ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 6 LEs                ; 30 LEs                 ; No         ; |Verilog_Final|knife~1788         ;
+; 9:1                ; 5 bits    ; 30 LEs        ; 5 LEs                ; 25 LEs                 ; No         ; |Verilog_Final|knife~1787         ;
+; 10:1               ; 6 bits    ; 36 LEs        ; 6 LEs                ; 30 LEs                 ; No         ; |Verilog_Final|knife~1781         ;
+; 10:1               ; 5 bits    ; 30 LEs        ; 5 LEs                ; 25 LEs                 ; No         ; |Verilog_Final|knife~1772         ;
+; 11:1               ; 6 bits    ; 42 LEs        ; 6 LEs                ; 36 LEs                 ; No         ; |Verilog_Final|knife~1769         ;
+; 11:1               ; 5 bits    ; 35 LEs        ; 5 LEs                ; 30 LEs                 ; No         ; |Verilog_Final|knife~1762         ;
+; 12:1               ; 6 bits    ; 48 LEs        ; 6 LEs                ; 42 LEs                 ; No         ; |Verilog_Final|knife~1756         ;
+; 12:1               ; 5 bits    ; 40 LEs        ; 5 LEs                ; 35 LEs                 ; No         ; |Verilog_Final|knife~1750         ;
+; 13:1               ; 6 bits    ; 48 LEs        ; 6 LEs                ; 42 LEs                 ; No         ; |Verilog_Final|knife~1747         ;
+; 13:1               ; 5 bits    ; 40 LEs        ; 5 LEs                ; 35 LEs                 ; No         ; |Verilog_Final|knife~1739         ;
+; 14:1               ; 6 bits    ; 54 LEs        ; 6 LEs                ; 48 LEs                 ; No         ; |Verilog_Final|knife~1736         ;
+; 14:1               ; 5 bits    ; 45 LEs        ; 5 LEs                ; 40 LEs                 ; No         ; |Verilog_Final|knife~1732         ;
+; 15:1               ; 6 bits    ; 60 LEs        ; 6 LEs                ; 54 LEs                 ; No         ; |Verilog_Final|knife~1726         ;
+; 15:1               ; 5 bits    ; 50 LEs        ; 5 LEs                ; 45 LEs                 ; No         ; |Verilog_Final|knife~1717         ;
+; 16:1               ; 6 bits    ; 60 LEs        ; 6 LEs                ; 54 LEs                 ; No         ; |Verilog_Final|knife~1715         ;
+; 16:1               ; 5 bits    ; 50 LEs        ; 5 LEs                ; 45 LEs                 ; No         ; |Verilog_Final|knife~1710         ;
+; 17:1               ; 6 bits    ; 66 LEs        ; 6 LEs                ; 60 LEs                 ; No         ; |Verilog_Final|knife~1702         ;
+; 17:1               ; 5 bits    ; 55 LEs        ; 5 LEs                ; 50 LEs                 ; No         ; |Verilog_Final|knife~1696         ;
+; 18:1               ; 6 bits    ; 72 LEs        ; 6 LEs                ; 66 LEs                 ; No         ; |Verilog_Final|knife~1693         ;
+; 18:1               ; 5 bits    ; 60 LEs        ; 5 LEs                ; 55 LEs                 ; No         ; |Verilog_Final|knife~1684         ;
+; 19:1               ; 6 bits    ; 72 LEs        ; 6 LEs                ; 66 LEs                 ; No         ; |Verilog_Final|knife~1672         ;
+; 19:1               ; 5 bits    ; 60 LEs        ; 5 LEs                ; 55 LEs                 ; No         ; |Verilog_Final|knife~1677         ;
+; 164:1              ; 2 bits    ; 218 LEs       ; 4 LEs                ; 214 LEs                ; No         ; |Verilog_Final|screen_state~1082  ;
+; 172:1              ; 2 bits    ; 228 LEs       ; 2 LEs                ; 226 LEs                ; No         ; |Verilog_Final|Selector448        ;
+; 172:1              ; 2 bits    ; 228 LEs       ; 8 LEs                ; 220 LEs                ; No         ; |Verilog_Final|Selector450        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
 
 
@@ -557,7 +557,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 132 02/25/2009 SJ Web Edition
-    Info: Processing started: Wed Dec 16 21:12:30 2020
+    Info: Processing started: Mon Dec 21 17:25:03 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Verilog_Final -c Verilog_Final
 Info: Found 1 design units, including 1 entities, in source file Verilog_Final.v
     Info: Found entity 1: Verilog_Final
@@ -571,92 +571,92 @@ Warning (10230): Verilog HDL assignment warning at Verilog_Final.v(168): truncat
 Warning (10230): Verilog HDL assignment warning at Verilog_Final.v(171): truncated value with size 32 to match size of target (4)
 Warning (10230): Verilog HDL assignment warning at Verilog_Final.v(173): truncated value with size 32 to match size of target (10)
 Warning (10230): Verilog HDL assignment warning at Verilog_Final.v(185): truncated value with size 32 to match size of target (5)
-Warning (10230): Verilog HDL assignment warning at Verilog_Final.v(213): truncated value with size 32 to match size of target (16)
-Warning (10230): Verilog HDL assignment warning at Verilog_Final.v(221): truncated value with size 32 to match size of target (5)
-Warning (10230): Verilog HDL assignment warning at Verilog_Final.v(224): truncated value with size 32 to match size of target (5)
-Warning (10230): Verilog HDL assignment warning at Verilog_Final.v(230): truncated value with size 32 to match size of target (16)
-Warning (10230): Verilog HDL assignment warning at Verilog_Final.v(234): truncated value with size 32 to match size of target (16)
-Warning (10230): Verilog HDL assignment warning at Verilog_Final.v(242): truncated value with size 32 to match size of target (10)
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(291): variable "screen_state" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(311): variable "game_mode" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Info (10264): Verilog HDL Case Statement information at Verilog_Final.v(293): all case item expressions in this case statement are onehot
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(496): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(497): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(498): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(499): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(500): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(506): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(507): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(508): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(509): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(510): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(516): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(517): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(518): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(519): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(520): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(526): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(527): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(528): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(529): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(530): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(536): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(537): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(538): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(539): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(540): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(546): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(547): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(548): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(549): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(550): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(554): variable "za_warudo" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(570): variable "t_tens" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(585): variable "t_units" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(619): variable "za_warudo_cc" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(635): variable "t_tens" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(650): variable "t_units" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(699): variable "t_tens" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(714): variable "t_units" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Info (10264): Verilog HDL Case Statement information at Verilog_Final.v(462): all case item expressions in this case statement are onehot
-Info (10264): Verilog HDL Case Statement information at Verilog_Final.v(753): all case item expressions in this case statement are onehot
-Info (10264): Verilog HDL Case Statement information at Verilog_Final.v(811): all case item expressions in this case statement are onehot
-Warning (10270): Verilog HDL Case Statement warning at Verilog_Final.v(868): incomplete case statement has no default case item
-Info (10264): Verilog HDL Case Statement information at Verilog_Final.v(868): all case item expressions in this case statement are onehot
-Info (10264): Verilog HDL Case Statement information at Verilog_Final.v(291): all case item expressions in this case statement are onehot
-Warning (10240): Verilog HDL Always Construct warning at Verilog_Final.v(288): inferring latch(es) for variable "screen_col", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "screen_col[0]" at Verilog_Final.v(288)
-Info (10041): Inferred latch for "screen_col[1]" at Verilog_Final.v(288)
-Info (10041): Inferred latch for "screen_col[2]" at Verilog_Final.v(288)
-Info (10041): Inferred latch for "screen_col[3]" at Verilog_Final.v(288)
-Info (10041): Inferred latch for "screen_col[4]" at Verilog_Final.v(288)
-Info (10041): Inferred latch for "screen_col[5]" at Verilog_Final.v(288)
-Info (10041): Inferred latch for "screen_col[6]" at Verilog_Final.v(288)
-Info (10041): Inferred latch for "screen_col[7]" at Verilog_Final.v(288)
-Info (10041): Inferred latch for "screen_col[8]" at Verilog_Final.v(288)
-Info (10041): Inferred latch for "screen_col[9]" at Verilog_Final.v(288)
-Info (10041): Inferred latch for "screen_col[10]" at Verilog_Final.v(288)
-Info (10041): Inferred latch for "screen_col[11]" at Verilog_Final.v(288)
-Info (10041): Inferred latch for "screen_col[12]" at Verilog_Final.v(288)
-Info (10041): Inferred latch for "screen_col[13]" at Verilog_Final.v(288)
-Info (10041): Inferred latch for "screen_col[14]" at Verilog_Final.v(288)
-Info (10041): Inferred latch for "screen_col[15]" at Verilog_Final.v(288)
-Info (10041): Inferred latch for "screen_col[16]" at Verilog_Final.v(288)
-Info (10041): Inferred latch for "screen_col[17]" at Verilog_Final.v(288)
-Info (10041): Inferred latch for "screen_col[18]" at Verilog_Final.v(288)
-Info (10041): Inferred latch for "screen_col[19]" at Verilog_Final.v(288)
-Info (10041): Inferred latch for "screen_col[20]" at Verilog_Final.v(288)
-Info (10041): Inferred latch for "screen_col[21]" at Verilog_Final.v(288)
-Info (10041): Inferred latch for "screen_col[22]" at Verilog_Final.v(288)
-Info (10041): Inferred latch for "screen_col[23]" at Verilog_Final.v(288)
-Info (10041): Inferred latch for "screen_col[24]" at Verilog_Final.v(288)
-Info (10041): Inferred latch for "screen_col[25]" at Verilog_Final.v(288)
-Info (10041): Inferred latch for "screen_col[26]" at Verilog_Final.v(288)
-Info (10041): Inferred latch for "screen_col[27]" at Verilog_Final.v(288)
-Info (10041): Inferred latch for "screen_col[28]" at Verilog_Final.v(288)
-Info (10041): Inferred latch for "screen_col[29]" at Verilog_Final.v(288)
-Info (10041): Inferred latch for "screen_col[30]" at Verilog_Final.v(288)
-Info (10041): Inferred latch for "screen_col[31]" at Verilog_Final.v(288)
+Warning (10230): Verilog HDL assignment warning at Verilog_Final.v(228): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at Verilog_Final.v(236): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at Verilog_Final.v(239): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at Verilog_Final.v(245): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at Verilog_Final.v(249): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at Verilog_Final.v(257): truncated value with size 32 to match size of target (10)
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(306): variable "screen_state" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(326): variable "game_mode" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Info (10264): Verilog HDL Case Statement information at Verilog_Final.v(308): all case item expressions in this case statement are onehot
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(511): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(512): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(513): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(514): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(515): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(521): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(522): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(523): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(524): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(525): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(531): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(532): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(533): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(534): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(535): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(541): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(542): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(543): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(544): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(545): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(551): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(552): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(553): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(554): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(555): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(561): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(562): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(563): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(564): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(565): variable "human_col" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(569): variable "za_warudo" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(585): variable "t_tens" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(600): variable "t_units" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(634): variable "za_warudo_cc" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(650): variable "t_tens" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(665): variable "t_units" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(714): variable "t_tens" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Verilog_Final.v(729): variable "t_units" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Info (10264): Verilog HDL Case Statement information at Verilog_Final.v(477): all case item expressions in this case statement are onehot
+Info (10264): Verilog HDL Case Statement information at Verilog_Final.v(768): all case item expressions in this case statement are onehot
+Info (10264): Verilog HDL Case Statement information at Verilog_Final.v(826): all case item expressions in this case statement are onehot
+Warning (10270): Verilog HDL Case Statement warning at Verilog_Final.v(883): incomplete case statement has no default case item
+Info (10264): Verilog HDL Case Statement information at Verilog_Final.v(883): all case item expressions in this case statement are onehot
+Info (10264): Verilog HDL Case Statement information at Verilog_Final.v(306): all case item expressions in this case statement are onehot
+Warning (10240): Verilog HDL Always Construct warning at Verilog_Final.v(303): inferring latch(es) for variable "screen_col", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "screen_col[0]" at Verilog_Final.v(303)
+Info (10041): Inferred latch for "screen_col[1]" at Verilog_Final.v(303)
+Info (10041): Inferred latch for "screen_col[2]" at Verilog_Final.v(303)
+Info (10041): Inferred latch for "screen_col[3]" at Verilog_Final.v(303)
+Info (10041): Inferred latch for "screen_col[4]" at Verilog_Final.v(303)
+Info (10041): Inferred latch for "screen_col[5]" at Verilog_Final.v(303)
+Info (10041): Inferred latch for "screen_col[6]" at Verilog_Final.v(303)
+Info (10041): Inferred latch for "screen_col[7]" at Verilog_Final.v(303)
+Info (10041): Inferred latch for "screen_col[8]" at Verilog_Final.v(303)
+Info (10041): Inferred latch for "screen_col[9]" at Verilog_Final.v(303)
+Info (10041): Inferred latch for "screen_col[10]" at Verilog_Final.v(303)
+Info (10041): Inferred latch for "screen_col[11]" at Verilog_Final.v(303)
+Info (10041): Inferred latch for "screen_col[12]" at Verilog_Final.v(303)
+Info (10041): Inferred latch for "screen_col[13]" at Verilog_Final.v(303)
+Info (10041): Inferred latch for "screen_col[14]" at Verilog_Final.v(303)
+Info (10041): Inferred latch for "screen_col[15]" at Verilog_Final.v(303)
+Info (10041): Inferred latch for "screen_col[16]" at Verilog_Final.v(303)
+Info (10041): Inferred latch for "screen_col[17]" at Verilog_Final.v(303)
+Info (10041): Inferred latch for "screen_col[18]" at Verilog_Final.v(303)
+Info (10041): Inferred latch for "screen_col[19]" at Verilog_Final.v(303)
+Info (10041): Inferred latch for "screen_col[20]" at Verilog_Final.v(303)
+Info (10041): Inferred latch for "screen_col[21]" at Verilog_Final.v(303)
+Info (10041): Inferred latch for "screen_col[22]" at Verilog_Final.v(303)
+Info (10041): Inferred latch for "screen_col[23]" at Verilog_Final.v(303)
+Info (10041): Inferred latch for "screen_col[24]" at Verilog_Final.v(303)
+Info (10041): Inferred latch for "screen_col[25]" at Verilog_Final.v(303)
+Info (10041): Inferred latch for "screen_col[26]" at Verilog_Final.v(303)
+Info (10041): Inferred latch for "screen_col[27]" at Verilog_Final.v(303)
+Info (10041): Inferred latch for "screen_col[28]" at Verilog_Final.v(303)
+Info (10041): Inferred latch for "screen_col[29]" at Verilog_Final.v(303)
+Info (10041): Inferred latch for "screen_col[30]" at Verilog_Final.v(303)
+Info (10041): Inferred latch for "screen_col[31]" at Verilog_Final.v(303)
 Warning: Using design file LFSR_5bit.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info: Found entity 1: LFSR_5bit
 Info: Elaborating entity "LFSR_5bit" for hierarchy "LFSR_5bit:M1"
@@ -728,29 +728,29 @@ Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "out_state[3]" is stuck at GND
 Info: Registers with preset signals will power-up high
 Info: 8 registers lost all their fanouts during netlist optimizations. The first 8 are displayed below.
-    Info: Register "screen_state~619" lost all its fanouts during netlist optimizations.
-    Info: Register "screen_state~620" lost all its fanouts during netlist optimizations.
-    Info: Register "screen_state~621" lost all its fanouts during netlist optimizations.
-    Info: Register "screen_state~622" lost all its fanouts during netlist optimizations.
-    Info: Register "LCD_state~679" lost all its fanouts during netlist optimizations.
-    Info: Register "LCD_state~680" lost all its fanouts during netlist optimizations.
-    Info: Register "LCD_state~681" lost all its fanouts during netlist optimizations.
-    Info: Register "LCD_state~682" lost all its fanouts during netlist optimizations.
-Info: Generated suppressed messages file C:/Users/User/Documents/Verilog_Fianl_Project/Verilog_Final.map.smsg
-Info: Implemented 3674 device resources after synthesis - the final resource count might be different
+    Info: Register "screen_state~1099" lost all its fanouts during netlist optimizations.
+    Info: Register "screen_state~1100" lost all its fanouts during netlist optimizations.
+    Info: Register "screen_state~1101" lost all its fanouts during netlist optimizations.
+    Info: Register "screen_state~1102" lost all its fanouts during netlist optimizations.
+    Info: Register "LCD_state~1159" lost all its fanouts during netlist optimizations.
+    Info: Register "LCD_state~1160" lost all its fanouts during netlist optimizations.
+    Info: Register "LCD_state~1161" lost all its fanouts during netlist optimizations.
+    Info: Register "LCD_state~1162" lost all its fanouts during netlist optimizations.
+Info: Generated suppressed messages file C:/Users/User/Desktop/Verilog_Fianl_Project/Verilog_Final.map.smsg
+Info: Implemented 3801 device resources after synthesis - the final resource count might be different
     Info: Implemented 4 input pins
     Info: Implemented 56 output pins
-    Info: Implemented 3614 logic cells
+    Info: Implemented 3741 logic cells
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 124 warnings
-    Info: Peak virtual memory: 287 megabytes
-    Info: Processing ended: Wed Dec 16 21:13:25 2020
-    Info: Elapsed time: 00:00:55
-    Info: Total CPU time (on all processors): 00:00:56
+    Info: Peak virtual memory: 302 megabytes
+    Info: Processing ended: Mon Dec 21 17:26:03 2020
+    Info: Elapsed time: 00:01:00
+    Info: Total CPU time (on all processors): 00:01:00
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/User/Documents/Verilog_Fianl_Project/Verilog_Final.map.smsg.
+The suppressed messages can be found in C:/Users/User/Desktop/Verilog_Fianl_Project/Verilog_Final.map.smsg.
 
 
