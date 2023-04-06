@@ -1,7 +1,7 @@
 # Verilog Game - Dodge Falling Objects But With Za Warudo
 You've got an invincible stand ability from a vampire, but thousands of knives are dropping toward you
 
-你獲得吸血鬼的無敵替身，但飛刀朝你落下
+Verilog遊戲，你獲得吸血鬼的無敵替身，但飛刀朝你落下
 
 ## Course
 
@@ -33,3 +33,9 @@ Quartus II
 DEVICE: EP1C6Q240C8
 
 Simulated input/output using VeriInstrument
+
+## YouTube
+
+![alt video](https://i9.ytimg.com/vi/1FNqo34kBKI/mqdefault.jpg?v=642ef5de&sqp=CIzuu6EG&rs=AOn4CLCSWCEOxu8X_V9ylODJT-ExfCQ1fQ)
+
+[遊玩影片 Video](https://youtu.be/1FNqo34kBKI)
