@@ -36,6 +36,6 @@ Simulated input/output using VeriInstrument
 
 ## YouTube
 
-![alt video](https://i9.ytimg.com/vi/1FNqo34kBKI/mqdefault.jpg?v=642ef5de&sqp=CIzuu6EG&rs=AOn4CLCSWCEOxu8X_V9ylODJT-ExfCQ1fQ)
+[![alt video](https://img.youtube.com/vi/1FNqo34kBKI/0.jpg)](https://youtu.be/1FNqo34kBKI)
 
 [遊玩影片 Video](https://youtu.be/1FNqo34kBKI)
