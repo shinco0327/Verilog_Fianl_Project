@@ -26,7 +26,7 @@ No .gitignore, little messy...
 <h2>NOT a Synthesizable Verilog!!!</h2>
 
 
-## Envrionment
+## Environment
 
 Quartus II
 
